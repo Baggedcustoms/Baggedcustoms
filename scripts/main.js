@@ -1,20 +1,19 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".filter-btn");
-    const modCards = document.querySelectorAll(".mod-card");
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.filter-button');
+    const cards = document.querySelectorAll('.mod-card');
 
     buttons.forEach(button => {
-        button.addEventListener("click", () => {
-            buttons.forEach(btn => btn.classList.remove("active"));
-            button.classList.add("active");
+        button.addEventListener('click', () => {
+            document.querySelector('.filter-button.active').classList.remove('active');
+            button.classList.add('active');
 
-            const selectedCategory = button.getAttribute("data-category");
-
-            modCards.forEach(card => {
-                const cardCategory = card.getAttribute("data-category");
-                if (selectedCategory === "all" || selectedCategory === cardCategory) {
-                    card.style.display = "block";
+            const filter = button.getAttribute('data-filter');
+            cards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    card.style.display = 'block';
                 } else {
-                    card.style.display = "none";
+                    card.style.display = 'none';
                 }
             });
         });
