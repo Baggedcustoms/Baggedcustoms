@@ -1,120 +1,107 @@
-/* Color Theme */
-:root {
-    --bg-dark: #121212;
-    --bg-card: #1e1e1e;
-    --primary-color: #84391c;
-    --accent-color: #b34e1c;
-    --text-light: #f5f5f5;
-}
-
-/* Reset */
-body, h1, h2, p, ul, li, a, button {
+/* Reset & Base */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General Layout */
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text-light);
+    background-color: #121212;
+    color: #f5f5f5;
+    line-height: 1.6;
 }
 
 /* Header Banner */
-header {
-    background-color: var(--primary-color);
+.banner-header {
+    background-color: #6b2f1e;
     padding: 20px 0;
     text-align: center;
 }
-.banner-image {
-    max-width: 400px;
-    width: 100%;
+
+.banner-img {
+    max-width: 600px;
+    width: 90%;
     height: auto;
 }
 
-/* Filter Bar */
-.filter-bar {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding: 15px;
-    background-color: #1a1a1a;
-    border-top: 2px solid var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
-}
-.filter-button {
-    background-color: var(--accent-color);
-    border: none;
-    padding: 8px 16px;
-    color: var(--text-light);
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease;
-}
-.filter-button:hover,
-.filter-button.active {
-    background-color: #e8692c;
+/* Category Filter Buttons */
+.category-filter {
+    text-align: center;
+    margin: 20px 0;
 }
 
-/* Gallery Layout */
+.filter-button {
+    background-color: #333;
+    color: #f5f5f5;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-button.active,
+.filter-button:hover {
+    background-color: #a84f2f;
+}
+
+/* Mod Gallery */
 .mod-gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
-    padding: 40px 20px;
+    gap: 25px;
+    padding: 0 20px 50px;
 }
 
-/* Cards */
+/* Mod Card */
 .mod-card {
-    background-color: var(--bg-card);
+    background-color: #1e1e1e;
     border-radius: 12px;
-    overflow: hidden;
-    max-width: 300px;
-    box-shadow: 0 0 15px rgba(255, 115, 55, 0.15);
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.2);
     text-align: center;
     transition: transform 0.2s ease;
 }
+
 .mod-card:hover {
     transform: translateY(-5px);
 }
-.mod-card img {
+
+.mod-image {
     width: 100%;
-    height: auto;
-    display: block;
-}
-.mod-card h2 {
-    font-size: 1rem;
-    margin: 12px;
-}
-.mod-card p {
-    font-size: 0.85rem;
-    color: #ccc;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
-/* Download Button */
+/* Buttons */
 .download-button {
     display: inline-block;
-    margin: 15px auto 20px auto;
-    background-color: var(--primary-color);
-    color: white;
+    margin-top: 10px;
+    background-color: #a84f2f;
+    color: #fff;
+    padding: 10px 15px;
     border: none;
-    padding: 10px 20px;
     border-radius: 8px;
-    font-weight: bold;
     text-decoration: none;
+    font-weight: bold;
     transition: background-color 0.3s ease;
 }
+
 .download-button:hover {
-    background-color: var(--accent-color);
+    background-color: #c85a2c;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px 0;
-    font-size: 0.85rem;
-    color: #888;
+    padding: 15px;
+    background-color: #1a1a1a;
+    font-size: 14px;
+    color: #aaa;
 }
