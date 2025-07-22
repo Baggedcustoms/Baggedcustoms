@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     buttons.forEach(button => {
         button.addEventListener("click", () => {
-            // Toggle active class
             buttons.forEach(btn => btn.classList.remove("active"));
             button.classList.add("active");
 
