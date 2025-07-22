@@ -4,15 +4,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     buttons.forEach(button => {
         button.addEventListener("click", () => {
-            // Reset all buttons
+            // Toggle active class
             buttons.forEach(btn => btn.classList.remove("active"));
             button.classList.add("active");
 
-            const category = button.getAttribute("data-category");
+            const selectedCategory = button.getAttribute("data-category");
 
             modCards.forEach(card => {
-                const modCategory = card.querySelector("p").textContent.replace("Category: ", "").trim();
-                if (category === "all" || modCategory === category) {
+                const cardCategory = card.getAttribute("data-category");
+                if (selectedCategory === "all" || selectedCategory === cardCategory) {
                     card.style.display = "block";
                 } else {
                     card.style.display = "none";
