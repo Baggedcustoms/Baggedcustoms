@@ -1,4 +1,4 @@
-/* === Global Styles === */
+/* General Reset & Fonts */
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -6,107 +6,113 @@ body {
     color: #eee;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-h3 {
-    margin-top: 0.5em;
-    font-size: 1rem;
-}
-
-/* === Banner === */
-.banner {
-    background-color: #782f13;
+/* Header and Banner */
+.site-header {
+    background-color: #7a2f0d;
+    padding: 1rem 0 0.5rem 0;
     text-align: center;
-    padding: 20px 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-.logo {
-    max-width: 300px;
-    width: 100%;
-}
-
-/* === Filters === */
-.filter-buttons {
-    text-align: center;
-    margin: 1.5em 0 1em;
-}
-
-.filter-button {
-    background-color: #aa3b0f;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    margin: 4px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
-
-.filter-button:hover,
-.filter-button.active {
-    background-color: #d24b0f;
-}
-
-/* === Mod Grid === */
-.mod-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem;
-    max-width: 1200px;
+.banner-container {
+    max-width: 600px;
     margin: 0 auto;
 }
 
-/* === Mod Card === */
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    margin-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.filter-btn {
+    background-color: #e5672d;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 8px 14px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #f57c2a;
+}
+
+/* Mod Grid Container */
+.mod-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Mod Cards */
 .mod-card {
-    background-color: #1b1b1b;
-    border-radius: 12px;
-    overflow: hidden;
-    padding: 1em;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.2);
+    padding: 1rem;
+    text-align: center;
     transition: transform 0.3s ease;
 }
 
 .mod-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
 }
 
-.mod-thumb {
+.mod-card img {
     width: 100%;
-    max-height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 0.8em;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
 }
 
-/* === Download Button === */
+/* Title & Category */
+.mod-card h3 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #fff;
+}
+
+.category-label {
+    font-size: 0.85rem;
+    color: #bbb;
+    margin-bottom: 0.8rem;
+}
+
+/* Download Button */
 .download-button {
     display: inline-block;
-    margin-top: 0.8em;
-    background-color: #aa3b0f;
-    color: #fff;
-    padding: 10px 18px;
-    border-radius: 8px;
+    background-color: #a6481d;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
     font-weight: bold;
-    transition: background 0.2s ease;
+    transition: background-color 0.3s ease;
 }
 
 .download-button:hover {
-    background-color: #d24b0f;
+    background-color: #c65b2e;
 }
 
-/* === Footer === */
+/* Footer */
 footer {
     text-align: center;
-    padding: 2em 0;
-    font-size: 0.9em;
-    color: #888;
+    font-size: 0.75rem;
+    color: #777;
+    padding: 2rem 0 1rem 0;
 }
