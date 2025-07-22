@@ -2,40 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BaggedCustoms Mod Catalog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header class="banner-header">
-        <img src="images/banner.webp" alt="BaggedCustoms Banner" class="banner-img">
+    <header>
+        <img src="images/banner.webp" alt="BaggedCustoms Banner" class="banner-image">
     </header>
 
-    <nav class="category-filter">
-        <button class="filter-button active" data-category="all">All</button>
-        <button class="filter-button" data-category="Real Life Builds">Real Life Builds</button>
-        <button class="filter-button" data-category="Slammed Builds">Slammed Builds</button>
-    </nav>
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="real">Real Life Builds</button>
+        <button class="filter-btn" data-category="slammed">Slammed Builds</button>
+    </div>
 
-    <main>
-        <section class="mod-gallery">
-            <div class="mod-card" data-category="Real Life Builds">
-                <img src="images/mmiiwrsmall.webp" alt="Bagged MonsterMax II Screenshot" class="mod-image">
-                <h2>BaggedCustoms MonsterMax II Remastered [Add-On][FIVEM]</h2>
-                <p>Category: Real Life Builds</p>
-                <a href="https://www.patreon.com/posts/baggedcustoms-ii-86878023" class="download-button">Download</a>
+    <div class="card-container" id="cardContainer">
+        <div class="card" data-category="real">
+            <img src="images/mmiiwr.webp" alt="MonsterMax II Screenshot" class="card-img">
+            <div class="card-body">
+                <h3>BaggedCustoms MonsterMax II Remastered [Add-On][FIVEM]</h3>
+                <p class="category">Category: Real Life Builds</p>
+                <a href="#" class="download-btn">Download</a>
             </div>
-            <div class="mod-card" data-category="Slammed Builds">
-                <img src="images/sample2.jpg" alt="Bagged Silverado Screenshot" class="mod-image">
-                <h2>Bagged Silverado</h2>
-                <p>Category: Slammed Builds</p>
-                <a href="https://patreon.com/baggedcustoms" class="download-button">Download</a>
+        </div>
+
+        <div class="card" data-category="slammed">
+            <img src="images/slvr.webp" alt="Bagged Silverado Screenshot" class="card-img">
+            <div class="card-body">
+                <h3>Bagged Silverado</h3>
+                <p class="category">Category: Slammed Builds</p>
+                <a href="#" class="download-btn">Download</a>
             </div>
-        </section>
-    </main>
+        </div>
+    </div>
 
     <footer>
-        <p>&copy; 2025 BaggedCustoms. All rights reserved.</p>
+        <p>© 2025 BaggedCustoms. All rights reserved.</p>
     </footer>
 
     <script src="scripts/main.js"></script>
