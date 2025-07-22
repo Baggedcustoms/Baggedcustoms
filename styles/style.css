@@ -1,118 +1,133 @@
-/* General Reset & Fonts */
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #111;
-    color: #eee;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #eee;
 }
 
-/* Header and Banner */
-.site-header {
-    background-color: #7a2f0d;
-    padding: 1rem 0 0.5rem 0;
-    text-align: center;
+header {
+  background-color: #7a2e0e;
+  text-align: center;
+  padding: 1rem;
 }
 
-.banner-container {
-    max-width: 600px;
-    margin: 0 auto;
+.banner-img {
+  max-height: 160px;
+  object-fit: contain;
 }
 
-.banner-image {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Filter Buttons */
 .filter-buttons {
-    margin-top: 0.5rem;
-    padding-bottom: 1rem;
+  text-align: center;
+  margin: 1rem 0;
 }
 
 .filter-btn {
-    background-color: #e5672d;
-    color: white;
-    border: none;
-    border-radius: 999px;
-    padding: 8px 14px;
-    margin: 0 5px;
-    cursor: pointer;
-    font-size: 0.85rem;
-    transition: background-color 0.3s ease;
+  background: #e46a2e;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.2rem;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-.filter-btn:hover,
-.filter-btn.active {
-    background-color: #f57c2a;
+.filter-btn.active,
+.filter-btn:hover {
+  background: #f47c3c;
 }
 
-/* Mod Grid Container */
-.mod-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+.featured-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 1rem;
 }
 
-/* Mod Cards */
+.featured-main {
+  flex: 2;
+  background: #222;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.featured-main img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+.featured-side {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.mini-card {
+  background: #222;
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.mini-card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.mod-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.mod-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
 .mod-card {
-    background-color: #1e1e1e;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 102, 0, 0.2);
-    padding: 1rem;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.mod-card:hover {
-    transform: translateY(-5px);
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px #000;
 }
 
 .mod-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    margin-bottom: 0.8rem;
-    cursor: pointer;
+  max-width: 100%;
+  border-radius: 6px;
 }
 
-/* Title & Category */
-.mod-card h3 {
-    font-size: 1rem;
-    margin: 0.5rem 0;
-    color: #fff;
+.download-btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background: #a7431e;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.category-label {
-    font-size: 0.85rem;
-    color: #bbb;
-    margin-bottom: 0.8rem;
+.download-btn:hover {
+  background: #c8541f;
 }
 
-/* Download Button */
-.download-button {
-    display: inline-block;
-    background-color: #a6481d;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.download-button:hover {
-    background-color: #c65b2e;
-}
-
-/* Footer */
 footer {
-    text-align: center;
-    font-size: 0.75rem;
-    color: #777;
-    padding: 2rem 0 1rem 0;
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+  margin: 2rem 0;
 }
