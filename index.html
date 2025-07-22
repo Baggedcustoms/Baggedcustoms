@@ -4,106 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BaggedCustoms Mod Catalog</title>
-  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body>
-  <header>
-    <img src="images/banner.webp" alt="BaggedCustoms Banner" class="banner-img"/>
+  <header class="banner">
+    <img src="images/banner.webp" alt="BaggedCustoms Banner" class="banner-img" />
   </header>
 
   <div class="filter-buttons">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="real-life">Real Life Builds</button>
-    <button class="filter-btn" data-filter="slammed">Slammed Builds</button>
+    <button onclick="filterMods('all')">All</button>
+    <button onclick="filterMods('Real Life Builds')">Real Life Builds</button>
+    <button onclick="filterMods('Slammed Builds')">Slammed Builds</button>
   </div>
 
-  <section class="featured-section">
+  <section class="featured-wrapper">
     <div class="featured-main">
-      <img src="images/mmiiwrsmall.webp" alt="MonsterMax II" />
-      <div class="featured-info">
-        <h2>MonsterMax II Remastered</h2>
-        <p>Category: Real Life Builds</p>
-        <a href="#" class="download-btn">Download</a>
-      </div>
+      <img src="images/monstermax.png" alt="MonsterMax II Remastered" />
+      <div class="mod-title">MonsterMax II Remastered</div>
+      <div class="mod-category">Category: Real Life Builds</div>
+      <button class="download-btn">Download</button>
     </div>
     <div class="featured-side">
-      <div class="mini-card">
-        <img src="images/0.webp" alt="Featured Mod">
-        <h4>Bagged Silverado</h4>
-      </div>
-      <div class="mini-card">
-        <img src="images/0.webp" alt="Featured Mod">
-        <h4>Bagged Dually 3500</h4>
-      </div>
-      <div class="mini-card">
-        <img src="images/0.webp" alt="Featured Mod">
-        <h4>Bagged Ram SRT10</h4>
-      </div>
-      <div class="mini-card">
-        <img src="images/0.webp" alt="Featured Mod">
-        <h4>Squarebody Slammed</h4>
-      </div>
+      <div class="featured-small-card">🛈 Featured Mod<br/>Bagged Silverado</div>
+      <div class="featured-small-card">🛈 Featured Mod<br/>Bagged Dually 3500</div>
+      <div class="featured-small-card">🛈 Featured Mod<br/>Bagged Ram SRT10</div>
+      <div class="featured-small-card">🛈 Featured Mod<br/>Squarebody Slammed</div>
     </div>
   </section>
 
-  <section class="mod-section">
-    <h2 class="section-title">Recent Mods</h2>
-    <div class="mod-grid">
-      <div class="mod-card" data-category="real-life">
-        <img src="images/mmiiwrsmall.webp" alt="MonsterMax II Screenshot" />
-        <h3>MonsterMax II Remastered [FIVEM]</h3>
-        <p>Category: Real Life Builds</p>
-        <a href="#" class="download-btn">Download</a>
-      </div>
-      <div class="mod-card" data-category="slammed">
-        <img src="images/mmiiwrsmall.webp" alt="Bagged Silverado Screenshot" />
-        <h3>Bagged Silverado</h3>
-        <p>Category: Slammed Builds</p>
-        <a href="#" class="download-btn">Download</a>
-      </div>
-      <div class="mod-card" data-category="real-life">
-        <img src="images/mmiiwrsmall.webp" alt="Bagged Dually Screenshot" />
-        <h3>Bagged Dually 3500</h3>
-        <p>Category: Real Life Builds</p>
-        <a href="#" class="download-btn">Download</a>
-      </div>
-      <div class="mod-card" data-category="slammed">
-        <img src="images/mmiiwrsmall.webp" alt="Ram SRT10 Screenshot" />
-        <h3>Bagged Ram SRT10</h3>
-        <p>Category: Slammed Builds</p>
-        <a href="#" class="download-btn">Download</a>
-      </div>
-      <div class="mod-card" data-category="real-life">
-        <img src="images/mmiiwrsmall.webp" alt="Squarebody Screenshot" />
-        <h3>Squarebody Slammed</h3>
-        <p>Category: Real Life Builds</p>
-        <a href="#" class="download-btn">Download</a>
-      </div>
-      <div class="mod-card" data-category="slammed">
-        <img src="images/mmiiwrsmall.webp" alt="Tahoe Screenshot" />
-        <h3>Bagged Tahoe</h3>
-        <p>Category: Slammed Builds</p>
-        <a href="#" class="download-btn">Download</a>
-      </div>
-      <div class="mod-card" data-category="real-life">
-        <img src="images/mmiiwrsmall.webp" alt="OBS Screenshot" />
-        <h3>OBS Slammed</h3>
-        <p>Category: Real Life Builds</p>
-        <a href="#" class="download-btn">Download</a>
-      </div>
-      <div class="mod-card" data-category="slammed">
-        <img src="images/mmiiwrsmall.webp" alt="Slammed Suburban Screenshot" />
-        <h3>Slammed Suburban</h3>
-        <p>Category: Slammed Builds</p>
-        <a href="#" class="download-btn">Download</a>
-      </div>
-    </div>
-  </section>
+  <h2 class="section-title">Recent Mods</h2>
+  <div class="mod-grid" id="modGrid">
+    <!-- JS populates this -->
+  </div>
 
-  <footer>
-    <p>&copy; 2025 BaggedCustoms. All rights reserved.</p>
+  <footer class="footer">
+    © 2025 BaggedCustoms. All rights reserved.
   </footer>
 
-  <script src="scripts/script.js"></script>
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>
