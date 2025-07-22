@@ -26,33 +26,30 @@ header p {
     margin: 0.5rem 0 0;
 }
 
+/* Filter Bar */
 .category-filter {
-    text-align: center;
-    margin: 20px auto;
-    padding: 10px;
-    border-bottom: 2px solid #e6007e;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 1rem;
     background-color: #1a1a1a;
+    border-bottom: 2px solid #e91e63;
 }
 
 .filter-btn {
     background-color: #2c2c2c;
     border: none;
     color: #fff;
-    padding: 8px 16px;
-    margin: 5px;
+    padding: 0.5rem 1rem;
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
-.filter-btn:hover {
-    background-color: #e6007e;
-}
-
+.filter-btn:hover,
 .filter-btn.active {
     background-color: #e6007e;
-    color: #fff;
 }
 
 /* Mod Gallery Layout */
@@ -79,15 +76,12 @@ header p {
     transform: translateY(-5px);
 }
 
-/* Thumbnail Styling */
-.mod-card a img {
+.mod-card img {
     width: 100%;
-    height: auto;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1rem;
-    cursor: pointer;
 }
 
 /* Title and Category */
