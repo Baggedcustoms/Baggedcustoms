@@ -2,46 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>BaggedCustoms Mod Catalog</title>
-    <link rel="stylesheet" href="styles/style.css" />
-    <script defer src="scripts/main.js"></script>
+    <link rel="stylesheet" href="styles/style.css"/>
 </head>
 <body>
-    <header class="banner">
-        <img src="images/banner.webp" alt="BaggedCustoms Banner" class="logo" />
+    <header class="site-header">
+        <div class="banner-container">
+            <img src="images/banner.webp" alt="BaggedCustoms Banner" class="banner-image"/>
+        </div>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="Real Life Builds">Real Life Builds</button>
+            <button class="filter-btn" data-filter="Slammed Builds">Slammed Builds</button>
+        </div>
     </header>
 
-    <div class="filter-buttons">
-        <button class="filter-button active" onclick="filterMods('all')">All</button>
-        <button class="filter-button" onclick="filterMods('real')">Real Life Builds</button>
-        <button class="filter-button" onclick="filterMods('slammed')">Slammed Builds</button>
-    </div>
+    <main>
+        <div id="modContainer" class="mod-container">
+            <!-- Mod Card 1 -->
+            <div class="mod-card" data-category="Real Life Builds">
+                <img src="images/mmiiwrsmall.webp" alt="MonsterMax Screenshot"/>
+                <h3>BaggedCustoms MonsterMax II Remastered [Add-On][FIVEM]</h3>
+                <p class="category-label">Category: Real Life Builds</p>
+                <a href="#" class="download-button">Download</a>
+            </div>
 
-    <main class="mod-grid">
-        <div class="mod-card" data-category="real">
-            <a href="images/mmiiwrsmall.webp" target="_blank">
-                <img src="images/mmiiwr.webp" alt="MonsterMax II Screenshot" class="mod-thumb" />
-            </a>
-            <h3>BaggedCustoms MonsterMax II Remastered [Add-On][FIVEM]</h3>
-            <p>Category: Real Life Builds</p>
-            <a href="#" class="download-button">Download</a>
+            <!-- Mod Card 2 -->
+            <div class="mod-card" data-category="Slammed Builds">
+                <img src="images/mmiiwrsmall.webp" alt="Bagged Silverado Screenshot"/>
+                <h3>Bagged Silverado</h3>
+                <p class="category-label">Category: Slammed Builds</p>
+                <a href="#" class="download-button">Download</a>
+            </div>
+
+            <!-- Mod Card 3 -->
+            <div class="mod-card" data-category="Real Life Builds">
+                <img src="images/mmiiwrsmall.webp" alt="Bagged Dually Screenshot"/>
+                <h3>Bagged Dually 3500 [Add-On]</h3>
+                <p class="category-label">Category: Real Life Builds</p>
+                <a href="#" class="download-button">Download</a>
+            </div>
+
+            <!-- Mod Card 4 -->
+            <div class="mod-card" data-category="Slammed Builds">
+                <img src="images/mmiiwrsmall.webp" alt="Bagged SRT10 Screenshot"/>
+                <h3>Bagged Ram SRT10 [FIVEM]</h3>
+                <p class="category-label">Category: Slammed Builds</p>
+                <a href="#" class="download-button">Download</a>
+            </div>
         </div>
-
-        <div class="mod-card" data-category="slammed">
-            <a href="images/bcsilverado.webp" target="_blank">
-                <img src="images/bcsilverado.webp" alt="Bagged Silverado Screenshot" class="mod-thumb" />
-            </a>
-            <h3>Bagged Silverado</h3>
-            <p>Category: Slammed Builds</p>
-            <a href="#" class="download-button">Download</a>
-        </div>
-
-        <!-- Add more mod cards here -->
     </main>
 
     <footer>
-        &copy; 2025 BaggedCustoms. All rights reserved.
+        <p>© 2025 BaggedCustoms. All rights reserved.</p>
     </footer>
+
+    <script src="scripts/main.js"></script>
 </body>
 </html>
