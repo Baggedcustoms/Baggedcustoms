@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BaggedCustoms Mod Catalog</title>
-  <link rel="stylesheet" href="styles/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BaggedCustoms Mod Catalog</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script defer src="scripts/main.js"></script>
 </head>
 <body>
-  <header>
-    <img src="images/banner.webp" alt="BaggedCustoms Banner" class="banner-image" />
-  </header>
+    <header class="banner">
+        <img src="images/banner.webp" alt="BaggedCustoms Banner" class="logo" />
+    </header>
 
-  <div class="filter-buttons">
-    <button class="filter-btn active" data-category="all">All</button>
-    <button class="filter-btn" data-category="real">Real Life Builds</button>
-    <button class="filter-btn" data-category="slammed">Slammed Builds</button>
-  </div>
-
-  <div class="card-container" id="cardContainer">
-    <div class="card" data-category="real">
-      <img src="images/mmiiwrsmall.webp" alt="MonsterMax II Screenshot" class="card-img" />
-      <div class="card-body">
-        <h3>BaggedCustoms MonsterMax II Remastered [Add-On][FIVEM]</h3>
-        <p class="category">Category: Real Life Builds</p>
-        <a href="#" class="download-btn">Download</a>
-      </div>
+    <div class="filter-buttons">
+        <button class="filter-button active" onclick="filterMods('all')">All</button>
+        <button class="filter-button" onclick="filterMods('real')">Real Life Builds</button>
+        <button class="filter-button" onclick="filterMods('slammed')">Slammed Builds</button>
     </div>
 
-    <div class="card" data-category="slammed">
-      <img src="images/slvr.webp" alt="Bagged Silverado Screenshot" class="card-img" />
-      <div class="card-body">
-        <h3>Bagged Silverado</h3>
-        <p class="category">Category: Slammed Builds</p>
-        <a href="#" class="download-btn">Download</a>
-      </div>
-    </div>
-  </div>
+    <main class="mod-grid">
+        <div class="mod-card" data-category="real">
+            <a href="images/mmiiwrsmall.webp" target="_blank">
+                <img src="images/mmiiwr.webp" alt="MonsterMax II Screenshot" class="mod-thumb" />
+            </a>
+            <h3>BaggedCustoms MonsterMax II Remastered [Add-On][FIVEM]</h3>
+            <p>Category: Real Life Builds</p>
+            <a href="#" class="download-button">Download</a>
+        </div>
 
-  <footer>
-    <p>© 2025 BaggedCustoms. All rights reserved.</p>
-  </footer>
+        <div class="mod-card" data-category="slammed">
+            <a href="images/bcsilverado.webp" target="_blank">
+                <img src="images/bcsilverado.webp" alt="Bagged Silverado Screenshot" class="mod-thumb" />
+            </a>
+            <h3>Bagged Silverado</h3>
+            <p>Category: Slammed Builds</p>
+            <a href="#" class="download-button">Download</a>
+        </div>
 
-  <script src="scripts/main.js"></script>
+        <!-- Add more mod cards here -->
+    </main>
+
+    <footer>
+        &copy; 2025 BaggedCustoms. All rights reserved.
+    </footer>
 </body>
 </html>
