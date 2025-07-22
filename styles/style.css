@@ -1,153 +1,120 @@
-/* General Page Styles */
-body {
+/* Color Theme */
+:root {
+    --bg-dark: #121212;
+    --bg-card: #1e1e1e;
+    --primary-color: #84391c;
+    --accent-color: #b34e1c;
+    --text-light: #f5f5f5;
+}
+
+/* Reset */
+body, h1, h2, p, ul, li, a, button {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #111;
-    color: #fff;
-}
-
-/* Banner Header Styling */
-.banner-header {
-    text-align: center;
-    background-color: #1a1a1a;
     padding: 0;
-    border-bottom: 2px solid #6a3b24;
+    box-sizing: border-box;
 }
 
-.banner-header img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+/* General Layout */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
 }
 
-/* Category Filter Bar */
-.category-filter {
+/* Header Banner */
+header {
+    background-color: var(--primary-color);
+    padding: 20px 0;
     text-align: center;
-    margin: 20px auto;
-    padding: 10px;
-    border-bottom: 2px solid #6a3b24;
-    background-color: #1a1a1a;
+}
+.banner-image {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
 }
 
-.filter-btn {
-    background-color: #2c2c2c;
+/* Filter Bar */
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    background-color: #1a1a1a;
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+.filter-button {
+    background-color: var(--accent-color);
     border: none;
-    color: #fff;
     padding: 8px 16px;
-    margin: 5px;
+    color: var(--text-light);
     border-radius: 20px;
     cursor: pointer;
-    font-weight: bold;
+    font-size: 0.9rem;
     transition: background-color 0.3s ease;
 }
-
-.filter-btn:hover {
-    background-color: #6a3b24;
+.filter-button:hover,
+.filter-button.active {
+    background-color: #e8692c;
 }
 
-.filter-btn.active {
-    background-color: #6a3b24;
-    color: #fff;
-}
-
-/* Mod Gallery Layout */
+/* Gallery Layout */
 .mod-gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 30px;
+    padding: 40px 20px;
 }
 
-/* Mod Card Style */
+/* Cards */
 .mod-card {
-    background-color: #1a1a1a;
-    border: 2px solid #333;
-    border-radius: 16px;
-    width: 350px;
-    padding: 1rem;
-    box-shadow: 0 0 20px rgba(106, 59, 36, 0.4); /* brown glow */
-    transition: transform 0.3s ease;
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 300px;
+    box-shadow: 0 0 15px rgba(255, 115, 55, 0.15);
+    text-align: center;
+    transition: transform 0.2s ease;
 }
-
 .mod-card:hover {
     transform: translateY(-5px);
 }
-
-/* Thumbnail Styling */
-.mod-card a img {
+.mod-card img {
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    cursor: pointer;
+    display: block;
 }
-
-/* Title and Category */
 .mod-card h2 {
-    font-size: 1.1rem;
-    margin-bottom: 0.25rem;
-    color: #fff;
+    font-size: 1rem;
+    margin: 12px;
 }
-
 .mod-card p {
-    font-size: 0.9rem;
-    color: #bbb;
-    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    color: #ccc;
 }
 
 /* Download Button */
 .download-button {
-    display: block;
-    text-align: center;
-    background-color: #6a3b24;
-    color: #fff;
-    padding: 0.75rem;
+    display: inline-block;
+    margin: 15px auto 20px auto;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
     border-radius: 8px;
-    text-decoration: none;
     font-weight: bold;
-    transition: background 0.2s ease;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
-
 .download-button:hover {
-    background-color: #8a422b;
+    background-color: var(--accent-color);
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    background-color: #1a1a1a;
-    color: #666;
-    border-top: 1px solid #333;
-}
-* Tweak banner display */
-.banner-header {
-    background-color: #111; /* Blend in with site background */
-    padding: 0;
-    border: none;
-}
-
-.banner-header img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Optional: Rounded buttons */
-.download-button {
-    border: none;
-    border-radius: 10px;
-}
-
-/* Optional: Tweak filter bar spacing */
-.category-filter {
-    margin-top: 0;
-    padding-top: 1rem;
-    border-top: 2px solid #6a3b24;
+    padding: 20px 0;
+    font-size: 0.85rem;
+    color: #888;
 }
