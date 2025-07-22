@@ -1,43 +1,90 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #111;
-  color: #f5f5f5;
+  background-color: #0f0f0f;
+  color: #f0f0f0;
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: #222;
-  padding: 20px;
+  background-color: #1b1b1b;
   text-align: center;
-  font-size: 2em;
-  font-weight: bold;
+  padding: 30px 20px;
+  border-bottom: 2px solid #ff3366;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
   color: #ff3366;
 }
 
-.container {
+header p {
+  margin-top: 10px;
+  color: #ccc;
+  font-weight: 300;
+}
+
+.mod-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
   padding: 40px;
 }
 
-.card {
-  background-color: #1a1a1a;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 0 10px #000;
+.mod-card {
+  background-color: #1e1e1e;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 51, 102, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card img {
+.mod-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(255, 51, 102, 0.4);
+}
+
+.mod-card img {
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  height: auto;
+  display: block;
 }
 
-.card a {
-  color: #ff3366;
-  text-decoration: none;
+.mod-card h2 {
+  font-size: 1.2em;
+  margin: 10px 15px 5px;
+  color: #fff;
+}
+
+.mod-card p {
+  margin: 0 15px 10px;
+  font-size: 0.95em;
+  color: #aaa;
+}
+
+.download-button {
+  display: block;
+  text-align: center;
+  background-color: #ff3366;
+  color: #fff;
+  margin: 10px 15px 20px;
+  padding: 10px;
+  border-radius: 8px;
   font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.download-button:hover {
+  background-color: #e02e5a;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1b1b1b;
+  font-size: 0.85em;
+  color: #777;
+  border-top: 1px solid #333;
 }
