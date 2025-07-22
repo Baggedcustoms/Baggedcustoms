@@ -131,3 +131,35 @@ footer {
   font-size: 0.9rem;
   margin: 2rem 0;
 }
+
+/* Hover Effects */
+.mod-card,
+.mini-card,
+.featured-main {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mod-card:hover,
+.mini-card:hover,
+.featured-main:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(255, 111, 35, 0.3);
+}
+
+.download-btn {
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+  background: #d44e13;
+  transform: scale(1.05);
+}
+
+.filter-btn {
+  transition: background 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: #f57c2a;
+}
+
