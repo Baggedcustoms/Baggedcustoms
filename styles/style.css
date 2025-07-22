@@ -125,3 +125,29 @@ footer {
     color: #666;
     border-top: 1px solid #333;
 }
+* Tweak banner display */
+.banner-header {
+    background-color: #111; /* Blend in with site background */
+    padding: 0;
+    border: none;
+}
+
+.banner-header img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Optional: Rounded buttons */
+.download-button {
+    border: none;
+    border-radius: 10px;
+}
+
+/* Optional: Tweak filter bar spacing */
+.category-filter {
+    margin-top: 0;
+    padding-top: 1rem;
+    border-top: 2px solid #6a3b24;
+}
