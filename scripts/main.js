@@ -1,72 +1,54 @@
-let mods = [];
-let featuredIndex = 0;
+let allMods = [];
 
-fetch('mods.json')
-  .then(response => response.json())
-  .then(data => {
-    mods = data;
-    populateRecentMods();
-    cycleFeaturedMod();
-    setInterval(cycleFeaturedMod, 5000);
-  });
-
-function populateRecentMods() {
-  const recentMods = mods.slice(0, 16);
-  const grid = document.getElementById('modGrid');
-  grid.innerHTML = '';
-
-  recentMods.forEach(mod => {
-    const card = document.createElement('div');
-    card.className = 'mod-card';
-    card.innerHTML = `
-      <img src="${mod.image}" alt="${mod.name}">
-      <h3>${mod.name}</h3>
-      <p>Category: ${mod.category}</p>
-      <a href="${mod.link}" target="_blank">
-        <button class="download-btn">Download</button>
-      </a>
-    `;
-    grid.appendChild(card);
-  });
+function loadMods() {
+  fetch('mods.json')
+    .then(response => response.json())
+    .then(data => {
+      allMods = data;
+      displayFeatured(data);
+      displayMods(data);
+    });
 }
 
-function cycleFeaturedMod() {
-  const featuredMods = mods.filter(m => m.tags?.includes("featured"));
-  if (featuredMods.length === 0) return;
-
-  const mod = featuredMods[featuredIndex % featuredMods.length];
-  featuredIndex++;
-
+function displayFeatured(mods) {
+  const featured = mods.filter(mod => mod.featured);
   const container = document.getElementById('featuredMod');
+  if (featured.length === 0) {
+    container.innerHTML = "<p>No featured mods found.</p>";
+    return;
+  }
+
+  const mod = featured[0]; // Just show the first one
   container.innerHTML = `
-    <img src="${mod.image}" alt="${mod.name}">
-    <h3>${mod.name}</h3>
+    <img src="${mod.image}" alt="${mod.title}" />
+    <h3>${mod.title}</h3>
     <p>Category: ${mod.category}</p>
-    <a href="${mod.link}" target="_blank">
-      <button class="download-btn">Download</button>
-    </a>
+    <a class="download" href="${mod.download}" target="_blank">Download</a>
   `;
 }
 
-function filterMods(category) {
-  const filtered = category === 'all'
-    ? mods
-    : mods.filter(m => m.category === category);
-
-  const grid = document.getElementById('modGrid');
-  grid.innerHTML = '';
-
-  filtered.slice(0, 16).forEach(mod => {
-    const card = document.createElement('div');
-    card.className = 'mod-card';
-    card.innerHTML = `
-      <img src="${mod.image}" alt="${mod.name}">
-      <h3>${mod.name}</h3>
-      <p>Category: ${mod.category}</p>
-      <a href="${mod.link}" target="_blank">
-        <button class="download-btn">Download</button>
-      </a>
+function displayMods(mods) {
+  const container = document.getElementById('modGrid');
+  container.innerHTML = "";
+  mods.forEach(mod => {
+    container.innerHTML += `
+      <div class="mod-card">
+        <img src="${mod.image}" alt="${mod.title}" />
+        <h3>${mod.title}</h3>
+        <p>Category: ${mod.category}</p>
+        <a class="download" href="${mod.download}" target="_blank">Download</a>
+      </div>
     `;
-    grid.appendChild(card);
   });
 }
+
+function filterMods(category) {
+  if (category === 'all') {
+    displayMods(allMods);
+  } else {
+    const filtered = allMods.filter(mod => mod.category === category);
+    displayMods(filtered);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", loadMods);
