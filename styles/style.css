@@ -140,3 +140,16 @@ footer {
   color: #888;
   font-size: 12px;
 }
+/* Hover effect for mod cards */
+.mod-card:hover {
+  border: 2px solid #e0611f;
+  transform: scale(1.02);
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+
+/* Hover effect for download buttons */
+.download-button:hover {
+  background-color: #e0611f;
+  color: #fff;
+  transition: background-color 0.2s ease;
+}
