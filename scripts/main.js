@@ -1,7 +1,7 @@
 let mods = [];
 
 // Fetch JSON data
-fetch('/mods.json')
+fetch('mods.json')
   .then(res => res.json())
   .then(data => {
     mods = data;
