@@ -3,37 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BaggedCustoms</title>
-  <link rel="stylesheet" href="styles/style.css"/>
+  <title>BaggedCustoms Mod Catalog</title>
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
-  <header>
-    <img src="images/banner.webp" alt="BaggedCustoms Logo" class="logo"/>
-    <h1>BaggedCustoms</h1>
-    <div class="filter-buttons">
-      <button onclick="filterMods('all')">All</button>
-      <button onclick="filterMods('Real Life Builds')">Real Life Builds</button>
-      <button onclick="filterMods('Slammed Builds')">Slammed Builds</button>
-    </div>
+  <header class="banner">
+    <img src="images/banner.webp" alt="BaggedCustoms Logo" class="banner-img" />
   </header>
 
-  <main>
-    <section class="featured-section">
-      <h2>Featured Mods</h2>
-      <div class="featured-wrapper">
-        <div class="featured-main" id="featuredMain"></div>
-        <div class="featured-side" id="featuredSide"></div>
-      </div>
-    </section>
+  <div class="filter-buttons">
+    <button onclick="filterMods('all')" class="active">All</button>
+    <button onclick="filterMods('Real Life Builds')">Real Life Builds</button>
+    <button onclick="filterMods('Slammed Builds')">Slammed Builds</button>
+  </div>
 
-    <section>
-      <h2>Recent Mods</h2>
-      <div class="mod-grid" id="modGrid"></div>
-    </section>
-  </main>
+  <h2 class="section-title">Featured Mods</h2>
+  <section class="featured-wrapper">
+    <div class="featured-main" id="featured-main">
+      <!-- JS-populated big featured -->
+    </div>
+    <div class="featured-side" id="featured-side">
+      <!-- JS-populated 2 small featured -->
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 BaggedCustoms. All rights reserved.</p>
+  <h2 class="section-title">Recent Mods</h2>
+  <div class="mod-grid" id="modGrid">
+    <!-- JS populates recent 8 -->
+  </div>
+
+  <footer class="footer">
+    © 2025 BaggedCustoms. All rights reserved.
   </footer>
 
   <script src="scripts/main.js"></script>
