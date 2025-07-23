@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BaggedCustoms Mod Catalog</title>
-  <link rel="stylesheet" href="styles/style.css" />
+  <title>BaggedCustoms</title>
+  <link rel="stylesheet" href="styles/style.css"/>
 </head>
 <body>
   <header>
-    <img src="images/banner.webp" alt="BaggedCustoms Logo" class="logo" />
+    <img src="images/logo.webp" alt="BaggedCustoms Logo" class="logo"/>
     <h1>BaggedCustoms</h1>
-    <div class="filters">
+    <div class="filter-buttons">
       <button onclick="filterMods('all')">All</button>
       <button onclick="filterMods('Real Life Builds')">Real Life Builds</button>
       <button onclick="filterMods('Slammed Builds')">Slammed Builds</button>
@@ -20,20 +20,20 @@
   <main>
     <section class="featured-section">
       <h2>Featured Mods</h2>
-      <div class="featured-container">
-        <div id="main-featured" class="featured-main"></div>
-        <div class="featured-side" id="featured-side"></div>
+      <div class="featured-wrapper">
+        <div class="featured-main" id="featuredMain"></div>
+        <div class="featured-side" id="featuredSide"></div>
       </div>
     </section>
 
     <section>
       <h2>Recent Mods</h2>
-      <div id="mod-grid" class="mod-grid"></div>
+      <div class="mod-grid" id="modGrid"></div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 BaggedCustoms. All rights reserved.</p>
+    <p>&copy; 2025 BaggedCustoms. All rights reserved.</p>
   </footer>
 
   <script src="scripts/main.js"></script>
