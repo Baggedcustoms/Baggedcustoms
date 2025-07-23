@@ -181,3 +181,15 @@ a {
   margin-top: 3rem;
   padding-bottom: 1rem;
 }
+.featured-small-card:hover {
+  background-color: #2a2a2a;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.featured-main:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
