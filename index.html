@@ -8,9 +8,9 @@
 </head>
 <body>
   <header>
-    <img src="images/banner.webp" alt="BaggedCustoms Logo" class="logo-full" />
-    <div class="filter-buttons">
-      <button onclick="filterMods('all')">All</button>
+    <img src="images/banner.webp" alt="BaggedCustoms Logo" class="logo"/>
+    <div class="filters">
+      <button onclick="filterMods('All')">All</button>
       <button onclick="filterMods('Real Life Builds')">Real Life Builds</button>
       <button onclick="filterMods('Slammed Builds')">Slammed Builds</button>
     </div>
@@ -19,7 +19,7 @@
   <main>
     <section class="featured">
       <h2>Featured Mods</h2>
-      <div id="featuredMod" class="featured-large"></div>
+      <div class="featured-mod" id="featuredMod"></div>
     </section>
 
     <section class="recent">
