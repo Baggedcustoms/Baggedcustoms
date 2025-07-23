@@ -1,40 +1,39 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   background-color: #111;
   color: #fff;
 }
 
 header {
-  background-color: #772900;
-  padding: 20px;
+  background-color: #7c2800;
+  padding: 30px 0 10px;
   text-align: center;
 }
 
-.banner-img {
-  max-height: 100px;
-  margin-bottom: 10px;
+header img {
+  width: 100px;
+  height: auto;
 }
 
 h1 {
-  margin: 0;
-  font-size: 28px;
+  margin: 10px 0;
 }
 
 .filter-buttons {
+  text-align: center;
   margin-top: 10px;
 }
 
 .filter-buttons button {
   background-color: #e0611f;
-  color: #fff;
+  color: white;
   border: none;
-  padding: 8px 12px;
-  margin: 4px;
-  cursor: pointer;
+  padding: 8px 16px;
+  margin: 5px;
   border-radius: 20px;
-  font-weight: bold;
-  transition: background 0.3s;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .filter-buttons button:hover {
@@ -44,86 +43,89 @@ h1 {
 .section-title {
   text-align: center;
   margin: 40px 0 20px;
-  font-size: 24px;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .featured-container {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 40px;
   flex-wrap: wrap;
+  margin: 0 auto 30px;
+  max-width: 1300px;
 }
 
-#featured-main {
-  flex: 1 1 60%;
+.featured-large {
+  flex: 1 1 55%;
+  min-width: 300px;
   max-width: 600px;
 }
 
-#featured-side {
+.featured-small-grid {
   display: flex;
   flex-direction: column;
-  flex: 1 1 30%;
-  gap: 10px;
-}
-
-.mod-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 0 20px;
+  gap: 15px;
+  flex: 1 1 40%;
+  min-width: 250px;
 }
 
 .mod-card {
-  background-color: #1c1c1c;
-  border-radius: 10px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
   padding: 10px;
   text-align: center;
-  width: 200px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.5);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .mod-card:hover {
+  transform: translateY(-3px);
   box-shadow: 0 0 15px #e0611f;
-  transform: translateY(-4px);
 }
 
 .mod-card img {
-  width: 100%;
-  border-radius: 6px;
+  max-width: 100%;
+  border-radius: 5px;
 }
 
-.mod-title {
-  font-weight: bold;
-  margin: 10px 0 4px;
+.mod-card h3 {
+  margin: 10px 0 5px;
+  font-size: 0.95em;
 }
 
-.mod-category {
-  font-size: 0.85em;
+.mod-card p {
+  font-size: 0.8em;
   color: #ccc;
-  margin-bottom: 8px;
 }
 
 .download-btn {
+  margin-top: 8px;
   display: inline-block;
   background-color: #e0611f;
-  color: #fff;
+  color: white;
   padding: 6px 12px;
   border-radius: 5px;
   text-decoration: none;
-  font-size: 0.9em;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .download-btn:hover {
   background-color: #c9501d;
 }
 
+.recent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+  max-width: 1300px;
+  margin: 0 auto 40px;
+}
+
 footer {
   text-align: center;
   padding: 20px;
-  font-size: 0.85em;
+  font-size: 0.8em;
   color: #aaa;
 }
