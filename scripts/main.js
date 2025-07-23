@@ -1,88 +1,77 @@
-let mods = [];
+let allMods = [];
+let featuredIndex = 0;
+let featuredMods = [];
 
-function fetchMods() {
-  fetch("mods.json")
-    .then(response => response.json())
-    .then(data => {
-      mods = data;
-      renderFeatured();
-      renderRecent();
-    })
-    .catch(err => {
-      console.error("Failed to load mods.json:", err);
-    });
+async function loadMods() {
+  const res = await fetch('mods.json');
+  allMods = await res.json();
+
+  featuredMods = allMods.filter(mod => mod.featured);
+  populateFeatured();
+  populateMods(allMods);
 }
 
-function renderFeatured() {
-  const mainSpot = document.getElementById("featured-main");
-  const sideSpots = document.getElementById("featured-side");
-  const featuredMods = mods.filter(mod => mod.featured);
+function populateFeatured() {
+  const main = document.getElementById('main-featured');
+  const side = document.getElementById('featured-side');
+  if (!featuredMods.length) return;
 
-  if (featuredMods.length === 0) return;
+  const currentMain = featuredMods[featuredIndex];
+  const sideMods = featuredMods.filter((_, i) => i !== featuredIndex).slice(0, 4);
 
-  // Display first featured in main, others on side
-  let currentIndex = 0;
-  function showMain(index) {
-    const mod = featuredMods[index];
-    mainSpot.innerHTML = `
-      <div class="mod-card featured-main-card">
-        <img src="${mod.image}" alt="${mod.title}">
-        <div class="mod-title">${mod.title}</div>
-        <div class="mod-category">Category: ${mod.category}</div>
-        <a class="download-btn" href="${mod.download}" target="_blank">Download</a>
-      </div>
-    `;
-  }
+  main.innerHTML = createFeaturedCard(currentMain);
+  side.innerHTML = sideMods.map(createSideCard).join('');
 
-  function showSideMods() {
-    sideSpots.innerHTML = "";
-    featuredMods.forEach((mod, idx) => {
-      if (idx === currentIndex) return; // skip the one already in spotlight
-      const card = document.createElement("div");
-      card.className = "mod-card featured-side-card";
-      card.innerHTML = `
-        <img src="${mod.image}" alt="${mod.title}">
-        <div class="mod-title">${mod.title}</div>
-        <div class="mod-category">${mod.category}</div>
-      `;
-      card.addEventListener("click", () => {
-        currentIndex = idx;
-        showMain(currentIndex);
-        showSideMods();
-      });
-      sideSpots.appendChild(card);
-    });
-  }
-
-  showMain(currentIndex);
-  showSideMods();
-
-  // Cycle automatically every 6 seconds
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % featuredMods.length;
-    showMain(currentIndex);
-    showSideMods();
-  }, 6000);
+  featuredIndex = (featuredIndex + 1) % featuredMods.length;
+  setTimeout(populateFeatured, 6000);
 }
 
-function renderRecent() {
-  const grid = document.getElementById("modGrid");
-  grid.innerHTML = "";
-
-  const recentMods = mods.slice(0, 8); // Show only 8 recent mods
-
-  recentMods.forEach(mod => {
-    const card = document.createElement("div");
-    card.className = "mod-card";
-    card.innerHTML = `
+function createFeaturedCard(mod) {
+  return `
+    <div class="featured-card">
       <img src="${mod.image}" alt="${mod.title}">
-      <div class="mod-title">${mod.title}</div>
-      <div class="mod-category">Category: ${mod.category}</div>
-      <a class="download-btn" href="${mod.download}" target="_blank">Download</a>
-    `;
-    grid.appendChild(card);
-  });
+      <div class="info">
+        <h3>${mod.title}</h3>
+        <p>Category: ${mod.category}</p>
+        <a href="${mod.download}" target="_blank">Download</a>
+      </div>
+    </div>
+  `;
 }
 
-// Load on page load
-window.onload = fetchMods;
+function createSideCard(mod) {
+  return `
+    <div class="featured-card">
+      <img src="${mod.image}" alt="${mod.title}">
+      <div class="info">
+        <h3>${mod.title}</h3>
+        <p>${mod.category}</p>
+        <a href="${mod.download}" target="_blank">Download</a>
+      </div>
+    </div>
+  `;
+}
+
+function populateMods(mods) {
+  const container = document.getElementById('mod-grid');
+  container.innerHTML = mods.map(mod => `
+    <div class="mod-card">
+      <img src="${mod.image}" alt="${mod.title}">
+      <div class="info">
+        <h3>${mod.title}</h3>
+        <p>Category: ${mod.category}</p>
+        <a href="${mod.download}" target="_blank">Download</a>
+      </div>
+    </div>
+  `).join('');
+}
+
+function filterMods(category) {
+  if (category === 'all') {
+    populateMods(allMods);
+  } else {
+    populateMods(allMods.filter(mod => mod.category === category));
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadMods);
