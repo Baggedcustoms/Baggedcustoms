@@ -1,3 +1,4 @@
+/* General Page Styling */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -6,16 +7,25 @@ body {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Banner */
 .banner {
   background-color: #7a2f0f;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .banner-img {
-  max-width: 300px;
+  max-width: 100%;
   height: auto;
+  max-height: 180px;
+  object-fit: contain;
 }
 
+/* Filter Buttons */
 .filter-buttons {
   margin: 1rem 0;
 }
@@ -32,16 +42,25 @@ body {
   transition: background-color 0.2s;
 }
 
-.filter-buttons button:hover {
+.filter-buttons button:hover,
+.filter-buttons button.active {
   background-color: #e0611f;
 }
 
+/* Section Title */
+.section-title {
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem;
+  color: #fff;
+}
+
+/* Featured Mods */
 .featured-wrapper {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 2rem 1rem 1rem;
+  padding: 0 1rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -59,6 +78,19 @@ body {
   border-radius: 6px;
 }
 
+.featured-main .mod-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0.3rem;
+  color: #fff;
+}
+
+.featured-main .mod-category {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-bottom: 0.5rem;
+}
+
 .featured-side {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -70,16 +102,18 @@ body {
   background-color: #1e1e1e;
   padding: 1rem;
   border-radius: 10px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #ccc;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.02);
+  transition: transform 0.2s ease;
 }
 
-.section-title {
-  font-size: 1.8rem;
-  margin: 2rem 0 1rem;
-  color: #fff;
+.featured-small-card:hover {
+  transform: scale(1.03);
 }
 
+/* Mod Grid */
 .mod-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -89,6 +123,7 @@ body {
   margin: 0 auto;
 }
 
+/* Mod Cards */
 .mod-card {
   background-color: #1e1e1e;
   border-radius: 10px;
@@ -122,6 +157,7 @@ body {
   color: #bbb;
 }
 
+/* Download Button */
 .download-btn {
   margin-top: 0.5rem;
   background-color: #c9501d;
@@ -130,12 +166,15 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 6px;
   cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.2s ease;
 }
 
 .download-btn:hover {
   background-color: #e0611f;
 }
 
+/* Footer */
 .footer {
   font-size: 0.8rem;
   color: #666;
