@@ -1,47 +1,6 @@
-const mods = [
-  {
-    title: "MonsterMax II Remastered [FIVEM]",
-    category: "Real Life Builds",
-    image: "images/monstermax.png"
-  },
-  {
-    title: "Bagged Silverado",
-    category: "Slammed Builds",
-    image: "images/monstermax.png"
-  },
-  {
-    title: "Bagged Dually 3500",
-    category: "Real Life Builds",
-    image: "images/monstermax.png"
-  },
-  {
-    title: "Bagged Ram SRT10",
-    category: "Slammed Builds",
-    image: "images/monstermax.png"
-  },
-  {
-    title: "Squarebody Slammed",
-    category: "Slammed Builds",
-    image: "images/monstermax.png"
-  },
-  {
-    title: "Bagged Tahoe",
-    category: "Slammed Builds",
-    image: "images/monstermax.png"
-  },
-  {
-    title: "OBS Slammed",
-    category: "Slammed Builds",
-    image: "images/monstermax.png"
-  },
-  {
-    title: "Slammed Suburban",
-    category: "Slammed Builds",
-    image: "images/monstermax.png"
-  }
-];
+let mods = [];
 
-function filterMods(category) {
+function renderMods(category = 'all') {
   const grid = document.getElementById("modGrid");
   grid.innerHTML = "";
 
@@ -50,14 +9,64 @@ function filterMods(category) {
     const card = document.createElement("div");
     card.className = "mod-card";
     card.innerHTML = `
-      <img src="${mod.image}" alt="${mod.title}">
+      <img src="${mod.image}" alt="${mod.title}" />
       <div class="mod-title">${mod.title}</div>
       <div class="mod-category">Category: ${mod.category}</div>
-      <button class="download-btn">Download</button>
+      <a class="download-btn" href="${mod.download}" target="_blank">Download</a>
     `;
     grid.appendChild(card);
   });
 }
 
-// Load all by default
-window.onload = () => filterMods("all");
+function renderFeatured() {
+  const wrapper = document.getElementById("featuredMods");
+  wrapper.innerHTML = "";
+
+  const featured = mods.filter(mod => mod.featured);
+  if (featured.length === 0) return;
+
+  const main = featured[0];
+  const side = featured.slice(1, 5); // Show up to 4 in side
+
+  const mainHTML = `
+    <div class="featured-main">
+      <img src="${main.image}" alt="${main.title}" />
+      <div class="mod-title">${main.title}</div>
+      <div class="mod-category">Category: ${main.category}</div>
+      <a class="download-btn" href="${main.download}" target="_blank">Download</a>
+    </div>
+  `;
+
+  const sideHTML = `
+    <div class="featured-side">
+      ${side.map(mod => `
+        <div class="featured-small-card">
+          <strong>${mod.title}</strong><br/>
+          <small>${mod.category}</small>
+        </div>
+      `).join('')}
+    </div>
+  `;
+
+  wrapper.innerHTML = mainHTML + sideHTML;
+}
+
+function setupFilters() {
+  document.querySelectorAll(".filter-buttons button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".filter-buttons button").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      const category = btn.getAttribute("data-category");
+      renderMods(category);
+    });
+  });
+}
+
+fetch("mods.json")
+  .then(res => res.json())
+  .then(data => {
+    mods = data;
+    renderMods("all");
+    renderFeatured();
+    setupFilters();
+  });
