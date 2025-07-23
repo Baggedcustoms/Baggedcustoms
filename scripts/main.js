@@ -1,35 +1,40 @@
 let allMods = [];
+let featuredMods = [];
+let featuredIndex = 0;
 
 function loadMods() {
   fetch('mods.json')
     .then(response => response.json())
     .then(data => {
       allMods = data;
-      displayFeatured(data);
+      featuredMods = data.filter(mod => mod.featured);
+      displayFeatured(); // Start rotating
       displayMods(data);
     });
 }
 
-function displayFeatured(mods) {
-  const featured = mods.filter(mod => mod.featured);
-  const container = document.getElementById('featuredMod');
-  if (featured.length === 0) {
-    container.innerHTML = "<p>No featured mods found.</p>";
-    return;
-  }
+function displayFeatured() {
+  if (featuredMods.length === 0) return;
 
-  const mod = featured[0]; // Just show the first one
+  const mod = featuredMods[featuredIndex];
+  const container = document.getElementById('featuredMod');
+
   container.innerHTML = `
     <img src="${mod.image}" alt="${mod.title}" />
     <h3>${mod.title}</h3>
     <p>Category: ${mod.category}</p>
     <a class="download" href="${mod.download}" target="_blank">Download</a>
   `;
+
+  // Move to next after 5s
+  featuredIndex = (featuredIndex + 1) % featuredMods.length;
+  setTimeout(displayFeatured, 5000);
 }
 
 function displayMods(mods) {
   const container = document.getElementById('modGrid');
   container.innerHTML = "";
+
   mods.forEach(mod => {
     container.innerHTML += `
       <div class="mod-card">
