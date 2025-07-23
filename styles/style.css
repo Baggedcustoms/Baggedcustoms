@@ -1,3 +1,4 @@
+/* General Reset and Layout */
 body {
     background-color: #111;
     color: #fff;
@@ -23,6 +24,7 @@ h1 {
     font-size: 24px;
 }
 
+/* Filter Buttons */
 .filter-buttons {
     margin: 10px 0;
 }
@@ -42,11 +44,7 @@ h1 {
     background-color: #e0611f;
 }
 
-section {
-    padding: 30px 10px;
-    text-align: center;
-}
-
+/* Featured Mods Layout */
 #featured-container {
     display: flex;
     justify-content: center;
@@ -56,11 +54,11 @@ section {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    align-items: flex-start;
 }
 
 .featured-main {
-    flex: 2 1 600px;
-    max-width: 640px;
+    flex: 0 0 640px;
     background-color: #222;
     padding: 15px;
     border-radius: 10px;
@@ -99,7 +97,7 @@ section {
 }
 
 .featured-side {
-    flex: 1 1 280px;
+    flex: 0 0 280px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -111,6 +109,7 @@ section {
     overflow: hidden;
     text-align: center;
     transition: transform 0.3s ease;
+    max-width: 280px;
 }
 
 .featured-card:hover {
@@ -147,6 +146,7 @@ section {
     background-color: #e0611f;
 }
 
+/* Mod Grid Below */
 #mod-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -198,6 +198,7 @@ section {
     background-color: #e0611f;
 }
 
+/* Footer */
 footer {
     padding: 20px;
     font-size: 0.8em;
