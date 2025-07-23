@@ -1,169 +1,161 @@
-/* General Layout */
 body {
-  background-color: #111;
-  color: white;
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: #8b2e00;
-  padding: 1em 0 0.5em;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #101010;
+  color: #fff;
   text-align: center;
 }
 
-.logo {
-  max-height: 50px;
-  margin-bottom: 0.3em;
+.banner {
+  background-color: #7a2f0f;
+  padding: 1rem 0;
+}
+
+.banner-img {
+  max-width: 150px;
+  height: auto;
 }
 
 .filter-buttons {
-  margin-top: 0.5em;
+  margin: 1rem 0;
 }
 
 .filter-buttons button {
-  background-color: #c9501d;
+  margin: 0 0.4rem;
+  padding: 0.5rem 1rem;
   border: none;
-  border-radius: 16px;
-  margin: 0 0.25em;
-  padding: 0.4em 1em;
-  color: white;
+  background-color: #c9501d;
+  color: #fff;
+  border-radius: 20px;
   cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
 }
 
+.filter-buttons button.active,
 .filter-buttons button:hover {
   background-color: #e0611f;
 }
 
-/* Main Layout */
-main {
-  padding: 1.5em 1em;
+.section-title {
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem;
+  color: #fff;
+}
+
+.featured-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0 1rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 1em;
-}
-
-/* Featured Layout */
-.featured-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1em;
-}
-
 .featured-main {
-  flex: 2 1 600px;
-  max-width: 700px;
+  background-color: #1e1e1e;
+  padding: 0.5rem;
   border-radius: 10px;
-  overflow: hidden;
-  background-color: #222;
-  padding: 1em;
+  box-shadow: 0 0 20px rgba(255,255,255,0.05);
+  flex: 2 1 0;
 }
 
 .featured-main img {
   width: 100%;
-  border-radius: 8px;
-  display: block;
-}
-
-.featured-main h3,
-.featured-main p {
-  margin: 0.5em 0;
-  text-align: center;
-}
-
-.featured-main button {
-  display: block;
-  margin: 0.5em auto;
-  background-color: #c9501d;
-  color: white;
-  border: none;
-  padding: 0.5em 1em;
-  cursor: pointer;
+  height: 300px;
+  object-fit: cover;
   border-radius: 6px;
-}
-
-.featured-main button:hover {
-  background-color: #e0611f;
 }
 
 .featured-side {
-  flex: 1 1 200px;
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
-  justify-content: flex-start;
+  gap: 1rem;
+  flex: 1 1 0;
 }
 
-.featured-side img {
+.featured-small-card {
+  background-color: #1e1e1e;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+
+.featured-small-card img {
   width: 100%;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+  height: 100px;
+  object-fit: cover;
 }
 
-.featured-side img:hover {
-  transform: scale(1.02);
+.featured-small-card .info {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #bbb;
 }
 
-/* Mod Cards */
 .mod-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.2rem;
+  padding: 0 1rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .mod-card {
-  background-color: #1a1a1a;
+  background-color: #1e1e1e;
   border-radius: 10px;
-  padding: 0.5em;
-  text-align: center;
-  transition: transform 0.2s ease-in-out;
-}
-
-.mod-card img {
-  width: 100%;
-  border-radius: 6px;
+  overflow: hidden;
+  padding: 0.3rem;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .mod-card:hover {
   transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(255,255,255,0.1);
 }
 
-.mod-card h3 {
-  font-size: 1em;
-  margin: 0.5em 0 0.2em;
+.mod-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
-.mod-card p {
-  font-size: 0.9em;
-  margin: 0;
-  color: #ccc;
+.mod-card .mod-title {
+  font-weight: bold;
+  margin: 0.5rem 0 0.3rem;
+  font-size: 0.95rem;
+  color: #fff;
 }
 
-.mod-card button {
-  margin-top: 0.5em;
+.mod-card .mod-category {
+  font-size: 0.8rem;
+  color: #bbb;
+}
+
+.download-btn {
+  margin-top: 0.5rem;
   background-color: #c9501d;
   border: none;
-  color: white;
-  padding: 0.4em 0.8em;
-  border-radius: 5px;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
 }
 
-.mod-card button:hover {
+.download-btn:hover {
   background-color: #e0611f;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  font-size: 0.8em;
-  padding: 2em 0;
-  color: #999;
+.footer {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
 }
