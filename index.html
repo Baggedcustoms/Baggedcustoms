@@ -11,26 +11,25 @@
     <img src="images/banner.webp" alt="BaggedCustoms Banner" class="banner-img" />
   </header>
 
-  <nav class="filter-buttons">
-    <button data-category="all" class="active">All</button>
-    <button data-category="Real Life Builds">Real Life Builds</button>
-    <button data-category="Slammed Builds">Slammed Builds</button>
-  </nav>
+  <div class="filter-buttons">
+    <button onclick="filterMods('all')">All</button>
+    <button onclick="filterMods('Real Life Builds')">Real Life Builds</button>
+    <button onclick="filterMods('Slammed Builds')">Slammed Builds</button>
+  </div>
 
   <h2 class="section-title">Featured Mods</h2>
-  <section class="featured-wrapper" id="featuredMods">
-    <!-- Featured mods dynamically injected here -->
+  <section class="featured-wrapper">
+    <div class="featured-main" id="featuredMain"></div>
+    <div class="featured-side" id="featuredSide"></div>
   </section>
 
   <h2 class="section-title">Recent Mods</h2>
-  <div class="mod-grid" id="modGrid">
-    <!-- Mod cards dynamically injected here -->
-  </div>
+  <div class="mod-grid" id="modGrid"></div>
 
   <footer class="footer">
     © 2025 BaggedCustoms. All rights reserved.
   </footer>
 
-  <script src="scripts/main.js"></script>
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>
