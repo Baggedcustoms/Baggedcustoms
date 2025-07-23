@@ -11,36 +11,26 @@
     <img src="images/banner.webp" alt="BaggedCustoms Banner" class="banner-img" />
   </header>
 
-  <div class="filter-buttons">
-    <button onclick="filterMods('all')">All</button>
-    <button onclick="filterMods('Real Life Builds')">Real Life Builds</button>
-    <button onclick="filterMods('Slammed Builds')">Slammed Builds</button>
-  </div>
+  <nav class="filter-buttons">
+    <button data-category="all" class="active">All</button>
+    <button data-category="Real Life Builds">Real Life Builds</button>
+    <button data-category="Slammed Builds">Slammed Builds</button>
+  </nav>
 
-  <section class="featured-wrapper">
-    <div class="featured-main">
-      <img src="images/monstermax.png" alt="MonsterMax II Remastered" />
-      <div class="mod-title">MonsterMax II Remastered</div>
-      <div class="mod-category">Category: Real Life Builds</div>
-      <button class="download-btn">Download</button>
-    </div>
-    <div class="featured-side">
-      <div class="featured-small-card">🛈 Featured Mod<br/>Bagged Silverado</div>
-      <div class="featured-small-card">🛈 Featured Mod<br/>Bagged Dually 3500</div>
-      <div class="featured-small-card">🛈 Featured Mod<br/>Bagged Ram SRT10</div>
-      <div class="featured-small-card">🛈 Featured Mod<br/>Squarebody Slammed</div>
-    </div>
+  <h2 class="section-title">Featured Mods</h2>
+  <section class="featured-wrapper" id="featuredMods">
+    <!-- Featured mods dynamically injected here -->
   </section>
 
   <h2 class="section-title">Recent Mods</h2>
   <div class="mod-grid" id="modGrid">
-    <!-- JS populates this -->
+    <!-- Mod cards dynamically injected here -->
   </div>
 
   <footer class="footer">
     © 2025 BaggedCustoms. All rights reserved.
   </footer>
 
-  <script src="scripts/scripts.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
