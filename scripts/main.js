@@ -1,19 +1,58 @@
 let mods = [];
-let featuredMods = [];
-let currentFeaturedIndex = 0;
 
-// Fetch mods.json
 fetch('mods.json')
-  .then(response => response.json())
+  .then(res => res.json())
   .then(data => {
     mods = data;
-    featuredMods = mods.slice(0, 5); // First 5 as featured
+    showFeatured();
     filterMods("all");
-    setupFeaturedRotation();
-  })
-  .catch(err => console.error("Failed to load mods.json:", err));
+  });
 
-// Filter logic
+function showFeatured() {
+  const main = document.getElementById("featuredMain");
+  const side = document.getElementById("featuredSide");
+
+  const top5 = mods.slice(0, 5);
+  let currentIndex = 0;
+
+  function renderMain(index) {
+    const mod = top5[index];
+    main.innerHTML = `
+      <img src="${mod.image}" alt="${mod.title}" />
+      <div class="mod-title">${mod.title}</div>
+      <div class="mod-category">Category: ${mod.category}</div>
+      <button class="download-btn">Download</button>
+    `;
+  }
+
+  function renderSide() {
+    side.innerHTML = "";
+    top5.forEach((mod, index) => {
+      if (index !== currentIndex) {
+        const div = document.createElement("div");
+        div.className = "featured-small-card";
+        div.innerHTML = `<strong>${mod.title}</strong><br><small>${mod.category}</small>`;
+        div.onclick = () => {
+          currentIndex = index;
+          renderMain(currentIndex);
+          renderSide();
+        };
+        side.appendChild(div);
+      }
+    });
+  }
+
+  renderMain(currentIndex);
+  renderSide();
+
+  // Auto-cycle every 8 seconds
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % top5.length;
+    renderMain(currentIndex);
+    renderSide();
+  }, 8000);
+}
+
 function filterMods(category) {
   const grid = document.getElementById("modGrid");
   grid.innerHTML = "";
@@ -30,50 +69,4 @@ function filterMods(category) {
     `;
     grid.appendChild(card);
   });
-}
-
-// Populate main featured mod
-function populateFeaturedMain(mod) {
-  const featuredMain = document.querySelector(".featured-main");
-  featuredMain.innerHTML = `
-    <img src="${mod.image}" alt="${mod.title}" />
-    <div class="mod-title">${mod.title}</div>
-    <div class="mod-category">Category: ${mod.category}</div>
-    <button class="download-btn">Download</button>
-  `;
-}
-
-// Populate 4 small featured cards
-function populateFeaturedSide(modsSubset) {
-  const sideContainer = document.querySelector(".featured-side");
-  sideContainer.innerHTML = "";
-
-  modsSubset.forEach((mod, index) => {
-    const card = document.createElement("div");
-    card.className = "featured-small-card";
-    card.innerHTML = `
-      <strong>Featured Mod</strong><br>
-      ${mod.title}<br>
-      <small>${mod.category}</small>
-    `;
-    card.onclick = () => {
-      currentFeaturedIndex = mods.indexOf(mod);
-      populateFeaturedMain(mod);
-    };
-    sideContainer.appendChild(card);
-  });
-}
-
-// Rotate featured mods every 10s
-function setupFeaturedRotation() {
-  populateFeaturedMain(featuredMods[0]);
-  populateFeaturedSide(featuredMods.slice(1));
-
-  setInterval(() => {
-    currentFeaturedIndex = (currentFeaturedIndex + 1) % featuredMods.length;
-    const reordered = [...featuredMods];
-    const nextMain = reordered.splice(currentFeaturedIndex, 1)[0];
-    populateFeaturedMain(nextMain);
-    populateFeaturedSide(reordered);
-  }, 10000);
 }
