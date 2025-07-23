@@ -3,7 +3,7 @@ let featuredMods = [];
 let currentFeaturedIndex = 0;
 
 // Fetch mods.json
-fetch('data/mods.json')
+fetch('mods.json')
   .then(response => response.json())
   .then(data => {
     mods = data;
