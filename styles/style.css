@@ -158,3 +158,20 @@ footer {
   color: #fff;
   transition: background-color 0.2s ease;
 }
+
+.filter-link {
+  background-color: #c9501d;
+  color: white;
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.filter-link:hover {
+  background-color: #e0611f;
+}
