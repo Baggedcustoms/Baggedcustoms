@@ -16,10 +16,10 @@ function displayFeatured() {
   function renderFeatured() {
     const mod = featured[index];
     featuredContainer.innerHTML = `
-      <img src="${mod.image}" alt="${mod.title}">
-      <div class="title">${mod.title}</div>
+      <img src="${mod.image}" alt="${mod.name}">
+      <div class="title">${mod.name}</div>
       <div class="category">Category: ${mod.category}</div>
-      <a href="${mod.download}" class="download-button" target="_blank">Download</a>
+      <a href="${mod.link}" class="download-button" target="_blank">Download</a>
     `;
 
     index = (index + 1) % featured.length;
@@ -42,10 +42,10 @@ function displayMods(category) {
     card.className = "mod-card";
 
     card.innerHTML = `
-      <img src="${mod.image}" alt="${mod.title}">
-      <div class="title">${mod.title}</div>
+      <img src="${mod.image}" alt="${mod.name}">
+      <div class="title">${mod.name}</div>
       <div class="category">Category: ${mod.category}</div>
-      <a href="${mod.download}" class="download-button" target="_blank">Download</a>
+      <a href="${mod.link}" class="download-button" target="_blank">Download</a>
     `;
 
     grid.appendChild(card);
