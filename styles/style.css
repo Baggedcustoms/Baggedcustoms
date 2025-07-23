@@ -1,140 +1,124 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Arial, sans-serif;
   background-color: #111;
   color: #fff;
 }
 
-.site-header {
-  background-color: #802700;
+header {
+  background-color: #7a2600;
   text-align: center;
-  padding: 20px 10px;
+  padding: 1rem 0 0.5rem;
 }
 
-.logo {
-  max-height: 100px;
-  margin-bottom: 10px;
+.logo-full {
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
 }
 
-.site-header h1 {
-  margin: 0;
-  font-size: 2em;
+.filter-buttons {
+  margin: 10px 0;
 }
 
-.filters {
-  margin-top: 10px;
-}
-
-.filters button {
+.filter-buttons button {
   background-color: #c9501d;
   color: white;
   border: none;
-  padding: 8px 14px;
+  padding: 8px 16px;
   margin: 5px;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.filters button:hover {
+.filter-buttons button:hover {
   background-color: #e0611f;
 }
 
-.featured-section,
-.recent-section {
+h2 {
   text-align: center;
-  margin: 40px auto;
-  max-width: 1200px;
+  margin-top: 2rem;
+  font-size: 1.5rem;
 }
 
-.featured-mod {
-  margin: 20px auto;
-  padding: 10px;
+.featured-large {
+  max-width: 800px;
+  margin: 1rem auto;
+  padding: 1rem;
   background-color: #222;
   border-radius: 10px;
-  max-width: 600px;
+  text-align: center;
 }
 
-.featured-mod img {
+.featured-large img {
   width: 100%;
   border-radius: 10px;
 }
 
-.featured-mod h3 {
-  margin-top: 10px;
+.featured-large h3 {
+  margin: 1rem 0 0.5rem;
 }
 
-.featured-mod p {
-  color: #ccc;
-}
-
-.featured-mod .download-btn {
-  margin-top: 10px;
-  background-color: #c9501d;
-  padding: 6px 12px;
-  border: none;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.featured-mod .download-btn:hover {
-  background-color: #e0611f;
+.featured-large p {
+  margin: 0 0 1rem;
 }
 
 .mod-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .mod-card {
   background-color: #222;
-  padding: 10px;
   border-radius: 10px;
-  width: 180px;
+  overflow: hidden;
   text-align: center;
-  transition: transform 0.2s;
+  transition: transform 0.2s ease;
 }
 
 .mod-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 8px #c9501d;
+  transform: scale(1.03);
+  box-shadow: 0 0 10px #c9501d;
 }
 
 .mod-card img {
   width: 100%;
-  border-radius: 5px;
+  height: 150px;
+  object-fit: cover;
 }
 
 .mod-card h3 {
-  font-size: 1em;
-  margin: 10px 0 5px;
+  font-size: 1rem;
+  margin: 0.5rem 0 0;
 }
 
 .mod-card p {
-  font-size: 0.9em;
-  color: #aaa;
+  font-size: 0.85rem;
+  margin: 0 0 0.5rem;
 }
 
-.mod-card .download-btn {
-  margin-top: 8px;
+.mod-card .download {
   background-color: #c9501d;
-  padding: 5px 10px;
-  border: none;
   color: white;
-  border-radius: 4px;
+  border: none;
+  padding: 6px 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.mod-card .download-btn:hover {
+.mod-card .download:hover {
   background-color: #e0611f;
 }
 
 footer {
   text-align: center;
-  color: #666;
-  padding: 30px 0;
-  font-size: 0.9em;
+  padding: 2rem;
+  font-size: 0.8rem;
+  color: #aaa;
 }
