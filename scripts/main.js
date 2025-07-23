@@ -4,7 +4,7 @@ async function fetchMods() {
   const res = await fetch("mods.json");
   allMods = await res.json();
   displayFeatured();
-  displayMods("All");
+  displayMods();
 }
 
 function displayFeatured() {
@@ -29,13 +29,11 @@ function displayFeatured() {
   setInterval(renderFeatured, 5000); // cycle every 5 seconds
 }
 
-function displayMods(category) {
+function displayMods() {
   const grid = document.getElementById("modGrid");
   grid.innerHTML = "";
 
-  const modsToShow = allMods
-    .filter(mod => category === "All" || mod.category === category)
-    .slice(0, 16);
+  const modsToShow = allMods.slice(0, 16); // Always show 16 most recent
 
   modsToShow.forEach(mod => {
     const card = document.createElement("div");
@@ -50,10 +48,6 @@ function displayMods(category) {
 
     grid.appendChild(card);
   });
-}
-
-function filterMods(category) {
-  displayMods(category);
 }
 
 fetchMods();
