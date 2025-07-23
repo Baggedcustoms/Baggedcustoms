@@ -1,161 +1,140 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #101010;
+  background-color: #111;
   color: #fff;
+}
+
+.site-header {
+  background-color: #802700;
   text-align: center;
+  padding: 20px 10px;
 }
 
-.banner {
-  background-color: #7a2f0f;
-  padding: 1rem 0;
+.logo {
+  max-height: 100px;
+  margin-bottom: 10px;
 }
 
-.banner-img {
-  max-width: 150px;
-  height: auto;
+.site-header h1 {
+  margin: 0;
+  font-size: 2em;
 }
 
-.filter-buttons {
-  margin: 1rem 0;
+.filters {
+  margin-top: 10px;
 }
 
-.filter-buttons button {
-  margin: 0 0.4rem;
-  padding: 0.5rem 1rem;
-  border: none;
+.filters button {
   background-color: #c9501d;
-  color: #fff;
-  border-radius: 20px;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  margin: 5px;
+  border-radius: 5px;
   cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.2s;
+  transition: background-color 0.3s ease;
 }
 
-.filter-buttons button.active,
-.filter-buttons button:hover {
+.filters button:hover {
   background-color: #e0611f;
 }
 
-.section-title {
-  font-size: 1.8rem;
-  margin: 2rem 0 1rem;
-  color: #fff;
-}
-
-.featured-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 0 1rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.featured-main {
-  background-color: #1e1e1e;
-  padding: 0.5rem;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.05);
-  flex: 2 1 0;
-}
-
-.featured-main img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.featured-side {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  flex: 1 1 0;
-}
-
-.featured-small-card {
-  background-color: #1e1e1e;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255,255,255,0.05);
-}
-
-.featured-small-card img {
-  width: 100%;
-  height: 100px;
-  object-fit: cover;
-}
-
-.featured-small-card .info {
-  padding: 0.5rem;
+.featured-section,
+.recent-section {
   text-align: center;
-  font-size: 0.9rem;
-  color: #bbb;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.featured-mod {
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #222;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.featured-mod img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.featured-mod h3 {
+  margin-top: 10px;
+}
+
+.featured-mod p {
+  color: #ccc;
+}
+
+.featured-mod .download-btn {
+  margin-top: 10px;
+  background-color: #c9501d;
+  padding: 6px 12px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.featured-mod .download-btn:hover {
+  background-color: #e0611f;
 }
 
 .mod-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1.2rem;
-  padding: 0 1rem 3rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .mod-card {
-  background-color: #1e1e1e;
+  background-color: #222;
+  padding: 10px;
   border-radius: 10px;
-  overflow: hidden;
-  padding: 0.3rem;
-  box-shadow: 0 0 10px rgba(255,255,255,0.05);
-  transition: transform 0.2s, box-shadow 0.2s;
+  width: 180px;
+  text-align: center;
+  transition: transform 0.2s;
 }
 
 .mod-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 15px rgba(255,255,255,0.1);
+  transform: scale(1.05);
+  box-shadow: 0 0 8px #c9501d;
 }
 
 .mod-card img {
   width: 100%;
-  height: 110px;
-  object-fit: cover;
-  border-radius: 6px;
+  border-radius: 5px;
 }
 
-.mod-card .mod-title {
-  font-weight: bold;
-  margin: 0.5rem 0 0.3rem;
-  font-size: 0.95rem;
-  color: #fff;
+.mod-card h3 {
+  font-size: 1em;
+  margin: 10px 0 5px;
 }
 
-.mod-card .mod-category {
-  font-size: 0.8rem;
-  color: #bbb;
+.mod-card p {
+  font-size: 0.9em;
+  color: #aaa;
 }
 
-.download-btn {
-  margin-top: 0.5rem;
+.mod-card .download-btn {
+  margin-top: 8px;
   background-color: #c9501d;
+  padding: 5px 10px;
   border: none;
-  color: #fff;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
+  color: white;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.2s;
 }
 
-.download-btn:hover {
+.mod-card .download-btn:hover {
   background-color: #e0611f;
 }
 
-.footer {
-  font-size: 0.8rem;
+footer {
+  text-align: center;
   color: #666;
-  margin-top: 2rem;
-  padding-bottom: 1rem;
+  padding: 30px 0;
+  font-size: 0.9em;
 }
