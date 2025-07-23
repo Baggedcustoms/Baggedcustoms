@@ -1,58 +1,58 @@
 [
   {
-    "title": "MonsterMax II Remastered [FIVEM]",
+    "name": "MonsterMax II Remastered [FIVEM]",
     "category": "Real Life Builds",
     "image": "images/mmiiwrsmall.webp",
-    "download": "https://www.patreon.com/posts/baggedcustoms-ii-86878023",
+    "link": "https://www.patreon.com/posts/baggedcustoms-ii-86878023",
     "featured": true
   },
   {
-    "title": "Bagged Silverado",
+    "name": "Bagged Silverado",
     "category": "Slammed Builds",
     "image": "images/mmiiwrsmall.webp",
-    "download": "https://www.patreon.com/posts/bagged-silverado-12345678",
+    "link": "https://www.patreon.com/posts/bagged-silverado-12345678",
     "featured": true
   },
   {
-    "title": "Bagged Dually 3500",
+    "name": "Bagged Dually 3500",
     "category": "Real Life Builds",
     "image": "images/mmiiwrsmall.webp",
-    "download": "https://www.patreon.com/posts/bagged-dually-3500",
+    "link": "https://www.patreon.com/posts/bagged-dually-3500",
     "featured": true
   },
   {
-    "title": "Bagged Ram SRT10",
+    "name": "Bagged Ram SRT10",
     "category": "Slammed Builds",
     "image": "images/mmiiwrsmall.webp",
-    "download": "https://www.patreon.com/posts/bagged-ram-srt10",
+    "link": "https://www.patreon.com/posts/bagged-ram-srt10",
     "featured": true
   },
   {
-    "title": "Squarebody Slammed",
+    "name": "Squarebody Slammed",
     "category": "Slammed Builds",
     "image": "images/mmiiwrsmall.webp",
-    "download": "https://www.patreon.com/posts/squarebody-slammed",
+    "link": "https://www.patreon.com/posts/squarebody-slammed",
     "featured": true
   },
   {
-    "title": "OBS Slammed",
+    "name": "OBS Slammed",
     "category": "Slammed Builds",
     "image": "images/mmiiwrsmall.webp",
-    "download": "https://www.patreon.com/posts/obs-slammed",
+    "link": "https://www.patreon.com/posts/obs-slammed",
     "featured": false
   },
   {
-    "title": "Bagged Tahoe",
+    "name": "Bagged Tahoe",
     "category": "Slammed Builds",
     "image": "images/mmiiwrsmall.webp",
-    "download": "https://www.patreon.com/posts/bagged-tahoe",
+    "link": "https://www.patreon.com/posts/bagged-tahoe",
     "featured": false
   },
   {
-    "title": "Slammed Suburban",
+    "name": "Slammed Suburban",
     "category": "Slammed Builds",
     "image": "images/mmiiwrsmall.webp",
-    "download": "https://www.patreon.com/posts/slammed-suburban",
+    "link": "https://www.patreon.com/posts/slammed-suburban",
     "featured": false
   }
 ]
