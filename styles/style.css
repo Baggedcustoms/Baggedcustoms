@@ -7,15 +7,16 @@ body {
 
 header {
   background-color: #802400;
-  padding: 20px;
+  padding: 10px 0 0 0; /* reduce vertical space */
   text-align: center;
 }
 
 .logo {
-  max-height: none;
+  max-height: 180px;
   width: auto;
   height: auto;
   max-width: 100%;
+  margin-bottom: -20px; /* pulls filters closer */
 }
 
 .filters {
