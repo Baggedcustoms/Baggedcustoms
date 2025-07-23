@@ -1,6 +1,20 @@
 let mods = [];
+let featuredMods = [];
+let currentFeaturedIndex = 0;
 
-function renderMods(category = 'all') {
+// Fetch mods.json
+fetch('data/mods.json')
+  .then(response => response.json())
+  .then(data => {
+    mods = data;
+    featuredMods = mods.slice(0, 5); // First 5 as featured
+    filterMods("all");
+    setupFeaturedRotation();
+  })
+  .catch(err => console.error("Failed to load mods.json:", err));
+
+// Filter logic
+function filterMods(category) {
   const grid = document.getElementById("modGrid");
   grid.innerHTML = "";
 
@@ -9,64 +23,57 @@ function renderMods(category = 'all') {
     const card = document.createElement("div");
     card.className = "mod-card";
     card.innerHTML = `
-      <img src="${mod.image}" alt="${mod.title}" />
+      <img src="${mod.image}" alt="${mod.title}">
       <div class="mod-title">${mod.title}</div>
       <div class="mod-category">Category: ${mod.category}</div>
-      <a class="download-btn" href="${mod.download}" target="_blank">Download</a>
+      <button class="download-btn">Download</button>
     `;
     grid.appendChild(card);
   });
 }
 
-function renderFeatured() {
-  const wrapper = document.getElementById("featuredMods");
-  wrapper.innerHTML = "";
-
-  const featured = mods.filter(mod => mod.featured);
-  if (featured.length === 0) return;
-
-  const main = featured[0];
-  const side = featured.slice(1, 5); // Show up to 4 in side
-
-  const mainHTML = `
-    <div class="featured-main">
-      <img src="${main.image}" alt="${main.title}" />
-      <div class="mod-title">${main.title}</div>
-      <div class="mod-category">Category: ${main.category}</div>
-      <a class="download-btn" href="${main.download}" target="_blank">Download</a>
-    </div>
+// Populate main featured mod
+function populateFeaturedMain(mod) {
+  const featuredMain = document.querySelector(".featured-main");
+  featuredMain.innerHTML = `
+    <img src="${mod.image}" alt="${mod.title}" />
+    <div class="mod-title">${mod.title}</div>
+    <div class="mod-category">Category: ${mod.category}</div>
+    <button class="download-btn">Download</button>
   `;
-
-  const sideHTML = `
-    <div class="featured-side">
-      ${side.map(mod => `
-        <div class="featured-small-card">
-          <strong>${mod.title}</strong><br/>
-          <small>${mod.category}</small>
-        </div>
-      `).join('')}
-    </div>
-  `;
-
-  wrapper.innerHTML = mainHTML + sideHTML;
 }
 
-function setupFilters() {
-  document.querySelectorAll(".filter-buttons button").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll(".filter-buttons button").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      const category = btn.getAttribute("data-category");
-      renderMods(category);
-    });
+// Populate 4 small featured cards
+function populateFeaturedSide(modsSubset) {
+  const sideContainer = document.querySelector(".featured-side");
+  sideContainer.innerHTML = "";
+
+  modsSubset.forEach((mod, index) => {
+    const card = document.createElement("div");
+    card.className = "featured-small-card";
+    card.innerHTML = `
+      <strong>Featured Mod</strong><br>
+      ${mod.title}<br>
+      <small>${mod.category}</small>
+    `;
+    card.onclick = () => {
+      currentFeaturedIndex = mods.indexOf(mod);
+      populateFeaturedMain(mod);
+    };
+    sideContainer.appendChild(card);
   });
 }
 
-fetch("mods.json")
-  .then(res => res.json())
-  .then(data => {
-    mods = data;
-    renderMods("all");
-    renderFeatured();
-    setupFilters();
-  });
+// Rotate featured mods every 10s
+function setupFeaturedRotation() {
+  populateFeaturedMain(featuredMods[0]);
+  populateFeaturedSide(featuredMods.slice(1));
+
+  setInterval(() => {
+    currentFeaturedIndex = (currentFeaturedIndex + 1) % featuredMods.length;
+    const reordered = [...featuredMods];
+    const nextMain = reordered.splice(currentFeaturedIndex, 1)[0];
+    populateFeaturedMain(nextMain);
+    populateFeaturedSide(reordered);
+  }, 10000);
+}
