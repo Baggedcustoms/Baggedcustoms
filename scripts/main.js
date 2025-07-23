@@ -1,72 +1,88 @@
 let mods = [];
 
-fetch('mods.json')
-  .then(res => res.json())
-  .then(data => {
-    mods = data;
-    showFeatured();
-    filterMods("all");
-  });
+function fetchMods() {
+  fetch("mods.json")
+    .then(response => response.json())
+    .then(data => {
+      mods = data;
+      renderFeatured();
+      renderRecent();
+    })
+    .catch(err => {
+      console.error("Failed to load mods.json:", err);
+    });
+}
 
-function showFeatured() {
-  const main = document.getElementById("featuredMain");
-  const side = document.getElementById("featuredSide");
+function renderFeatured() {
+  const mainSpot = document.getElementById("featured-main");
+  const sideSpots = document.getElementById("featured-side");
+  const featuredMods = mods.filter(mod => mod.featured);
 
-  const top5 = mods.slice(0, 5);
+  if (featuredMods.length === 0) return;
+
+  // Display first featured in main, others on side
   let currentIndex = 0;
-
-  function renderMain(index) {
-    const mod = top5[index];
-    main.innerHTML = `
-      <img src="${mod.image}" alt="${mod.title}" />
-      <div class="mod-title">${mod.title}</div>
-      <div class="mod-category">Category: ${mod.category}</div>
-      <button class="download-btn">Download</button>
+  function showMain(index) {
+    const mod = featuredMods[index];
+    mainSpot.innerHTML = `
+      <div class="mod-card featured-main-card">
+        <img src="${mod.image}" alt="${mod.title}">
+        <div class="mod-title">${mod.title}</div>
+        <div class="mod-category">Category: ${mod.category}</div>
+        <a class="download-btn" href="${mod.download}" target="_blank">Download</a>
+      </div>
     `;
   }
 
-  function renderSide() {
-    side.innerHTML = "";
-    top5.forEach((mod, index) => {
-      if (index !== currentIndex) {
-        const div = document.createElement("div");
-        div.className = "featured-small-card";
-        div.innerHTML = `<strong>${mod.title}</strong><br><small>${mod.category}</small>`;
-        div.onclick = () => {
-          currentIndex = index;
-          renderMain(currentIndex);
-          renderSide();
-        };
-        side.appendChild(div);
-      }
+  function showSideMods() {
+    sideSpots.innerHTML = "";
+    featuredMods.forEach((mod, idx) => {
+      if (idx === currentIndex) return; // skip the one already in spotlight
+      const card = document.createElement("div");
+      card.className = "mod-card featured-side-card";
+      card.innerHTML = `
+        <img src="${mod.image}" alt="${mod.title}">
+        <div class="mod-title">${mod.title}</div>
+        <div class="mod-category">${mod.category}</div>
+      `;
+      card.addEventListener("click", () => {
+        currentIndex = idx;
+        showMain(currentIndex);
+        showSideMods();
+      });
+      sideSpots.appendChild(card);
     });
   }
 
-  renderMain(currentIndex);
-  renderSide();
+  showMain(currentIndex);
+  showSideMods();
 
-  // Auto-cycle every 8 seconds
+  // Cycle automatically every 6 seconds
   setInterval(() => {
-    currentIndex = (currentIndex + 1) % top5.length;
-    renderMain(currentIndex);
-    renderSide();
-  }, 8000);
+    currentIndex = (currentIndex + 1) % featuredMods.length;
+    showMain(currentIndex);
+    showSideMods();
+  }, 6000);
 }
 
-function filterMods(category) {
+function renderRecent() {
   const grid = document.getElementById("modGrid");
   grid.innerHTML = "";
 
-  const filtered = category === "all" ? mods : mods.filter(mod => mod.category === category);
-  filtered.forEach(mod => {
+  const recentMods = mods.slice(0, 8); // Show only 8 recent mods
+
+  recentMods.forEach(mod => {
     const card = document.createElement("div");
     card.className = "mod-card";
     card.innerHTML = `
       <img src="${mod.image}" alt="${mod.title}">
       <div class="mod-title">${mod.title}</div>
       <div class="mod-category">Category: ${mod.category}</div>
-      <button class="download-btn">Download</button>
+      <a class="download-btn" href="${mod.download}" target="_blank">Download</a>
     `;
     grid.appendChild(card);
   });
 }
+
+// Load on page load
+window.onload = fetchMods;
