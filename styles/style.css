@@ -21,18 +21,16 @@ header {
 
 .filters {
   margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
 }
 
 .filters button {
-  background-color: #c9501d;
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  margin: 0 5px;
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  padding: 6px 12px;
+  font-size: 14px;
+  margin: 4px 4px;
 }
 
 .filters button:hover {
