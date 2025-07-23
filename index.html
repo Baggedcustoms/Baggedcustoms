@@ -7,28 +7,29 @@
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <img src="images/banner.webp" alt="BaggedCustoms Logo" class="logo"/>
-    <h1>BaggedCustoms</h1>
-    <div class="filters">
+  <header>
+    <img src="images/banner.webp" alt="BaggedCustoms Logo" class="logo-full" />
+    <div class="filter-buttons">
       <button onclick="filterMods('all')">All</button>
       <button onclick="filterMods('Real Life Builds')">Real Life Builds</button>
       <button onclick="filterMods('Slammed Builds')">Slammed Builds</button>
     </div>
   </header>
 
-  <section class="featured-section">
-    <h2>Featured Mods</h2>
-    <div id="featuredMod" class="featured-mod"></div>
-  </section>
+  <main>
+    <section class="featured">
+      <h2>Featured Mods</h2>
+      <div id="featuredMod" class="featured-large"></div>
+    </section>
 
-  <section class="recent-section">
-    <h2>Recent Mods</h2>
-    <div id="modGrid" class="mod-grid"></div>
-  </section>
+    <section class="recent">
+      <h2>Recent Mods</h2>
+      <div id="modGrid" class="mod-grid"></div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 BaggedCustoms. All rights reserved.</p>
+    <p>© 2025 BaggedCustoms. All rights reserved.</p>
   </footer>
 
   <script src="scripts/main.js"></script>
