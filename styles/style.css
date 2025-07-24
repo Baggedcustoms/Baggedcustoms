@@ -1,244 +1,206 @@
-/* === Global Reset === */
-* {
-  box-sizing: border-box;
+body {
+    background-color: #111;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-  background-color: #111;
-  color: #fff;
-  font-family: Arial, sans-serif;
-}
-
-/* === Header & Logo === */
 header {
-  background-color: #822800;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 180px;
-  overflow: hidden;
+    background-color: #6b2000;
+    padding: 40px 0 20px;
+    text-align: center;
+    position: relative;
+}
+
+header img {
+    max-height: 100px;
 }
 
 .logo {
-  height: 160px;
-  width: auto;
-  object-fit: contain;
+    margin: 0 auto;
+    display: block;
 }
 
-/* === Filter Bar === */
-.top-filters {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1rem auto;
-  padding: 0 1rem;
-  max-width: 800px;
+.logo-text {
+    font-size: 2rem;
+    color: white;
+    margin-top: 10px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0 25px;
+    gap: 10px;
 }
 
 select,
+input[type="text"],
+button {
+    padding: 8px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+}
+
 input[type="text"] {
-  padding: 8px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  font-size: 14px;
-  background-color: #222;
-  color: #fff;
+    width: 200px;
 }
 
 button {
-  background-color: #c9501d;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
+    background-color: #e0611f;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #e0611f;
+    background-color: #c9501d;
 }
 
-/* === Featured Mod === */
-.featured-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1.5rem 1rem 0.5rem;
-  text-align: center;
+.featured-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding: 0 20px;
 }
 
-.featured-card {
-  background-color: #1a1a1a;
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  transition: transform 0.2s, box-shadow 0.2s;
+.featured-mod {
+    background-color: #222;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 0 8px #000;
+    transition: box-shadow 0.3s ease;
 }
 
-.featured-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(201, 80, 29, 0.6);
+.featured-mod:hover {
+    box-shadow: 0 0 15px #e0611f;
 }
 
-.featured-card img {
-  width: 100%;
-  height: auto;
-  display: block;
+.featured-mod img {
+    width: 100%;
+    border-radius: 4px;
 }
 
-.featured-card .title {
-  font-size: 20px;
-  margin: 0.5rem 0;
-  font-weight: bold;
+.featured-mod .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-.featured-card .category {
-  font-size: 14px;
-  color: #ccc;
+.featured-mod .category,
+.featured-mod .download-button {
+    margin-top: 5px;
 }
 
 .download-button {
-  display: inline-block;
-  background-color: #c9501d;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 5px;
-  margin: 1rem 0;
-  text-decoration: none;
-  font-weight: bold;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #e0611f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .download-button:hover {
-  background-color: #e0611f;
+    background-color: #c9501d;
 }
 
-/* === Recent Mods Section === */
-.recent-mods-title {
-  text-align: left;
-  font-size: 20px;
-  margin: 2rem 1rem 0.5rem;
+section h2 {
+    margin-left: 30px;
+    margin-bottom: 15px;
 }
 
 .mod-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
-  max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 15px 40px;
 }
 
 .mod-card {
-  background-color: #1a1a1a;
-  border-radius: 8px;
-  overflow: hidden;
-  width: 180px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    width: 180px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .mod-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(201, 80, 29, 0.6);
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px #e0611f;
 }
 
 .mod-card img {
-  width: 100%;
-  height: auto;
-  display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
 }
 
-.mod-card .title {
-  font-size: 16px;
-  margin: 0.5rem;
-  font-weight: bold;
+.mod-card h3 {
+    font-size: 1rem;
+    margin: 8px 0 4px;
 }
 
 .mod-card .category {
-  font-size: 12px;
-  color: #aaa;
-  margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    color: #ccc;
+    margin-bottom: 5px;
 }
 
-.mod-card .download-button {
-  margin-bottom: 1rem;
+.back-link {
+    text-align: center;
+    margin: 25px 0 10px;
+    display: block;
+    font-size: 14px;
+    color: #ccc;
+    text-decoration: none;
 }
 
-/* === Pagination === */
+.back-link:hover {
+    color: #e0611f;
+    text-decoration: underline;
+}
+
 .pagination {
-  text-align: center;
-  margin: 1.5rem 0;
+    text-align: center;
+    margin: 25px 0 40px;
 }
 
 .pagination button {
-  margin: 0 0.25rem;
-  padding: 6px 10px;
-  font-size: 14px;
+    margin: 0 5px;
+    padding: 6px 12px;
+    background-color: #333;
 }
 
-/* === Titles & Back Button === */
-#categoryTitle,
-#searchTitle {
-  text-align: center;
-  font-size: 24px;
-  margin-top: 1rem;
+.pagination button.active {
+    background-color: #e0611f;
 }
 
-#backButton {
-  display: block;
-  width: fit-content;
-  margin: 1rem auto 0;
-  background-color: #111;
-  color: #fff;
-  border: 2px solid #c9501d;
-  padding: 8px 16px;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
+@media screen and (max-width: 600px) {
+    .search-bar {
+        flex-direction: column;
+        align-items: center;
+    }
 
-#backButton:hover {
-  background-color: #c9501d;
-}
+    .featured-container {
+        padding: 0 10px;
+    }
 
-/* === Mobile Styles === */
-@media screen and (max-width: 768px) {
-  .logo {
-    width: 140px;
-    max-width: 100%;
-  }
+    .mod-grid {
+        padding: 0 10px;
+    }
 
-  .top-filters {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .mod-card {
-    width: 90%;
-    max-width: 300px;
-  }
-
-  .mod-grid {
-    justify-content: center;
-  }
-
-  .featured-card {
-    width: 95%;
-  }
-
-  .recent-mods-title {
-    text-align: center;
-  }
+    .mod-card {
+        width: 100%;
+        max-width: 300px;
+    }
 }
