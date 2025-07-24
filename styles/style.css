@@ -18,12 +18,14 @@ header {
   padding: 1rem 0;
   text-align: center;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px; /* fixed banner height */
 }
 
 .logo {
-  display: block;
-  margin: 0 auto;
-  height: 160px; /* fixed height */
+  max-height: 100%;
   width: auto;
   object-fit: contain;
 }
