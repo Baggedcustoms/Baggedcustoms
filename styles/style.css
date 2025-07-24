@@ -179,3 +179,11 @@ h2, h3 {
 .pagination-button:hover {
   background-color: #c9501d;
 }
+
+
+/* Keep dark background on input focus */
+.top-filters input[type="text"]:focus {
+  background-color: #222;  /* same as unfocused */
+  color: #fff;
+  outline: 2px solid #e0611f;  /* subtle border to show it's active */
+}
