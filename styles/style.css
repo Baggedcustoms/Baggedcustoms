@@ -189,3 +189,19 @@ h2, h3 {
   color: #fff;
   outline: 2px solid #e0611f;  /* subtle border to show it's active */
 }
+
+.search-container input[type="text"]:focus {
+  background-color: #1a1a1a !important;
+  color: white !important;
+  border: 1px solid #e0611f;
+  outline: none;
+}
+
+/* Prevent Chrome autofill yellow background */
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0px 1000px #1a1a1a inset !important;
+  -webkit-text-fill-color: white !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
