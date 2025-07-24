@@ -13,20 +13,19 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
-/* === Header & Logo === */
 header {
   background-color: #822800;
-  padding: 20px 0;
+  padding: 1rem 0;
   text-align: center;
+  overflow: hidden;
 }
 
 .logo {
   display: block;
   margin: 0 auto;
-  max-width: 200px;
-  max-height: 200px;
-  height: auto;
-  image-rendering: auto;
+  height: 160px; /* fixed height */
+  width: auto;
+  object-fit: contain;
 }
 
 /* === Filter Bar === */
