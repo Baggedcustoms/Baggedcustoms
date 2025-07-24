@@ -15,21 +15,20 @@ html, body {
 
 header {
   background-color: #822800;
-  padding: 1rem 0;
-  text-align: center;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 180px; /* fixed banner height */
+  height: 180px;
+  overflow: hidden;
+  padding: 0; /* Remove extra padding */
 }
 
 .logo {
-  max-height: 100%;
+  max-height: 160px;
   width: auto;
+  height: auto;
   object-fit: contain;
 }
-
 /* === Filter Bar === */
 .top-filters {
   display: flex;
