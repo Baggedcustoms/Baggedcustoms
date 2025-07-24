@@ -6,7 +6,7 @@ async function fetchMods() {
   allMods = await res.json();
 
   const path = window.location.pathname;
-  if (path.endsWith("index.html") || path === "/" || path === "/BaggedCustoms/") {
+  if (path.endsWith("index.html") || path === "/" || path === "/Baggedcustoms/") {
     displayFeatured();
     displayMods("All");
   } else if (path.endsWith("category.html")) {
