@@ -6,17 +6,26 @@ body {
 }
 
 header {
-  background-color: #802400;
-  padding: 10px 0 0 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #771f00;
 }
 
 .logo {
-  max-height: 180px;
-  width: auto;
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
   height: auto;
-  max-width: 100%;
-  margin-bottom: -20px;
+  padding: 20px 0;
+}
+
+/* Responsive fix for mobile */
+@media (max-width: 600px) {
+  .logo {
+    max-width: 140px;
+    padding: 10px 0;
+  }
 }
 
 .top-filters {
