@@ -3,35 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BaggedCustoms Mod Catalog</title>
+  <title>BaggedCustoms</title>
   <link rel="stylesheet" href="styles/style.css" />
+  <script defer src="scripts/scripts.js"></script>
 </head>
 <body>
   <header>
-    <img src="images/banner.webp" alt="BaggedCustoms Logo" class="logo"/>
-    <div class="filters">
-      <a href="categories/all.html" class="filter-link">All</a>
-      <a href="categories/real-life-builds.html" class="filter-link">Real Life Builds</a>
-      <a href="categories/construction.html" class="filter-link">Construction</a>
-    </div>
+    <img src="images/banner.webp" alt="BaggedCustoms Banner" class="banner" />
   </header>
 
-  <main>
-    <section class="featured">
-      <h2>Featured Mods</h2>
-      <div class="featured-mod" id="featuredMod"></div>
-    </section>
+  <!-- 🔽 Category + Search bar -->
+  <div class="top-filters">
+    <select id="categoryDropdown" onchange="redirectCategory(this)">
+      <option value="">Select Category</option>
+      <option value="Real Life Builds">Real Life Builds</option>
+      <option value="Slammed Builds">Slammed Builds</option>
+      <option value="Construction">Construction</option>
+      <option value="Off-Road">Off-Road</option>
+      <option value="Fictional">Fictional</option>
+    </select>
 
-    <section class="recent">
-      <h2>Recent Mods</h2>
-      <div id="modGrid" class="mod-grid"></div>
-    </section>
-  </main>
+    <input type="text" id="searchInput" placeholder="Search mods..." />
+    <button onclick="performSearch()">Search</button>
+  </div>
 
-  <footer>
-    <p>© 2025 BaggedCustoms. All rights reserved.</p>
-  </footer>
+  <section id="featuredMod" class="featured"></section>
 
-  <script src="scripts/main.js"></script>
+  <h2 class="section-title">Recent Mods</h2>
+  <section id="modGrid" class="mod-grid"></section>
 </body>
 </html>
