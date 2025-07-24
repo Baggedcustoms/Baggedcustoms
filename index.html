@@ -4,32 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BaggedCustoms</title>
-  <link rel="stylesheet" href="styles/style.css" />
-  <script defer src="scripts/main.js"></script>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-<header>
-  <img src="images/banner.webp" alt="BaggedCustoms Logo" class="logo">
-</header>
 
-  <!-- 🔽 Category + Search bar -->
-  <div class="top-filters">
-    <select id="categoryDropdown" onchange="redirectCategory(this)">
-      <option value="">Select Category</option>
-      <option value="Real Life Builds">Real Life Builds</option>
-      <option value="Slammed Builds">Slammed Builds</option>
-      <option value="Construction">Construction</option>
-      <option value="Off-Road">Off-Road</option>
-      <option value="Fictional">Fictional</option>
-    </select>
+  <header>
+    <img src="images/logo.png" alt="BaggedCustoms Logo">
+    <div class="search-container">
+      <select id="categoryFilter">
+        <option value="">Select Category</option>
+        <option value="Slammed Builds">Slammed Builds</option>
+        <option value="Real Life Builds">Real Life Builds</option>
+        <option value="Classic Restorations">Classic Restorations</option>
+        <option value="Offroad Builds">Offroad Builds</option>
+      </select>
+      <input type="text" id="searchInput" placeholder="Search mods...">
+      <button onclick="handleSearch()">Search</button>
+    </div>
+  </header>
 
-    <input type="text" id="searchInput" placeholder="Search mods..." />
-    <button onclick="performSearch()">Search</button>
-  </div>
+  <main>
+    <div id="featuredMod"></div>
 
-  <section id="featuredMod" class="featured"></section>
+    <h2>Recent Mods</h2>
+    <div id="modGrid"></div>
+  </main>
 
-  <h2 class="section-title">Recent Mods</h2>
-  <section id="modGrid" class="mod-grid"></section>
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>
