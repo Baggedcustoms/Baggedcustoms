@@ -3,14 +3,14 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
   background-color: #111;
   color: #fff;
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 /* === Header & Logo === */
@@ -18,17 +18,18 @@ header {
   background-color: #822800;
   padding: 20px 0;
   text-align: center;
-  overflow-x: hidden;
 }
 
 .logo {
   display: block;
   margin: 0 auto;
-  width: 220px;
+  max-width: 200px;
+  max-height: 200px;
   height: auto;
-  max-width: 100%;
+  image-rendering: auto;
 }
 
+/* === Filter Bar === */
 .top-filters {
   display: flex;
   justify-content: center;
@@ -37,6 +38,7 @@ header {
   gap: 0.5rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  padding: 0 1rem;
 }
 
 select,
@@ -62,6 +64,7 @@ button:hover {
   background-color: #e0611f;
 }
 
+/* === Featured Mod === */
 .featured-section {
   display: flex;
   justify-content: center;
@@ -125,7 +128,6 @@ button:hover {
   gap: 1rem;
   padding: 1rem;
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 .mod-card {
@@ -177,7 +179,7 @@ button:hover {
   font-size: 14px;
 }
 
-/* === Back Button === */
+/* === Titles & Back Button === */
 #categoryTitle,
 #searchTitle {
   text-align: center;
