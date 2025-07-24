@@ -1,216 +1,239 @@
 body {
-  background-color: #111;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  max-width: 100vw;
-  overflow-x: hidden;
+margin: 0;
+font-family: Arial, sans-serif;
+background-color: #111;
+color: #fff;
 }
 
 header {
-  background-color: #822800;
-  padding: 20px 0;
+  background-color: #802400;
+  padding: 10px 0 0 0;
   text-align: center;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-  width: 220px;
-}
-
-#categoryTitle,
-#searchTitle {
-  text-align: center;
-  font-size: 24px;
-  margin-top: 1rem;
-}
-
-#backButton {
-  display: block;
-  width: fit-content;
-  margin: 1rem auto 0;
-  background-color: #111;
-  color: #fff;
-  border: 2px solid #c9501d;
-  padding: 8px 16px;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-#backButton:hover {
-  background-color: #c9501d;
-}
-
-/* Top filters */
-.top-filters {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
-  gap: 0.5rem;
-  flex-wrap: wrap;
+  background-color: #771f00;
 }
 
-select,
-input[type="text"] {
-  padding: 8px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  font-size: 14px;
-}
-
-button {
-  background-color: #c9501d;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button:hover {
-  background-color: #e0611f;
-}
-
-.featured-section {
-  display: flex;
-  justify-content: center;
-  padding: 2rem 1rem;
-}
-
-.featured-card {
-  background-color: #1a1a1a;
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-  width: 90%;
-  max-width: 500px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-.featured-card img {
-  width: 100%;
-  height: auto;
+.logo {
+  max-height: 180px;
+  width: auto;
   display: block;
+  margin: 0 auto;
+  max-width: 200px;
+height: auto;
+  max-width: 100%;
+  margin-bottom: -20px;
+  padding: 20px 0;
 }
 
-.featured-card .title {
-  font-size: 20px;
-  margin: 0.5rem 0;
-  font-weight: bold;
+/* Responsive fix for mobile */
+@media (max-width: 600px) {
+  .logo {
+    max-width: 140px;
+    padding: 10px 0;
+  }
 }
 
-.featured-card .category {
-  font-size: 14px;
-  color: #ccc;
+.top-filters {
+display: flex;
+justify-content: center;
+gap: 10px;
+margin: 20px auto;
+max-width: 600px;
+flex-wrap: wrap;
 }
 
-.download-button {
-  display: inline-block;
-  background-color: #c9501d;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 5px;
-  margin: 1rem 0;
-  text-decoration: none;
-  font-weight: bold;
+/* 🔥 Updated: Search bar + dropdown styled */
+.top-filters select,
+.top-filters input[type="text"],
+.top-filters button {
+padding: 8px;
+font-size: 1rem;
+border-radius: 4px;
+background-color: #1a1a1a;
+color: #fff;
+border: 1px solid #c9501d;
 }
 
-.download-button:hover {
-  background-color: #e0611f;
+.top-filters select:focus,
+.top-filters input[type="text"]:focus {
+outline: none;
+border-color: #e0611f;
+box-shadow: 0 0 4px #e0611f;
 }
 
-.recent-mods-title {
-  text-align: center;
-  font-size: 20px;
-  margin-top: 1.5rem;
+.top-filters button {
+background-color: #c9501d;
+border: none;
+cursor: pointer;
+}
+
+.top-filters button:hover {
+background-color: #e0611f;
+}
+
+.filters button:hover {
+background-color: #e0611f;
+}
+
+h2 {
+text-align: center;
+margin-top: 40px;
+}
+
+.featured-mod {
+max-width: 800px;
+margin: 20px auto;
+background-color: #1c1c1c;
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 0 10px #000;
+text-align: center;
+padding-bottom: 16px;
+}
+
+.featured-mod img {
+width: 100%;
+height: auto;
+}
+
+.featured-mod .title {
+font-size: 20px;
+font-weight: bold;
+margin-top: 10px;
+}
+
+.featured-mod .category {
+color: #bbb;
+margin: 4px 0;
+}
+
+.featured-mod .download-button {
+background-color: #c9501d;
+color: white;
+padding: 8px 14px;
+text-decoration: none;
+border-radius: 6px;
+display: inline-block;
+margin-top: 10px;
+}
+
+.featured-mod .download-button:hover {
+background-color: #e0611f;
 }
 
 .mod-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+max-width: 1200px;
+margin: 20px auto;
 }
 
 .mod-card {
-  background-color: #1a1a1a;
-  border-radius: 8px;
-  overflow: hidden;
-  width: 180px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s, box-shadow 0.2s;
+background-color: #1e1e1e;
+border-radius: 12px;
+width: 180px;
+overflow: hidden;
+box-shadow: 0 0 5px #000;
+text-align: center;
 }
 
 .mod-card img {
-  width: 100%;
-  height: auto;
-  display: block;
+width: 100%;
+height: auto;
 }
 
 .mod-card .title {
-  font-size: 16px;
-  margin: 0.5rem;
-  font-weight: bold;
+font-size: 16px;
+font-weight: bold;
+padding-top: 8px;
 }
 
 .mod-card .category {
-  font-size: 12px;
-  color: #aaa;
-  margin-bottom: 0.5rem;
+font-size: 13px;
+color: #aaa;
+padding: 4px 0;
 }
 
 .mod-card .download-button {
-  margin-bottom: 1rem;
+background-color: #c9501d;
+color: white;
+padding: 6px 12px;
+text-decoration: none;
+border-radius: 5px;
+display: inline-block;
+margin: 8px 0 10px;
+font-size: 13px;
 }
 
+.mod-card .download-button:hover {
+background-color: #e0611f;
+}
+
+footer {
+text-align: center;
+padding: 20px;
+color: #888;
+font-size: 12px;
+}
+
+/* Hover effect for mod cards */
 .mod-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(201, 80, 29, 0.6);
+border: 2px solid #e0611f;
+transform: scale(1.02);
+transition: transform 0.2s ease, border 0.2s ease;
 }
 
-/* Pagination */
-.pagination {
-  text-align: center;
-  margin: 1.5rem 0;
+/* Hover effect for download buttons */
+.download-button:hover {
+background-color: #e0611f;
+color: #fff;
+transition: background-color 0.2s ease;
 }
 
-.pagination button {
-  margin: 0 0.25rem;
-  padding: 6px 10px;
-  font-size: 14px;
+.filter-link {
+background-color: #c9501d;
+color: white;
+padding: 6px 12px;
+margin: 4px;
+border-radius: 20px;
+font-weight: bold;
+text-decoration: none;
+font-size: 14px;
+display: inline-block;
+transition: background-color 0.3s;
 }
 
-/* Mobile Responsive */
-@media screen and (max-width: 768px) {
-  .logo {
-    width: 140px;
-  }
+.filter-link:hover {
+background-color: #e0611f;
+}
 
-  .top-filters {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
+/* Hover effect for featured mod */
+.featured-mod:hover {
+border: 2px solid #e0611f;
+transform: scale(1.02);
+transition: transform 0.2s ease, border 0.2s ease;
+}
 
-  .mod-card {
-    width: 90%;
-    max-width: 300px;
-  }
+.back-home {
+display: flex;
+justify-content: center;
+margin: 20px auto 10px;
+}
 
-  .mod-grid {
-    justify-content: center;
-  }
+.back-button {
+background-color: #c9501d;
+color: white;
+text-decoration: none;
+padding: 8px 16px;
+font-weight: bold;
+border-radius: 6px;
+transition: background-color 0.2s ease;
+}
 
-  .featured-card {
-    width: 95%;
-  }
+.back-button:hover {
+background-color: #e0611f;
 }
