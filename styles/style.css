@@ -201,3 +201,23 @@ footer {
   transform: scale(1.02);
   transition: transform 0.2s ease, border 0.2s ease;
 }
+
+.back-home {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 10px;
+}
+
+.back-button {
+  background-color: #c9501d;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #e0611f;
+}
