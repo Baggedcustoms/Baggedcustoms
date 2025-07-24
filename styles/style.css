@@ -1,4 +1,3 @@
-/* GLOBAL STYLES */
 body {
   background-color: #111;
   color: white;
@@ -9,62 +8,57 @@ body {
 
 header {
   background-color: #6b1f00;
-  padding: 20px;
+  padding: 20px 10px 40px 10px;
   text-align: center;
   position: relative;
 }
 
 header img {
   height: 100px;
-  margin: 0 auto;
   display: block;
+  margin: 0 auto 15px auto;
 }
 
-#logoText {
-  display: none;
-}
-
-/* SEARCH + DROPDOWN */
 .search-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin: 10px auto 0 auto;
+  margin: 0 auto;
+  max-width: 600px;
+  flex-wrap: wrap;
 }
 
 .search-container select,
 .search-container input[type="text"] {
-  padding: 8px;
+  padding: 10px;
   font-size: 14px;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   outline: none;
   box-sizing: border-box;
+  background-color: #1a1a1a;
+  color: white;
+  border: 1px solid #444;
+  flex-grow: 1;
+  min-width: 150px;
 }
 
 .search-container button {
   background-color: #e0611f;
-  border: none;
   color: white;
-  padding: 8px 12px;
-  border-radius: 4px;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .search-container button:hover {
   background-color: #c9501d;
+  box-shadow: 0 0 10px #c9501d;
 }
 
-.search-container select {
-  min-width: 140px;
-}
-
-.search-container input[type="text"] {
-  min-width: 200px;
-}
-
-/* FEATURED MOD */
 #featuredMod {
   margin: 30px auto;
   width: 90%;
@@ -73,8 +67,8 @@ header img {
   border-radius: 8px;
   background-color: #1b1b1b;
   box-shadow: 0 0 15px #c9501d;
-  transition: box-shadow 0.3s;
   text-align: center;
+  transition: box-shadow 0.3s;
 }
 
 #featuredMod:hover {
@@ -106,13 +100,13 @@ header img {
   display: inline-block;
   text-decoration: none;
   border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .download-button:hover {
   background-color: #c9501d;
 }
 
-/* MOD CARD GRID */
 #modGrid {
   display: flex;
   flex-wrap: wrap;
@@ -146,7 +140,6 @@ header img {
   margin-top: 8px;
 }
 
-/* BACK BUTTON */
 .back-button {
   margin: 20px auto;
   text-align: center;
@@ -161,13 +154,11 @@ header img {
   text-decoration: underline;
 }
 
-/* PAGE TITLES */
 h2, h3 {
   text-align: center;
   margin-top: 30px;
 }
 
-/* PAGINATION */
 #paginationControls {
   display: flex;
   justify-content: center;
