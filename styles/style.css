@@ -24,9 +24,8 @@ header {
 }
 
 .logo {
-  max-height: 160px;
+  height: 160px;
   width: auto;
-  height: auto;
   object-fit: contain;
 }
 
