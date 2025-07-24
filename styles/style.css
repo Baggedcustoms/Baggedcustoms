@@ -13,6 +13,7 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
+/* === Header & Logo === */
 header {
   background-color: #822800;
   display: flex;
@@ -20,7 +21,6 @@ header {
   align-items: center;
   height: 180px;
   overflow: hidden;
-  padding: 0; /* Remove extra padding */
 }
 
 .logo {
@@ -29,6 +29,7 @@ header {
   height: auto;
   object-fit: contain;
 }
+
 /* === Filter Bar === */
 .top-filters {
   display: flex;
@@ -36,9 +37,9 @@ header {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem auto;
   padding: 0 1rem;
+  max-width: 800px;
 }
 
 select,
@@ -69,7 +70,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem 0.5rem;
 }
 
 .featured-card {
@@ -78,7 +79,7 @@ button:hover {
   overflow: hidden;
   text-align: center;
   width: 90%;
-  max-width: 500px;
+  max-width: 600px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
@@ -114,11 +115,11 @@ button:hover {
   background-color: #e0611f;
 }
 
-/* === Recent Mods === */
+/* === Recent Mods Section === */
 .recent-mods-title {
-  text-align: center;
+  text-align: left;
   font-size: 20px;
-  margin-top: 1.5rem;
+  margin: 2rem 1rem 0.5rem;
 }
 
 .mod-grid {
@@ -227,5 +228,9 @@ button:hover {
 
   .featured-card {
     width: 95%;
+  }
+
+  .recent-mods-title {
+    text-align: center;
   }
 }
