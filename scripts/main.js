@@ -8,21 +8,37 @@ async function fetchMods() {
   const path = window.location.pathname.toLowerCase();
   const params = new URLSearchParams(window.location.search);
 
-  if (path.includes("index.html") || path === "/" || path.includes("baggedcustoms")) {
+  console.log("Mods loaded:", allMods.length);
+  console.log("Window path:", path);
+  console.log("URL params:", Object.fromEntries(params.entries()));
+
+  if (path.includes("index.html") || path === "/" || path.includes("baggedcustoms") && !path.includes("category.html") && !path.includes("search.html")) {
     displayFeatured();
     displayMods("All");
   } else if (path.includes("category.html")) {
-    const category = params.get("cat");
+    const category = params.get("cat") || "";
     const page = parseInt(params.get("page")) || 1;
-    const filtered = allMods.filter(mod => category ? mod.category === category : true);
-    document.getElementById("categoryTitle").textContent = category ?? "All Categories";
+    console.log("Filtering category:", category);
+
+    const filtered = allMods.filter(mod =>
+      mod.category.toLowerCase() === category.toLowerCase()
+    );
+
+    console.log("Filtered mods:", filtered.length);
+    document.getElementById("categoryTitle").textContent = category || "All Categories";
     displayPagedMods(filtered, page, `category.html?cat=${encodeURIComponent(category)}&`);
   } else if (path.includes("search.html")) {
     const query = params.get("q")?.toLowerCase() || "";
     const page = parseInt(params.get("page")) || 1;
+
     const filtered = allMods.filter(mod =>
-      mod.name.toLowerCase().includes(query) || mod.category.toLowerCase().includes(query)
+      mod.name.toLowerCase().includes(query) ||
+      mod.category.toLowerCase().includes(query)
     );
+
+    console.log("Search query:", query);
+    console.log("Search results:", filtered.length);
+
     document.getElementById("searchTitle").textContent = `Search: "${query}"`;
     displayPagedMods(filtered, page, `search.html?q=${encodeURIComponent(query)}&`);
   }
@@ -31,6 +47,7 @@ async function fetchMods() {
 function displayFeatured() {
   const featured = allMods.filter(mod => mod.featured);
   if (!featured.length) return;
+
   let index = 0;
   const container = document.getElementById("featuredMod");
 
@@ -54,7 +71,7 @@ function displayFeatured() {
 function displayMods(category) {
   const grid = document.getElementById("modGrid");
   grid.innerHTML = "";
-  const filtered = category === "All" ? allMods : allMods.filter(mod => mod.category === category);
+  const filtered = category === "All" ? allMods : allMods.filter(mod => mod.category.toLowerCase() === category.toLowerCase());
   filtered.slice(0, 16).forEach(mod => {
     grid.innerHTML += generateModCard(mod);
   });
