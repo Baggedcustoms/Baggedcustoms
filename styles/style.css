@@ -172,3 +172,10 @@ footer {
 .filter-link:hover {
   background-color: #e0611f;
 }
+
+/* Hover effect for featured mod */
+.featured-mod:hover {
+  border: 2px solid #e0611f;
+  transform: scale(1.02);
+  transition: transform 0.2s ease, border 0.2s ease;
+}
