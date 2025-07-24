@@ -19,26 +19,22 @@ header {
   margin-bottom: -20px; /* pulls filters closer */
 }
 
-.filters {
-  margin-top: 20px;
-  margin-bottom: 10px;
+.top-filters {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+  flex-wrap: wrap;
 }
 
-.filters button {
-  background-color: #c9501d;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  font-size: 14px;
-  margin: 4px 4px;
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.top-filters select,
+.top-filters input[type="text"],
+.top-filters button {
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #333;
 }
 
 .filters button:hover {
