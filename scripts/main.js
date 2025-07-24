@@ -12,7 +12,13 @@ async function fetchMods() {
   console.log("Window path:", path);
   console.log("URL params:", Object.fromEntries(params.entries()));
 
-  if (path.includes("index.html") || path === "/" || path.includes("baggedcustoms") && !path.includes("category.html") && !path.includes("search.html")) {
+  if (
+    path.includes("index.html") ||
+    path === "/" ||
+    (path.includes("baggedcustoms") &&
+      !path.includes("category.html") &&
+      !path.includes("search.html"))
+  ) {
     displayFeatured();
     displayMods("All");
   } else if (path.includes("category.html")) {
@@ -20,20 +26,22 @@ async function fetchMods() {
     const page = parseInt(params.get("page")) || 1;
     console.log("Filtering category:", category);
 
-    const filtered = allMods.filter(mod =>
-      mod.category.toLowerCase() === category.toLowerCase()
+    const filtered = allMods.filter(
+      (mod) => mod.category.toLowerCase() === category.toLowerCase()
     );
 
     console.log("Filtered mods:", filtered.length);
-    document.getElementById("categoryTitle").textContent = category || "All Categories";
+    document.getElementById("categoryTitle").textContent =
+      category || "All Categories";
     displayPagedMods(filtered, page, `category.html?cat=${encodeURIComponent(category)}&`);
   } else if (path.includes("search.html")) {
     const query = params.get("q")?.toLowerCase() || "";
     const page = parseInt(params.get("page")) || 1;
 
-    const filtered = allMods.filter(mod =>
-      mod.name.toLowerCase().includes(query) ||
-      mod.category.toLowerCase().includes(query)
+    const filtered = allMods.filter(
+      (mod) =>
+        mod.name.toLowerCase().includes(query) ||
+        mod.category.toLowerCase().includes(query)
     );
 
     console.log("Search query:", query);
@@ -45,7 +53,7 @@ async function fetchMods() {
 }
 
 function displayFeatured() {
-  const featured = allMods.filter(mod => mod.featured);
+  const featured = allMods.filter((mod) => mod.featured);
   if (!featured.length) return;
 
   let index = 0;
@@ -71,8 +79,13 @@ function displayFeatured() {
 function displayMods(category) {
   const grid = document.getElementById("modGrid");
   grid.innerHTML = "";
-  const filtered = category === "All" ? allMods : allMods.filter(mod => mod.category.toLowerCase() === category.toLowerCase());
-  filtered.slice(0, 16).forEach(mod => {
+  const filtered =
+    category === "All"
+      ? allMods
+      : allMods.filter(
+          (mod) => mod.category.toLowerCase() === category.toLowerCase()
+        );
+  filtered.slice(0, 16).forEach((mod) => {
     grid.innerHTML += generateModCard(mod);
   });
 }
@@ -92,19 +105,23 @@ function displayPagedMods(mods, currentPage, baseUrl) {
     return;
   }
 
-  paged.forEach(mod => {
+  paged.forEach((mod) => {
     grid.innerHTML += generateModCard(mod);
   });
 
   if (totalPages > 1) {
     if (currentPage > 1) {
-      pagination.innerHTML += `<a class="back-button" href="${baseUrl}page=${currentPage - 1}">← Prev</a>`;
+      pagination.innerHTML += `<a class="back-button" href="${baseUrl}page=${
+        currentPage - 1
+      }">← Prev</a>`;
     }
 
     pagination.innerHTML += `<span style="margin: 0 10px;">Page ${currentPage} of ${totalPages}</span>`;
 
     if (currentPage < totalPages) {
-      pagination.innerHTML += `<a class="back-button" href="${baseUrl}page=${currentPage + 1}">Next →</a>`;
+      pagination.innerHTML += `<a class="back-button" href="${baseUrl}page=${
+        currentPage + 1
+      }">Next →</a>`;
     }
   }
 }
@@ -122,19 +139,36 @@ function generateModCard(mod) {
   `;
 }
 
-function redirectCategory(select) {
-  const value = select.value;
-  if (value) {
-    window.location.href = `category.html?cat=${encodeURIComponent(value)}&page=1`;
-  }
-}
+// Hook up search + category listeners after DOM loads
+document.addEventListener("DOMContentLoaded", () => {
+  const categorySelect = document.getElementById("categorySelect");
+  const searchInput = document.getElementById("searchInput");
+  const searchButton = document.getElementById("searchButton");
 
-function performSearch() {
-  const input = document.getElementById("searchInput");
-  const value = input.value.trim();
-  if (value) {
-    window.location.href = `search.html?q=${encodeURIComponent(value)}&page=1`;
+  if (categorySelect) {
+    categorySelect.addEventListener("change", () => {
+      const selected = categorySelect.value;
+      if (selected) {
+        window.location.href = `category.html?cat=${encodeURIComponent(selected)}&page=1`;
+      }
+    });
   }
-}
 
+  if (searchInput && searchButton) {
+    searchButton.addEventListener("click", () => {
+      const value = searchInput.value.trim();
+      if (value) {
+        window.location.href = `search.html?q=${encodeURIComponent(value)}&page=1`;
+      }
+    });
+
+    searchInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        searchButton.click();
+      }
+    });
+  }
+});
+
+// Initial load
 fetchMods();
