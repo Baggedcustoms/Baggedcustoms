@@ -57,19 +57,19 @@ function displayFeatured() {
   if (!featured.length) return;
 
   let index = 0;
-  const container = document.getElementById("featuredMod");
+  const featuredContainer = document.getElementById("featuredMod");
 
   function renderFeatured() {
-  const mod = featured[index];
-  featuredContainer.innerHTML = `
-    <img src="${mod.image}" alt="${mod.name}">
-    <div class="title">${mod.name}</div>
-  `;
-  index = (index + 1) % featured.length;
-}
+    const mod = featured[index];
+    featuredContainer.innerHTML = `
+      <img src="${mod.image}" alt="${mod.name}">
+      <div class="title">${mod.name}</div>
+    `;
+    index = (index + 1) % featured.length;
+  }
 
-  render();
-  setInterval(render, 5000);
+  renderFeatured(); // ✅ Call the correct function
+  setInterval(renderFeatured, 5000);
 }
 
 function displayMods(category) {
