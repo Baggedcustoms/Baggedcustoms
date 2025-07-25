@@ -132,8 +132,6 @@ function generateModCard(mod) {
       <img src="${mod.image}" alt="${mod.name}">
       <div class="mod-info">
         <h3>${mod.name}</h3>
-        <p>Category: ${mod.category}</p>
-        <a href="${mod.link}" target="_blank" class="download-button">Download</a>
       </div>
     </div>
   `;
