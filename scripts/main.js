@@ -59,18 +59,14 @@ function displayFeatured() {
   let index = 0;
   const container = document.getElementById("featuredMod");
 
-  function render() {
-    const mod = featured[index];
-    container.innerHTML = `
-      <div class="featured-mod">
-        <img src="${mod.image}" alt="${mod.name}">
-        <div class="title">${mod.name}</div>
-        <div class="category">Category: ${mod.category}</div>
-        <a href="${mod.link}" class="download-button" target="_blank">Download</a>
-      </div>
-    `;
-    index = (index + 1) % featured.length;
-  }
+  function renderFeatured() {
+  const mod = featured[index];
+  featuredContainer.innerHTML = `
+    <img src="${mod.image}" alt="${mod.name}">
+    <div class="title">${mod.name}</div>
+  `;
+  index = (index + 1) % featured.length;
+}
 
   render();
   setInterval(render, 5000);
