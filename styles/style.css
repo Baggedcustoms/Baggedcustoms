@@ -212,8 +212,30 @@ input:-webkit-autofill:hover {
 }
 
 .contact-container {
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
   text-align: center;
-  padding: 40px 20px;
+  color: #ddd;
+}
+
+.contact-links {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.contact-links li {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.contact-links a {
+  color: #e0611f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
 }
