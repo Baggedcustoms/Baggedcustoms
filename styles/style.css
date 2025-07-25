@@ -120,26 +120,31 @@ header {
 
 .mod-card {
   background-color: #1a1a1a;
-  width: 150px;
+  width: 200px;            /* increased width */
+  height: 260px;           /* added fixed height */
   border-radius: 8px;
   overflow: hidden;
   text-align: center;
   padding: 10px;
-  transition: box-shadow 0.3s ease;
+  transition: transform 0.2s, box-shadow 0.3s ease;
 }
 
 .mod-card:hover {
-  box-shadow: 0 0 10px #c9501d;
+  transform: scale(1.08);  /* subtle zoom on hover */
+  box-shadow: 0 0 12px #c9501d;
 }
 
 .mod-card img {
   width: 100%;
-  border-radius: 4px;
+  height: 180px;           /* consistent image size */
+  object-fit: cover;
+  border-radius: 6px;
 }
 
-.mod-card .download-button {
-  font-size: 0.8rem;
-  margin-top: 8px;
+.mod-card h3 {
+  font-size: 0.95rem;
+  margin-top: 10px;
+  color: white;
 }
 
 .back-button {
