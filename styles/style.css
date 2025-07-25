@@ -239,3 +239,13 @@ input:-webkit-autofill:hover {
 .contact-links a:hover {
   text-decoration: underline;
 }
+
+a {
+  color: #e0611f;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
