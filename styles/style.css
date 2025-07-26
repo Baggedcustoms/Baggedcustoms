@@ -147,46 +147,41 @@ header {
   color: white;
 }
 
-.back-button {
-  margin: 20px auto;
-  text-align: center;
-  display: block;
-  font-size: 14px;
-  color: #ff8c42;
-  text-decoration: none;
-}
-
-.back-button:hover {
-  color: #ffa05e;
-  text-decoration: underline;
-}
-
-h2, h3 {
-  text-align: center;
-  margin-top: 30px;
-}
-
+/* Pagination Controls */
 #paginationControls {
   display: flex;
   justify-content: center;
+  align-items: center;   /* vertically align buttons and page number */
   margin: 20px 0;
+  gap: 10px;             /* spacing between elements */
+  color: #c9501d;        /* orange text color */
+  font-weight: bold;     /* make page number stand out */
 }
 
-.pagination-button {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  margin: 0 5px;
+#paginationControls span {
+  color: #c9501d;        /* ensure page number text is orange */
+  font-weight: bold;
+  font-size: 1rem;
+  user-select: none;
+}
+
+.back-button {
+  margin: 0;
+  font-size: 14px;
+  color: #c9501d;        /* override previous to orange */
+  text-decoration: none;
   cursor: pointer;
+  padding: 6px 12px;
   border-radius: 4px;
+  background-color: #333;
+  transition: background-color 0.3s ease;
 }
 
-.pagination-button.active,
-.pagination-button:hover {
-  background-color: #c9501d;
+.back-button:hover {
+  background-color: #e0611f;
+  color: #fff;
+  text-decoration: none;
 }
-
 
 /* Keep dark background on input focus */
 .top-filters input[type="text"]:focus {
@@ -249,6 +244,7 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
 .mod-image {
   width: 100%;
   max-width: 800px;
@@ -291,4 +287,3 @@ a:hover {
   height: 100%;
   border: none;
 }
-
