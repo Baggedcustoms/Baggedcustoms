@@ -35,9 +35,12 @@ async function fetchMods() {
 
   // Populate the categorySelect dropdown with tags
   const categorySelect = document.getElementById("categorySelect");
-if (categorySelect) {
-  categorySelect.innerHTML = '<option value="">All Categories</option>'; // default option
-  
+  if (categorySelect) {
+    categorySelect.innerHTML = `
+      <option value="" selected>Select Category</option>
+      <option value="all">All Categories</option>
+    `; // default options
+
     tags.forEach(tag => {
       const opt = document.createElement("option");
       opt.value = tag;
@@ -68,20 +71,20 @@ if (categorySelect) {
       !path.includes("search.html"))
   ) {
     displayFeatured();
-    displayMods("All");
+    displayMods("all");
   } else if (path.includes("category.html")) {
     const category = params.get("cat") || "";
     const page = parseInt(params.get("page")) || 1;
     console.log("Filtering category/tag:", category);
 
     // Filter by tags now (not category)
-    const filtered = category === ""
+    const filtered = (category === "" || category === "all")
       ? allMods
       : allMods.filter(mod => Array.isArray(mod.tags) && mod.tags.includes(category));
 
     console.log("Filtered mods:", filtered.length);
     document.getElementById("categoryTitle").textContent =
-      category || "All Tags";
+      category || "All Categories";
     displayPagedMods(filtered, page, `category.html?cat=${encodeURIComponent(category)}&`);
   } else if (path.includes("search.html")) {
     const query = params.get("q")?.toLowerCase() || "";
@@ -125,7 +128,7 @@ function displayMods(category) {
   const grid = document.getElementById("modGrid");
   grid.innerHTML = "";
   const filtered =
-    category === "All" || category === ""
+    category === "All" || category === "" || category === "all"
       ? allMods
       : allMods.filter(
           (mod) => Array.isArray(mod.tags) && mod.tags.includes(category)
@@ -195,10 +198,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (categorySelect) {
     categorySelect.addEventListener("change", () => {
       const selected = categorySelect.value;
-      if (selected) {
+      if (selected && selected !== "all") {
         window.location.href = `category.html?cat=${encodeURIComponent(selected)}&page=1`;
       } else {
-        // Go to main index if no category selected
+        // Go to main index if 'all' or no category selected
         window.location.href = 'index.html';
       }
     });
