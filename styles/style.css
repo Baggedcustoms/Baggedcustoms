@@ -61,6 +61,10 @@ header {
   box-shadow: 0 0 10px #c9501d;
 }
 
+#searchInput {
+  color: #e0611f;
+}
+
 #featuredMod {
   margin: 30px auto;
   width: 90%;
