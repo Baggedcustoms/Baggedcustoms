@@ -77,14 +77,15 @@ async function fetchMods() {
     const page = parseInt(params.get("page")) || 1;
     console.log("Filtering category/tag:", category);
 
-    // Filter by tags now (not category)
+    // Show all mods with at least one tag for "all" or ""
+    // Otherwise filter by the selected tag
     const filtered = (category === "" || category === "all")
-      ? allMods
+      ? allMods.filter(mod => Array.isArray(mod.tags) && mod.tags.length > 0)
       : allMods.filter(mod => Array.isArray(mod.tags) && mod.tags.includes(category));
 
     console.log("Filtered mods:", filtered.length);
     document.getElementById("categoryTitle").textContent =
-      category || "All Categories";
+      category === "" || category === "all" ? "All Categories" : category;
     displayPagedMods(filtered, page, `category.html?cat=${encodeURIComponent(category)}&`);
   } else if (path.includes("search.html")) {
     const query = params.get("q")?.toLowerCase() || "";
