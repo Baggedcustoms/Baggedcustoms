@@ -5,11 +5,17 @@ async function fetchMods() {
   const res = await fetch("mods.json");
   allMods = await res.json();
 
-  // EXCLUDE ALL MODS WITH 'z3d' IN THE NAME (case-insensitive)
-  allMods = allMods.filter(mod => !mod.name.toLowerCase().includes("z3d"));
+  // List of exclusion keywords (case-insensitive)
+  const exclusions = ["z3d", "example1", "example2"]; // add more keywords as needed
+
+  // Filter out mods whose name contains any of the exclusion keywords
+  allMods = allMods.filter(mod =>
+    !exclusions.some(keyword => mod.name.toLowerCase().includes(keyword.toLowerCase()))
+  );
 
   const path = window.location.pathname.toLowerCase();
   const params = new URLSearchParams(window.location.search);
+
 
   console.log("Mods loaded:", allMods.length);
   console.log("Window path:", path);
