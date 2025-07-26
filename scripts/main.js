@@ -115,13 +115,15 @@ function displayFeatured() {
   function renderFeatured() {
     const mod = featured[index];
     featuredContainer.innerHTML = `
-      <img src="${mod.image}" alt="${mod.name}">
-      <div class="title">${mod.name}</div>
+      <a href="mod.html?id=${encodeURIComponent(mod.name)}" style="text-decoration:none; color: inherit;">
+        <img src="${mod.image}" alt="${mod.name}">
+        <div class="title">${mod.name}</div>
+      </a>
     `;
     index = (index + 1) % featured.length;
   }
 
-  renderFeatured(); // ✅ Call the correct function
+  renderFeatured();
   setInterval(renderFeatured, 5000);
 }
 
