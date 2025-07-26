@@ -81,6 +81,10 @@ function displayMods(category) {
       : allMods.filter(
           (mod) => mod.category.toLowerCase() === category.toLowerCase()
         );
+
+  // Sort filtered mods by published_at descending (newest first)
+  filtered.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
+
   filtered.slice(0, 16).forEach((mod) => {
     grid.innerHTML += generateModCard(mod);
   });
