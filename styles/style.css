@@ -331,3 +331,10 @@ a:hover {
   background-color: #e0611f;
   color: #111;
 }
+
+/* Mod details page title */
+#modContainer h1, 
+#modContainer h2, 
+#modContainer .mod-title {
+  color: white !important;
+}
