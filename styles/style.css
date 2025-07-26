@@ -305,3 +305,25 @@ a:hover {
   border: none;
 }
 
+#categorySelect {
+  color: #e0611f;
+  background-color: #1a1a1a; /* your dark background */
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  font-family: 'Segoe UI', sans-serif;
+  cursor: pointer;
+}
+
+/* Optional: style the dropdown arrow for some browsers */
+#categorySelect::-ms-expand {
+  filter: invert(53%) sepia(83%) saturate(2386%) hue-rotate(3deg) brightness(92%) contrast(89%);
+}
+
+/* Hover/focus effect for dropdown options */
+#categorySelect option:hover,
+#categorySelect option:focus {
+  background-color: #e0611f;
+  color: #111;
+}
