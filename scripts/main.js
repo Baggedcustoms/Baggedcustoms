@@ -197,15 +197,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchButton = document.getElementById("searchButton");
 
   if (categorySelect) {
-    categorySelect.addEventListener("change", () => {
-      const selected = categorySelect.value;
-      if (selected && selected !== "all") {
-        window.location.href = `category.html?cat=${encodeURIComponent(selected)}&page=1`;
-      } else {
-        // Go to main index if 'all' or no category selected
-        window.location.href = 'index.html';
-      }
-    });
+  categorySelect.addEventListener("change", () => {
+  const selected = categorySelect.value;
+  // Always redirect to category.html with cat param (empty for all)
+  window.location.href = `category.html?cat=${encodeURIComponent(selected)}&page=1`;
+});
   }
 
   if (searchInput && searchButton) {
