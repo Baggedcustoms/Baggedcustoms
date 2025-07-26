@@ -368,14 +368,13 @@ a:hover {
   cursor: pointer;
 }
 
+/* Two columns on mobile screens */
 @media (max-width: 600px) {
   #modGrid {
     justify-content: center;
     gap: 15px;
   }
   .mod-card {
-    width: calc(50% - 15px); /* Two cards per row with some gap */
-    margin-bottom: 15px;
+    width: calc(50% - 15px);
   }
 }
-
