@@ -36,7 +36,7 @@ async function fetchMods() {
   // Populate the categorySelect dropdown with tags
   const categorySelect = document.getElementById("categorySelect");
   if (categorySelect) {
-    categorySelect.innerHTML = '<option value="">All Tags</option>'; // default option
+    categorySelect.innerHTML = '<option value="">Select Category</option>'; // default option
 
     tags.forEach(tag => {
       const opt = document.createElement("option");
