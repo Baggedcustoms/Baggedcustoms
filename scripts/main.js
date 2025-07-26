@@ -7,11 +7,22 @@ async function fetchMods() {
 
   // List of exclusion keywords (case-insensitive)
   const exclusions = ["z3d", "example1", "example2"]; // add more keywords as needed
+  // Tags to exclude completely from the site (case-insensitive)
+  const tagExclusions = ["Prime Assets", "GearHead Assets"];
 
   // Filter out mods whose name contains any of the exclusion keywords
-  allMods = allMods.filter(mod =>
-    !exclusions.some(keyword => mod.name.toLowerCase().includes(keyword.toLowerCase()))
-  );
+  // OR have any excluded tags
+  allMods = allMods.filter(mod => {
+    const nameExcluded = exclusions.some(keyword =>
+      mod.name.toLowerCase().includes(keyword.toLowerCase())
+    );
+
+    const tagsExcluded = mod.tags && mod.tags.some(tag =>
+      tagExclusions.some(excludedTag => tag.toLowerCase() === excludedTag.toLowerCase())
+    );
+
+    return !nameExcluded && !tagsExcluded;
+  });
 
   // Dynamically build unique tags list for category dropdown
   const tagSet = new Set();
