@@ -5,6 +5,9 @@ async function fetchMods() {
   const res = await fetch("mods.json");
   allMods = await res.json();
 
+  // EXCLUDE ALL MODS WITH 'z3d' IN THE NAME (case-insensitive)
+  allMods = allMods.filter(mod => !mod.name.toLowerCase().includes("z3d"));
+
   const path = window.location.pathname.toLowerCase();
   const params = new URLSearchParams(window.location.search);
 
@@ -51,6 +54,7 @@ async function fetchMods() {
     displayPagedMods(filtered, page, `search.html?q=${encodeURIComponent(query)}&`);
   }
 }
+
 
 function displayFeatured() {
   const featured = allMods.filter((mod) => mod.featured);
