@@ -347,35 +347,24 @@ a:hover {
   max-width: 600px;
 }
 
-.social-icon {
-  display: inline-block;
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px auto 20px auto;
+  max-width: 600px;
+}
+
+.social-icons a img {
   width: 32px;
   height: 32px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  transition: transform 0.2s ease, filter 0.2s ease;
-  filter: brightness(0.85);
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* optional: invert to white for dark backgrounds */
+  transition: filter 0.3s ease;
+}
+
+.social-icons a:hover img {
+  filter: brightness(0) invert(0.6) drop-shadow(0 0 4px #e0611f);
   cursor: pointer;
-}
-
-.social-icon:hover {
-  filter: brightness(1);
-  transform: scale(1.15);
-}
-
-.social-icon.discord {
-  background-image: url('images/social/discord.svg');
-}
-
-.social-icon.instagram {
-  background-image: url('images/social/instagram.svg');
-}
-
-.social-icon.youtube {
-  background-image: url('images/social/youtube.svg');
-}
-
-.social-icon.tiktok {
-  background-image: url('images/social/tiktok.svg');
 }
 
