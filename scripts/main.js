@@ -13,9 +13,37 @@ async function fetchMods() {
     !exclusions.some(keyword => mod.name.toLowerCase().includes(keyword.toLowerCase()))
   );
 
+  // Dynamically build unique tags list for category dropdown
+  const tagSet = new Set();
+  allMods.forEach(mod => {
+    if (Array.isArray(mod.tags)) {
+      mod.tags.forEach(tag => tagSet.add(tag));
+    }
+  });
+  const tags = Array.from(tagSet).sort();
+
+  // Populate the categorySelect dropdown with tags
+  const categorySelect = document.getElementById("categorySelect");
+  if (categorySelect) {
+    categorySelect.innerHTML = '<option value="">All Tags</option>'; // default option
+
+    tags.forEach(tag => {
+      const opt = document.createElement("option");
+      opt.value = tag;
+      opt.textContent = tag;
+      categorySelect.appendChild(opt);
+    });
+
+    // If URL param exists, set dropdown to that value
+    const params = new URLSearchParams(window.location.search);
+    const selectedTag = params.get("cat") || "";
+    if (selectedTag) {
+      categorySelect.value = selectedTag;
+    }
+  }
+
   const path = window.location.pathname.toLowerCase();
   const params = new URLSearchParams(window.location.search);
-
 
   console.log("Mods loaded:", allMods.length);
   console.log("Window path:", path);
@@ -33,15 +61,16 @@ async function fetchMods() {
   } else if (path.includes("category.html")) {
     const category = params.get("cat") || "";
     const page = parseInt(params.get("page")) || 1;
-    console.log("Filtering category:", category);
+    console.log("Filtering category/tag:", category);
 
-    const filtered = allMods.filter(
-      (mod) => mod.category.toLowerCase() === category.toLowerCase()
-    );
+    // Filter by tags now (not category)
+    const filtered = category === ""
+      ? allMods
+      : allMods.filter(mod => Array.isArray(mod.tags) && mod.tags.includes(category));
 
     console.log("Filtered mods:", filtered.length);
     document.getElementById("categoryTitle").textContent =
-      category || "All Categories";
+      category || "All Tags";
     displayPagedMods(filtered, page, `category.html?cat=${encodeURIComponent(category)}&`);
   } else if (path.includes("search.html")) {
     const query = params.get("q")?.toLowerCase() || "";
@@ -50,7 +79,7 @@ async function fetchMods() {
     const filtered = allMods.filter(
       (mod) =>
         mod.name.toLowerCase().includes(query) ||
-        mod.category.toLowerCase().includes(query)
+        (mod.tags && mod.tags.some(t => t.toLowerCase().includes(query)))
     );
 
     console.log("Search query:", query);
@@ -60,7 +89,6 @@ async function fetchMods() {
     displayPagedMods(filtered, page, `search.html?q=${encodeURIComponent(query)}&`);
   }
 }
-
 
 function displayFeatured() {
   const featured = allMods.filter((mod) => mod.featured);
@@ -86,10 +114,10 @@ function displayMods(category) {
   const grid = document.getElementById("modGrid");
   grid.innerHTML = "";
   const filtered =
-    category === "All"
+    category === "All" || category === ""
       ? allMods
       : allMods.filter(
-          (mod) => mod.category.toLowerCase() === category.toLowerCase()
+          (mod) => Array.isArray(mod.tags) && mod.tags.includes(category)
         );
 
   // Sort filtered mods by published_at descending (newest first)
@@ -158,6 +186,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const selected = categorySelect.value;
       if (selected) {
         window.location.href = `category.html?cat=${encodeURIComponent(selected)}&page=1`;
+      } else {
+        // Go to main index if no category selected
+        window.location.href = 'index.html';
       }
     });
   }
