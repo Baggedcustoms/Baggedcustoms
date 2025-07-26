@@ -140,7 +140,7 @@ function displayMods(category) {
   // Sort filtered mods by published_at descending (newest first)
   filtered.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
 
-  filtered.slice(0, 16).forEach((mod) => {
+  filtered.slice(0, 20).forEach((mod) => {
     grid.innerHTML += generateModCard(mod);
   });
 }
