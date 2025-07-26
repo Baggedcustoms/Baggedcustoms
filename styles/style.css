@@ -338,3 +338,44 @@ a:hover {
 #modContainer .mod-title {
   color: white !important;
 }
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 10px auto 0;
+  max-width: 600px;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  filter: brightness(0.85);
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  filter: brightness(1);
+  transform: scale(1.15);
+}
+
+.social-icon.discord {
+  background-image: url('images/social/discord.svg');
+}
+
+.social-icon.instagram {
+  background-image: url('images/social/instagram.svg');
+}
+
+.social-icon.youtube {
+  background-image: url('images/social/youtube.svg');
+}
+
+.social-icon.tiktok {
+  background-image: url('images/social/tiktok.svg');
+}
+
