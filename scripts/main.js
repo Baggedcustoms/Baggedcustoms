@@ -180,12 +180,15 @@ function displayPagedMods(mods, currentPage, baseUrl) {
 }
 
 function generateModCard(mod) {
+  const id = encodeURIComponent(mod.id || mod.name);
   return `
     <div class="mod-card">
-      <img src="${mod.image}" alt="${mod.name}">
-      <div class="mod-info">
-        <h3>${mod.name}</h3>
-      </div>
+      <a href="mod.html?id=${id}">
+        <img src="${mod.image}" alt="${mod.name}">
+        <div class="mod-info">
+          <h3>${mod.name}</h3>
+        </div>
+      </a>
     </div>
   `;
 }
