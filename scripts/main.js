@@ -38,7 +38,7 @@ async function fetchMods() {
   if (categorySelect) {
     categorySelect.innerHTML = `
       <option value="" selected>Select Category</option>
-      <option value="all">All Categories</option>
+      <option value="">All Categories</option>
     `; // default options
 
     tags.forEach(tag => {
