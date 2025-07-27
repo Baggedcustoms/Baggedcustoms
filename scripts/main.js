@@ -105,6 +105,14 @@ async function fetchMods() {
   }
 }
 
+async function preloadImage(src) {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = resolve;
+    img.src = src;
+  });
+}
+
 function displayFeatured() {
   const featured = allMods.filter((mod) => mod.featured);
   if (!featured.length) return;
@@ -112,15 +120,28 @@ function displayFeatured() {
   let index = 0;
   const featuredContainer = document.getElementById("featuredMod");
 
-  function renderFeatured() {
+  // Add fade CSS transition if not already in your CSS:
+  // #featuredMod { transition: opacity 0.5s ease-in-out; }
+
+  async function renderFeatured() {
     const mod = featured[index];
-    featuredContainer.innerHTML = `
-      <a href="mod.html?id=${encodeURIComponent(mod.name)}" style="text-decoration:none; color: inherit;">
-        <img src="${mod.image}" alt="${mod.name}">
-        <div class="title">${mod.name}</div>
-      </a>
-    `;
-    index = (index + 1) % featured.length;
+    await preloadImage(mod.image);
+
+    // Fade out
+    featuredContainer.style.opacity = 0;
+
+    setTimeout(() => {
+      featuredContainer.innerHTML = `
+        <a href="mod.html?id=${encodeURIComponent(mod.name)}" style="text-decoration:none; color: inherit;">
+          <img src="${mod.image}" alt="${mod.name}">
+          <div class="title">${mod.name}</div>
+        </a>
+      `;
+      // Fade in
+      featuredContainer.style.opacity = 1;
+
+      index = (index + 1) % featured.length;
+    }, 500); // match CSS transition duration
   }
 
   renderFeatured();
@@ -202,11 +223,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchButton = document.getElementById("searchButton");
 
   if (categorySelect) {
-  categorySelect.addEventListener("change", () => {
-  const selected = categorySelect.value;
-  // Always redirect to category.html with cat param (empty for all)
-  window.location.href = `category.html?cat=${encodeURIComponent(selected)}&page=1`;
-});
+    categorySelect.addEventListener("change", () => {
+      const selected = categorySelect.value;
+      // Always redirect to category.html with cat param (empty for all)
+      window.location.href = `category.html?cat=${encodeURIComponent(selected)}&page=1`;
+    });
   }
 
   if (searchInput && searchButton) {
