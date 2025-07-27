@@ -373,11 +373,11 @@ a:hover {
   #modGrid {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 10px; /* reduce gap a bit */
   }
   
   .mod-card {
-    width: 100% !important;  /* fill the grid cell */
-    border: 2px solid lime !important; /* debugging border, remove or comment out when happy */
+    width: 100% !important;  /* fill grid cell */
+    border: 2px solid lime !important; /* keep for debugging or remove */
   }
 }
