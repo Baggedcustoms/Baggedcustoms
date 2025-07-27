@@ -386,3 +386,7 @@ a:hover {
     border: none !important; /* remove debug border */
   }
 }
+
+#featuredMod {
+  transition: opacity 0.5s ease-in-out;
+}
