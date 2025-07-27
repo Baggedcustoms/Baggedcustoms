@@ -1,5 +1,5 @@
 let allMods = [];
-const pageSize = 30;
+const pageSize = 15;
 
 async function fetchMods() {
   const res = await fetch("mods.json");
