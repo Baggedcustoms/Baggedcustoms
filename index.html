@@ -5,26 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BaggedCustoms</title>
   <link rel="stylesheet" href="styles/style.css">
+  <style>
+    /* Ad placeholder style */
+    .ad-placeholder {
+      background-color: #6b1f00; /* matches your header brown */
+      color: #fff;
+      font-weight: bold;
+      padding: 15px 0;
+      border: 2px dashed #e0611f;
+      font-size: 18px;
+      border-radius: 6px;
+      user-select: none;
+      text-align: center;
+      max-width: 728px;
+      margin: 20px auto;
+      width: 100%;
+    }
+
+    /* Responsive fix for small screens */
+    @media (max-width: 768px) {
+      .ad-placeholder {
+        max-width: 320px;
+        margin: 15px auto;
+        font-size: 16px;
+        padding: 12px 0;
+      }
+    }
+
+    /* Toggle container style */
+    #toggleAdContainer {
+      text-align: center;
+      margin: 10px 0 20px 0;
+      color: white;
+      user-select: none;
+      font-family: Arial, sans-serif;
+    }
+
+    #toggleAdContainer input[type="checkbox"] {
+      margin-right: 8px;
+      transform: scale(1.2);
+      vertical-align: middle;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
 <header>
   <img src="images/banner.webp" alt="BaggedCustoms Logo" class="logo">
 
-<div class="social-icons">
-  <a href="https://discord.gg/ynDj6wNpbF" target="_blank" rel="noopener noreferrer">
-    <img src="images/discord.png" alt="Discord" />
-  </a>
-  <a href="https://www.instagram.com/baggedcustoms" target="_blank" rel="noopener noreferrer">
-    <img src="images/instagram.png" alt="Instagram" />
-  </a>
-  <a href="https://www.youtube.com/baggedcustoms?sub_confirmation=1" target="_blank" rel="noopener noreferrer">
-    <img src="images/youtube.png" alt="YouTube" />
-  </a>
-  <a href="https://www.tiktok.com/@baggedcustoms" target="_blank" rel="noopener noreferrer">
-    <img src="images/tik-tok.png" alt="TikTok" />
-  </a>
-</div>
+  <div class="social-icons">
+    <a href="https://discord.gg/ynDj6wNpbF" target="_blank" rel="noopener noreferrer">
+      <img src="images/discord.png" alt="Discord" />
+    </a>
+    <a href="https://www.instagram.com/baggedcustoms" target="_blank" rel="noopener noreferrer">
+      <img src="images/instagram.png" alt="Instagram" />
+    </a>
+    <a href="https://www.youtube.com/baggedcustoms?sub_confirmation=1" target="_blank" rel="noopener noreferrer">
+      <img src="images/youtube.png" alt="YouTube" />
+    </a>
+    <a href="https://www.tiktok.com/@baggedcustoms" target="_blank" rel="noopener noreferrer">
+      <img src="images/tik-tok.png" alt="TikTok" />
+    </a>
+  </div>
 
   <div class="search-container">
     <select id="categorySelect">
@@ -33,25 +76,67 @@
     <input type="text" id="searchInput" placeholder="Search mods..." />
     <button id="searchButton">Search</button>
   </div>
+
+  <!-- Toggle switch for ad placeholders -->
+  <div id="toggleAdContainer">
+    <label>
+      <input type="checkbox" id="toggleAds" />
+      Show Ad Placeholders
+    </label>
+  </div>
+
+  <!-- Top banner ad container -->
+  <div id="topBannerAd" class="ad-container">
+    <div class="ad-placeholder">Top Banner Ad Placeholder</div>
+  </div>
 </header>
 
 <main>
   <h2>Featured Mods</h2>
   <div id="featuredMod"></div>
 
+  <!-- Inline ad container -->
+  <div id="inlineAd" class="ad-container">
+    <div class="ad-placeholder">Inline Ad Placeholder</div>
+  </div>
+
   <h2>Recent Mods</h2>
   <div id="modGrid"></div>
 </main>
 
-  <script src="scripts/main.js"></script>
-</body>
+<!-- Footer ad container -->
+<div id="footerAd" class="ad-container" style="margin-top: 20px; text-align: center;">
+  <div class="ad-placeholder">Footer Ad Placeholder</div>
+</div>
 
- <footer style="text-align: center; padding: 30px 0; color: #666; font-size: 14px;">
+<footer style="text-align: center; padding: 30px 0; color: #666; font-size: 14px;">
   &copy; 2025 BaggedCustoms. All rights reserved.<br>
   <a href="about.html">About</a> |
   <a href="contact.html">Contact</a> |
   <a href="privacy.html">Privacy Policy</a> |
   <a href="terms.html">Terms of Use</a>
 </footer>
-  
+
+<script src="scripts/main.js"></script>
+<script>
+  // Toggle ad placeholders on/off
+  document.getElementById('toggleAds').addEventListener('change', function() {
+    const show = this.checked;
+    const placeholders = document.querySelectorAll('.ad-placeholder');
+    placeholders.forEach(div => {
+      div.style.display = show ? 'block' : 'none';
+    });
+  });
+
+  // Hide placeholders by default on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('toggleAds');
+    toggle.checked = false;
+    const placeholders = document.querySelectorAll('.ad-placeholder');
+    placeholders.forEach(div => {
+      div.style.display = 'none';
+    });
+  });
+</script>
+</body>
 </html>
