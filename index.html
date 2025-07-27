@@ -6,8 +6,9 @@
   <title>BaggedCustoms</title>
   <link rel="stylesheet" href="styles/style.css">
   <style>
-    /* Ad placeholder style */
+    /* Ad placeholder styles, hidden by default */
     .ad-placeholder {
+      display: none;
       background-color: #6b1f00; /* matches your header brown */
       color: #fff;
       font-weight: bold;
@@ -22,7 +23,7 @@
       width: 100%;
     }
 
-    /* Responsive fix for small screens */
+    /* Responsive fix for smaller screens */
     @media (max-width: 768px) {
       .ad-placeholder {
         max-width: 320px;
@@ -30,22 +31,6 @@
         font-size: 16px;
         padding: 12px 0;
       }
-    }
-
-    /* Toggle container style */
-    #toggleAdContainer {
-      text-align: center;
-      margin: 10px 0 20px 0;
-      color: white;
-      user-select: none;
-      font-family: Arial, sans-serif;
-    }
-
-    #toggleAdContainer input[type="checkbox"] {
-      margin-right: 8px;
-      transform: scale(1.2);
-      vertical-align: middle;
-      cursor: pointer;
     }
   </style>
 </head>
@@ -75,14 +60,6 @@
     </select>
     <input type="text" id="searchInput" placeholder="Search mods..." />
     <button id="searchButton">Search</button>
-  </div>
-
-  <!-- Toggle switch for ad placeholders -->
-  <div id="toggleAdContainer">
-    <label>
-      <input type="checkbox" id="toggleAds" />
-      Show Ad Placeholders
-    </label>
   </div>
 
   <!-- Top banner ad container -->
@@ -119,24 +96,17 @@
 
 <script src="scripts/main.js"></script>
 <script>
-  // Toggle ad placeholders on/off
-  document.getElementById('toggleAds').addEventListener('change', function() {
-    const show = this.checked;
-    const placeholders = document.querySelectorAll('.ad-placeholder');
-    placeholders.forEach(div => {
-      div.style.display = show ? 'block' : 'none';
-    });
-  });
+  // Toggle to show/hide ad placeholders. Set to true to show placeholders.
+  const showAdPlaceholders = true;
 
-  // Hide placeholders by default on page load
   window.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.getElementById('toggleAds');
-    toggle.checked = false;
-    const placeholders = document.querySelectorAll('.ad-placeholder');
-    placeholders.forEach(div => {
-      div.style.display = 'none';
-    });
+    if(showAdPlaceholders) {
+      document.querySelectorAll('.ad-placeholder').forEach(div => {
+        div.style.display = 'block';
+      });
+    }
   });
 </script>
+
 </body>
 </html>
