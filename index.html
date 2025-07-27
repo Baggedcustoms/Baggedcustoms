@@ -32,6 +32,35 @@
         padding: 12px 0;
       }
     }
+
+    /* Container for featured mods with layered background logo */
+    #featuredWrapper {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+      min-height: 250px; /* adjust as needed */
+    }
+
+    #featuredWrapper img.background-logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.15;
+      width: 300px; /* adjust size */
+      pointer-events: none;
+      user-select: none;
+      z-index: 1;
+      filter: grayscale(80%) brightness(150%);
+    }
+
+    #featuredMod {
+      position: relative;
+      z-index: 2;
+      transition: opacity 0.5s ease-in-out;
+      min-height: 250px; /* match wrapper height */
+    }
   </style>
 </head>
 <body>
@@ -70,7 +99,13 @@
 
 <main>
   <h2>Featured Mods</h2>
-  <div id="featuredMod"></div>
+
+  <div id="featuredWrapper">
+    <!-- Background logo behind featured mod -->
+    <img src="images/banner.webp" alt="BaggedCustoms Logo Background" class="background-logo" />
+    <!-- Featured mod content -->
+    <div id="featuredMod"></div>
+  </div>
 
   <!-- Inline ad container -->
   <div id="inlineAd" class="ad-container">
