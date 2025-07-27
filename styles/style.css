@@ -373,11 +373,16 @@ a:hover {
   #modGrid {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px; /* reduce gap a bit */
+    gap: 8px;
+    padding-left: 8px;   /* add some padding so mod cards don't hug edges */
+    padding-right: 8px;
+    margin-left: 0;
+    margin-right: 0;
   }
-  
+
   .mod-card {
-    width: 100% !important;  /* fill grid cell */
-    border: 2px solid lime !important; /* keep for debugging or remove */
+    width: 100% !important;
+    box-sizing: border-box; /* include border/padding in width */
+    border: none !important; /* remove debug border */
   }
 }
