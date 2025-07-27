@@ -390,3 +390,10 @@ a:hover {
 #featuredMod {
   transition: opacity 0.5s ease-in-out;
 }
+
+@media (max-width: 768px) {
+  #featuredWrapper img.background-logo {
+    width: 150px; /* smaller size for mobile */
+    opacity: 0.1; /* optionally reduce opacity on mobile */
+  }
+}
