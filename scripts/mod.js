@@ -36,12 +36,20 @@ async function loadModDetails() {
       <h1 style="text-align:center; margin-bottom: 20px; color:#e0611f;">${mod.name}</h1>
 
       <div id="mainImageWrapper" style="text-align:center; margin-bottom: 20px;">
-        <img id="mainImage" src="${mainImageUrl}" alt="${mod.name}" style="max-width: 100%; max-height: 400px; border-radius: 8px; box-shadow: 0 0 15px #c9501d;" />
+        <img id="mainImage" 
+             src="${mainImageUrl}" 
+             alt="${mod.name} Main Preview" 
+             title="${mod.name} Main Preview" 
+             style="max-width: 100%; max-height: 400px; border-radius: 8px; box-shadow: 0 0 15px #c9501d;" />
       </div>
 
       <div id="thumbnailContainer" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
         ${images.map((img, idx) => `
-          <img class="thumb" src="${img}" alt="Thumbnail ${idx+1}" style="width: 100px; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; box-shadow: 0 0 6px #c9501d;" />
+          <img class="thumb" 
+               src="${img}" 
+               alt="${mod.name} Thumbnail ${idx + 1}" 
+               title="${mod.name} Thumbnail ${idx + 1}" 
+               style="width: 100px; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; box-shadow: 0 0 6px #c9501d;" />
         `).join("")}
       </div>
 
@@ -57,9 +65,11 @@ async function loadModDetails() {
     // Thumbnail click swap logic
     const mainImage = document.getElementById("mainImage");
     const thumbnails = container.querySelectorAll(".thumb");
-    thumbnails.forEach(thumb => {
+    thumbnails.forEach((thumb, index) => {
       thumb.addEventListener("click", () => {
         mainImage.src = thumb.src;
+        mainImage.alt = `${mod.name} Thumbnail ${index + 1}`;
+        mainImage.title = `${mod.name} Thumbnail ${index + 1}`;
       });
     });
 
