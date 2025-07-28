@@ -1,3 +1,4 @@
+// === [ NO CHANGES ] ===
 let allMods = [];
 const pageSize = 15;
 
@@ -5,26 +6,19 @@ async function fetchMods() {
   const res = await fetch("mods.json");
   allMods = await res.json();
 
-  // List of exclusion keywords (case-insensitive)
-  const exclusions = ["z3d", "example1", "example2"]; // add more keywords as needed
-  // Tags to exclude completely from the site (case-insensitive)
+  const exclusions = ["z3d", "example1", "example2"];
   const tagExclusions = ["Prime Assets", "GearHead Assets"];
 
-  // Filter out mods whose name contains any of the exclusion keywords
-  // OR have any excluded tags
   allMods = allMods.filter(mod => {
     const nameExcluded = exclusions.some(keyword =>
       mod.name.toLowerCase().includes(keyword.toLowerCase())
     );
-
     const tagsExcluded = mod.tags && mod.tags.some(tag =>
       tagExclusions.some(excludedTag => tag.toLowerCase() === excludedTag.toLowerCase())
     );
-
     return !nameExcluded && !tagsExcluded;
   });
 
-  // Dynamically build unique tags list for category dropdown
   const tagSet = new Set();
   allMods.forEach(mod => {
     if (Array.isArray(mod.tags)) {
@@ -33,14 +27,12 @@ async function fetchMods() {
   });
   const tags = Array.from(tagSet).sort();
 
-  // Populate the categorySelect dropdown with tags
   const categorySelect = document.getElementById("categorySelect");
   if (categorySelect) {
     categorySelect.innerHTML = `
       <option value="" selected>Select Category</option>
       <option value="">All Categories</option>
-    `; // default options
-
+    `;
     tags.forEach(tag => {
       const opt = document.createElement("option");
       opt.value = tag;
@@ -48,20 +40,13 @@ async function fetchMods() {
       categorySelect.appendChild(opt);
     });
 
-    // If URL param exists, set dropdown to that value
     const params = new URLSearchParams(window.location.search);
     const selectedTag = params.get("cat") || "";
-    if (selectedTag) {
-      categorySelect.value = selectedTag;
-    }
+    if (selectedTag) categorySelect.value = selectedTag;
   }
 
   const path = window.location.pathname.toLowerCase();
   const params = new URLSearchParams(window.location.search);
-
-  console.log("Mods loaded:", allMods.length);
-  console.log("Window path:", path);
-  console.log("URL params:", Object.fromEntries(params.entries()));
 
   if (
     path.includes("index.html") ||
@@ -75,15 +60,11 @@ async function fetchMods() {
   } else if (path.includes("category.html")) {
     const category = params.get("cat") || "";
     const page = parseInt(params.get("page")) || 1;
-    console.log("Filtering category/tag:", category);
 
-    // Show all mods with at least one tag for "all" or ""
-    // Otherwise filter by the selected tag
     const filtered = (category === "" || category === "all")
       ? allMods.filter(mod => Array.isArray(mod.tags) && mod.tags.length > 0)
       : allMods.filter(mod => Array.isArray(mod.tags) && mod.tags.includes(category));
 
-    console.log("Filtered mods:", filtered.length);
     document.getElementById("categoryTitle").textContent =
       category === "" || category === "all" ? "All Categories" : category;
     displayPagedMods(filtered, page, `category.html?cat=${encodeURIComponent(category)}&`);
@@ -96,9 +77,6 @@ async function fetchMods() {
         mod.name.toLowerCase().includes(query) ||
         (mod.tags && mod.tags.some(t => t.toLowerCase().includes(query)))
     );
-
-    console.log("Search query:", query);
-    console.log("Search results:", filtered.length);
 
     document.getElementById("searchTitle").textContent = `Search: "${query}"`;
     displayPagedMods(filtered, page, `search.html?q=${encodeURIComponent(query)}&`);
@@ -113,6 +91,7 @@ async function preloadImage(src) {
   });
 }
 
+// === [ UPDATED FEATURED MODS with alt/title ] ===
 function displayFeatured() {
   const featured = allMods.filter((mod) => mod.featured);
   if (!featured.length) return;
@@ -120,28 +99,21 @@ function displayFeatured() {
   let index = 0;
   const featuredContainer = document.getElementById("featuredMod");
 
-  // Add fade CSS transition if not already in your CSS:
-  // #featuredMod { transition: opacity 0.5s ease-in-out; }
-
   async function renderFeatured() {
     const mod = featured[index];
     await preloadImage(mod.image);
-
-    // Fade out
     featuredContainer.style.opacity = 0;
 
     setTimeout(() => {
       featuredContainer.innerHTML = `
         <a href="mod.html?id=${encodeURIComponent(mod.name)}" style="text-decoration:none; color: inherit;">
-          <img src="${mod.image}" alt="${mod.name}">
+          <img src="${mod.image}" alt="${mod.name}" title="${mod.name}">
           <div class="title">${mod.name}</div>
         </a>
       `;
-      // Fade in
       featuredContainer.style.opacity = 1;
-
       index = (index + 1) % featured.length;
-    }, 500); // match CSS transition duration
+    }, 500);
   }
 
   renderFeatured();
@@ -158,9 +130,7 @@ function displayMods(category) {
           (mod) => Array.isArray(mod.tags) && mod.tags.includes(category)
         );
 
-  // Sort filtered mods by published_at descending (newest first)
   filtered.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
-
   filtered.slice(0, 20).forEach((mod) => {
     grid.innerHTML += generateModCard(mod);
   });
@@ -187,27 +157,24 @@ function displayPagedMods(mods, currentPage, baseUrl) {
 
   if (totalPages > 1) {
     if (currentPage > 1) {
-      pagination.innerHTML += `<a class="back-button" href="${baseUrl}page=${
-        currentPage - 1
-      }">← Prev</a>`;
+      pagination.innerHTML += `<a class="back-button" href="${baseUrl}page=${currentPage - 1}">← Prev</a>`;
     }
 
     pagination.innerHTML += `<span style="margin: 0 10px;">Page ${currentPage} of ${totalPages}</span>`;
 
     if (currentPage < totalPages) {
-      pagination.innerHTML += `<a class="back-button" href="${baseUrl}page=${
-        currentPage + 1
-      }">Next →</a>`;
+      pagination.innerHTML += `<a class="back-button" href="${baseUrl}page=${currentPage + 1}">Next →</a>`;
     }
   }
 }
 
+// === [ UPDATED: generateModCard with alt/title ] ===
 function generateModCard(mod) {
   const id = encodeURIComponent(mod.id || mod.name);
   return `
     <div class="mod-card">
       <a href="mod.html?id=${id}">
-        <img src="${mod.image}" alt="${mod.name}">
+        <img src="${mod.image}" alt="${mod.name}" title="${mod.name}">
         <div class="mod-info">
           <h3>${mod.name}</h3>
         </div>
@@ -216,7 +183,6 @@ function generateModCard(mod) {
   `;
 }
 
-// Hook up search + category listeners after DOM loads
 document.addEventListener("DOMContentLoaded", () => {
   const categorySelect = document.getElementById("categorySelect");
   const searchInput = document.getElementById("searchInput");
@@ -225,7 +191,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (categorySelect) {
     categorySelect.addEventListener("change", () => {
       const selected = categorySelect.value;
-      // Always redirect to category.html with cat param (empty for all)
       window.location.href = `category.html?cat=${encodeURIComponent(selected)}&page=1`;
     });
   }
@@ -246,5 +211,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Initial load
 fetchMods();
