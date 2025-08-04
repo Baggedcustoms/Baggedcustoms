@@ -399,18 +399,19 @@ a:hover {
 }
 
 #searchbutton {
-  background-color: #c9501d;
-  color: #ffffff;
-  font-weight: bold;
+  background-color: #1e1e1e; /* dark gray like your dropdowns */
+  color: #e0611f; /* orange text */
+  border: 1px solid #e0611f;
   padding: 8px 16px;
-  border: none;
+  font-weight: bold;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #searchbutton:hover {
   background-color: #e0611f;
+  color: #1e1e1e;
 }
 
 .visually-hidden {
