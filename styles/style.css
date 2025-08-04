@@ -397,3 +397,18 @@ a:hover {
     opacity: 0.1; /* optionally reduce opacity on mobile */
   }
 }
+
+#searchbutton {
+  background-color: #c9501d;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#searchbutton:hover {
+  background-color: #e0611f;
+}
