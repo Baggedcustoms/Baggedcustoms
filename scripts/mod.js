@@ -21,6 +21,20 @@ async function loadModDetails() {
       return;
     }
 
+    // === SEO ENHANCEMENTS ===
+    document.title = `${mod.name} - BaggedCustoms GTA V & FiveM Mod`;
+
+    const metaDesc = document.createElement("meta");
+    metaDesc.name = "description";
+    metaDesc.content = `${mod.name} — ${mod.description?.slice(0, 150) || "Explore this custom GTA V & FiveM mod."}`;
+    document.head.appendChild(metaDesc);
+
+    const canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    canonical.href = window.location.href;
+    document.head.appendChild(canonical);
+    // =======================
+
     // Build main image section
     const mainImageUrl = mod.image || (mod.images && mod.images[0]) || "";
     let images = [];
