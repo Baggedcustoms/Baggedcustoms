@@ -8,6 +8,7 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.baggedcustoms.com/mod.html" />
   <title>Mod Details - BaggedCustoms</title>
+  <meta name="description" content="Explore custom GTA V and GTA VI mods including slammed builds, real-life trucks, and FiveM-ready content from BaggedCustoms.">
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
@@ -19,18 +20,34 @@
     <!-- Populated by mod.js -->
   </main>
 
-<footer style="text-align: center; padding: 30px 0; color: #666; font-size: 14px;">
-  <div style="margin-bottom: 15px;">
-    <a href="index.html" class="back-link">← Back to Home</a>
-  </div>
-  &copy; 2025 BaggedCustoms. All rights reserved.<br>
-  <a href="about.html">About</a> |
-  <a href="contact.html">Contact</a> |
-  <a href="privacy.html">Privacy Policy</a> |
-  <a href="terms.html">Terms of Use</a>
-</footer>
 
-  
+  <div id="modTagsSEO" style="display: none;"></div>
+
+  <footer style="text-align: center; padding: 30px 0; color: #666; font-size: 14px;">
+    <div style="margin-bottom: 15px;">
+      <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+    &copy; 2025 BaggedCustoms. All rights reserved.<br>
+    <a href="about.html">About</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms of Use</a>
+  </footer>
+
   <script src="scripts/mod.js"></script>
+  <script>
+   
+    const urlParams = new URLSearchParams(window.location.search);
+    const modId = urlParams.get("id");
+
+    fetch("mods.json")
+      .then(res => res.json())
+      .then(mods => {
+        const mod = mods.find(m => m.id == modId);
+        if (!mod) return;
+        const tagText = (mod.tags || []).join(', ');
+        document.getElementById("modTagsSEO").innerText = tagText;
+      });
+  </script>
 </body>
 </html>
