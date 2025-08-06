@@ -427,3 +427,13 @@ a:hover {
 html {
   overflow-y: scroll;
 }
+
+.thumb {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0 6px #222;
+}
+
+.thumb:hover {
+  box-shadow: 0 0 12px #e0611f;
+  transform: scale(1.05);
+}
