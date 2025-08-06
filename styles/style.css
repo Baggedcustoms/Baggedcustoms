@@ -15,8 +15,7 @@ header {
 
 .logo {
   width: 180px;
-  max-height: 160px;
-  height: auto;
+  height: 160px;
   display: block;
   margin: 0 auto 10px auto;
 }
