@@ -91,7 +91,7 @@ async function preloadImage(src) {
   });
 }
 
-// === [ UPDATED FEATURED MODS with alt/title ] ===
+// === [ UPDATED FEATURED MODS with post_id ] ===
 function displayFeatured() {
   const featured = allMods.filter((mod) => mod.featured);
   if (!featured.length) return;
@@ -106,7 +106,7 @@ function displayFeatured() {
 
     setTimeout(() => {
       featuredContainer.innerHTML = `
-        <a href="mod.html?id=${encodeURIComponent(mod.name)}" style="text-decoration:none; color: inherit;">
+        <a href="mod.html?id=${mod.post_id}" style="text-decoration:none; color: inherit;">
           <img src="${mod.image}" alt="${mod.name}" title="${mod.name}">
           <div class="title">${mod.name}</div>
         </a>
@@ -168,9 +168,9 @@ function displayPagedMods(mods, currentPage, baseUrl) {
   }
 }
 
-// === [ UPDATED: generateModCard with alt/title ] ===
+// === [ UPDATED: generateModCard with post_id ] ===
 function generateModCard(mod) {
-  const id = encodeURIComponent(mod.id || mod.name);
+  const id = encodeURIComponent(mod.post_id);
   return `
     <div class="mod-card">
       <a href="mod.html?id=${id}">
