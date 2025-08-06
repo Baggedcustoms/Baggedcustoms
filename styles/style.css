@@ -434,6 +434,6 @@ html {
 }
 
 .thumb:hover {
-  box-shadow: 0 0 12px #e0611f;
-  transform: scale(1.05);
+  box-shadow: 0 0 20px #e0611f;
+  transform: scale(1.1);
 }
