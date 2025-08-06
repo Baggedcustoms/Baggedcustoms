@@ -12,9 +12,13 @@ async function loadModDetails() {
     const res = await fetch("mods.json");
     const allMods = await res.json();
 
-    // Find the mod by matching the encoded id param
+    // Find the mod using post_id, name, or by checking if the ID is inside the Patreon link
     const decodedId = decodeURIComponent(modId);
-    const mod = allMods.find(m => decodeURIComponent(m.name) === decodedId);
+    const mod = allMods.find(m =>
+      m.post_id === decodedId ||
+      decodeURIComponent(m.name) === decodedId ||
+      (m.link && m.link.includes(decodedId))
+    );
 
     if (!mod) {
       document.getElementById("modContainer").innerHTML = "<p>Mod not found.</p>";
