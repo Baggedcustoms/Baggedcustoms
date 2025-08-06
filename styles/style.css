@@ -423,3 +423,7 @@ a:hover {
   overflow: hidden;
   clip: rect(0 0 0 0);
 }
+
+html {
+  overflow-y: scroll;
+}
