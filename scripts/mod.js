@@ -1,5 +1,3 @@
-// mod.js
-
 async function loadModDetails() {
   const params = new URLSearchParams(window.location.search);
   const modId = params.get("id");
@@ -12,7 +10,6 @@ async function loadModDetails() {
     const res = await fetch("mods.json");
     const allMods = await res.json();
 
-    // Find the mod using post_id, name, or by checking if the ID is inside the Patreon link
     const decodedId = decodeURIComponent(modId);
     const mod = allMods.find(m =>
       m.post_id === decodedId ||
@@ -26,12 +23,18 @@ async function loadModDetails() {
     }
 
     // === SEO ENHANCEMENTS ===
-    document.title = `${mod.name} - BaggedCustoms GTA V & FiveM Mod`;
+    const tags = Array.isArray(mod.tags) ? mod.tags.join(', ') : '';
+    document.title = `${mod.name} - BaggedCustoms GTA V & FiveM Mod${tags ? ` [${tags}]` : ''}`;
 
     const metaDesc = document.createElement("meta");
     metaDesc.name = "description";
     metaDesc.content = `${mod.name} — ${mod.description?.slice(0, 150) || "Explore this custom GTA V & FiveM mod."}`;
     document.head.appendChild(metaDesc);
+
+    const metaKeywords = document.createElement("meta");
+    metaKeywords.name = "keywords";
+    metaKeywords.content = tags;
+    document.head.appendChild(metaKeywords);
 
     const canonical = document.createElement("link");
     canonical.rel = "canonical";
@@ -39,11 +42,9 @@ async function loadModDetails() {
     document.head.appendChild(canonical);
     // =======================
 
-    // Build main image section
     const mainImageUrl = mod.image || (mod.images && mod.images[0]) || "";
     let images = [];
 
-    // Prepare array of images for thumbnails (excluding main image if duplicates)
     if (Array.isArray(mod.images) && mod.images.length > 0) {
       images = mod.images.filter(img => img !== mainImageUrl);
     }
@@ -77,10 +78,10 @@ async function loadModDetails() {
 
       <div style="font-size: 14px; line-height: 1.6; max-width: 700px; margin: auto; color: #ddd;">
         ${mod.description || ""}
+        ${tags ? `<p style="margin-top: 20px; font-size: 13px; color: #888;"><strong>Tags:</strong> ${tags}</p>` : ""}
       </div>
     `;
 
-    // Thumbnail click swap logic
     const mainImage = document.getElementById("mainImage");
     const thumbnails = container.querySelectorAll(".thumb");
     thumbnails.forEach((thumb, index) => {
