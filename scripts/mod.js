@@ -64,12 +64,13 @@ async function loadModDetails() {
 
       <div id="thumbnailContainer" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
         ${images.map((img, idx) => `
-          <img class="thumb" 
-     src="${img}" 
-     alt="${mod.name} Thumbnail ${idx + 1}" 
-     title="${mod.name} Thumbnail ${idx + 1}" 
-     style="width: 100px; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer;" />
-        `).join("")}
+  <img class="thumb" 
+       src="${img}" 
+       alt="${mod.name} Thumbnail ${idx + 1}" 
+       title="${mod.name} Thumbnail ${idx + 1}" 
+       loading="lazy"
+       style="width: 100px; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer;" />
+`).join("")}
       </div>
 
       <div style="text-align:center; margin-bottom: 20px; font-size: 14px; color: #ccc;">
