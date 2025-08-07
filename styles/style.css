@@ -152,14 +152,15 @@ input:-webkit-autofill:hover {
   font-size: 1.2rem;
   font-weight: bold;
   margin-top: 10px;
+  text-align: center; 
 }
 
 #featuredMod .category {
   font-size: 0.9rem;
   color: #ccc;
   margin-top: 5px;
+  text-align: center; 
 }
-
 #featuredMod.preloading {
   min-height: 400px;
   background-color: #1a1a1a;
