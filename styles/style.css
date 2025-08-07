@@ -455,3 +455,8 @@ html {
   pointer-events: none;
   z-index: 1;
 }
+
+footer {
+  height: 50px;
+  min-height: 50px;
+}
