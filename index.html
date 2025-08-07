@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="robots" content="index, follow">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
- <link rel="preload" as="image" href="images/banner.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="images/banner.webp" type="image/webp" fetchpriority="high">
   <link rel="canonical" href="https://www.baggedcustoms.com/" />
   <title>BaggedCustoms | GTA V & FiveM Mods – Future-Ready for GTA 6</title>
   
@@ -15,10 +15,9 @@
 
   <link rel="stylesheet" href="styles/style.css">
   <style>
-    /* Ad placeholder styles, hidden by default */
     .ad-placeholder {
       display: none;
-      background-color: #6b1f00; /* matches your header brown */
+      background-color: #6b1f00;
       color: #fff;
       font-weight: bold;
       padding: 15px 0;
@@ -32,7 +31,6 @@
       width: 100%;
     }
 
-    /* Responsive fix for smaller screens */
     @media (max-width: 768px) {
       .ad-placeholder {
         max-width: 320px;
@@ -42,13 +40,12 @@
       }
     }
 
-    /* Container for featured mods with layered background logo */
     #featuredWrapper {
       position: relative;
       width: 100%;
       max-width: 900px;
       margin: 0 auto 40px auto;
-      min-height: 250px; /* adjust as needed */
+      min-height: 250px;
     }
 
     #featuredWrapper img.background-logo {
@@ -57,7 +54,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       opacity: 0.15;
-      width: 300px; /* adjust size */
+      width: 300px;
       pointer-events: none;
       user-select: none;
       z-index: 1;
@@ -68,36 +65,37 @@
       position: relative;
       z-index: 2;
       transition: opacity 0.5s ease-in-out;
-      min-height: 250px; /* match wrapper height */
+      min-height: 250px;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="images/banner.webp" alt="BaggedCustoms Logo Background" class="background logo" width="360" fetchpriority="high" decoding="async">
-
+  <img src="images/banner.webp" alt="" class="background logo" width="360" fetchpriority="high" decoding="async">
 
   <div class="social-icons">
     <a href="https://discord.gg/ynDj6wNpbF" target="_blank" rel="noopener noreferrer">
-      <img src="images/discord.png" alt="Discord" />
+      <img src="images/discord.png" alt="" />
     </a>
     <a href="https://www.instagram.com/baggedcustoms" target="_blank" rel="noopener noreferrer">
-      <img src="images/instagram.png" alt="Instagram" />
+      <img src="images/instagram.png" alt="" />
     </a>
     <a href="https://www.youtube.com/baggedcustoms?sub_confirmation=1" target="_blank" rel="noopener noreferrer">
-      <img src="images/youtube.png" alt="YouTube" />
+      <img src="images/youtube.png" alt="" />
     </a>
     <a href="https://www.tiktok.com/@baggedcustoms" target="_blank" rel="noopener noreferrer">
-      <img src="images/tik-tok.png" alt="TikTok" />
+      <img src="images/tik-tok.png" alt="" />
     </a>
   </div>
 
   <div class="search-container">
+    <label for="categorySelect" class="visually-hidden">Filter mods by category</label>
     <select id="categorySelect">
       <option value="">Select Category</option>
     </select>
-    <label for="searchInput" class="visually-hidden">Search</label>
+
+    <label for="searchInput" class="visually-hidden">Search mods</label>
     <input type="text" id="searchInput" placeholder="Search mods..." />
     <button id="searchButton">Search</button>
   </div>
@@ -113,13 +111,10 @@
 
   <div id="featuredWrapper">
     <!-- Background logo behind featured mod -->
-
-
-    <!-- Featured mod content -->
+    <img src="images/banner.webp" alt="" class="background-logo" width="300" loading="lazy" decoding="async" />
     <div id="featuredMod"></div>
   </div>
 
-  <!-- Inline ad container -->
   <div id="inlineAd" class="ad-container">
     <div class="ad-placeholder">Inline Ad Placeholder</div>
   </div>
@@ -128,7 +123,6 @@
   <div id="modGrid"></div>
 </main>
 
-<!-- Footer ad container -->
 <div id="footerAd" class="ad-container" style="margin-top: 20px; text-align: center;">
   <div class="ad-placeholder">Footer Ad Placeholder</div>
 </div>
@@ -143,11 +137,10 @@
 
 <script src="scripts/main.js"></script>
 <script>
-  // Toggle to show/hide ad placeholders. Set to true to show placeholders.
   const showAdPlaceholders = false;
 
   window.addEventListener('DOMContentLoaded', () => {
-    if(showAdPlaceholders) {
+    if (showAdPlaceholders) {
       document.querySelectorAll('.ad-placeholder').forEach(div => {
         div.style.display = 'block';
       });
