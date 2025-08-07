@@ -418,3 +418,13 @@ h2, h3 {
   pointer-events: none;
   z-index: 1;
 }
+
+#featuredMod {
+  flex-direction: column;
+}
+
+#featuredMod .featured-text {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
