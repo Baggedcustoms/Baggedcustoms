@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.baggedcustoms.com/sitemap.txt
+Sitemap: https://www.baggedcustoms.com/sitemap.xml
