@@ -401,6 +401,18 @@ h2, h3 {
   transform: scale(1.1);
 }
 
+#featuredWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 #featuredWrapper::before {
   content: "";
   position: absolute;
@@ -411,12 +423,12 @@ h2, h3 {
   background-size: 300px auto;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.15;
-  filter: grayscale(80%) brightness(150%);
+  opacity: 0.08; /* softened background */
+  filter: grayscale(80%) brightness(180%);
   width: 300px;
   height: 300px;
   pointer-events: none;
-  z-index: 1;
+  z-index: 0; /* moved behind content */
 }
 
 #featuredMod {
