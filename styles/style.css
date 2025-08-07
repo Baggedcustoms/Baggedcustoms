@@ -393,3 +393,26 @@ h2, h3 {
   pointer-events: none;
   z-index: 1;
 }
+
+#featuredMod {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#featuredMod.preloading {
+  min-height: 400px; /* Adjust this to match your typical mod height */
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px #c9501d;
+}
+
+#featuredMod.preloading::before {
+  content: "Loading Featured Mod...";
+  color: #666;
+  font-size: 1rem;
+  font-style: italic;
+}
