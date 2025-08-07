@@ -108,12 +108,15 @@ async function displayFeatured() {
   featuredContainer.style.opacity = 0;
 
  setTimeout(() => {
-  featuredContainer.innerHTML = `
-    <a href="mod.html?id=${mod.post_id}" style="text-decoration:none; color: inherit;">
-      <img src="${mod.image}" alt="${mod.name}" title="${mod.name}">
+featuredContainer.innerHTML = `
+  <a href="mod.html?id=${mod.post_id}" style="text-decoration:none; color: inherit;">
+    <img src="${mod.image}" alt="${mod.name}" title="${mod.name}">
+    <div class="featured-text">
       <div class="title">${mod.name}</div>
-    </a>
-  `;
+      ${mod.category ? `<div class="category">${mod.category}</div>` : ""}
+    </div>
+  </a>
+`;
   featuredContainer.classList.remove("preloading");
   featuredContainer.style.opacity = 1;
   featuredContainer.classList.add("loaded"); // ✅ add this
