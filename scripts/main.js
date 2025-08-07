@@ -1,215 +1,219 @@
-// === [ NO CHANGES ] ===
 let allMods = [];
 const pageSize = 15;
 
 async function fetchMods() {
-const res = await fetch("mods.json");
-allMods = await res.json();
+  const res = await fetch("mods.json");
+  allMods = await res.json();
 
-const exclusions = ["z3d", "example1", "example2"];
-const tagExclusions = ["Prime Assets", "GearHead Assets"];
+  const exclusions = ["z3d", "example1", "example2"];
+  const tagExclusions = ["Prime Assets", "GearHead Assets"];
 
-allMods = allMods.filter(mod => {
-const nameExcluded = exclusions.some(keyword =>
-mod.name.toLowerCase().includes(keyword.toLowerCase())
-);
-const tagsExcluded = mod.tags && mod.tags.some(tag =>
-tagExclusions.some(excludedTag => tag.toLowerCase() === excludedTag.toLowerCase())
-);
-return !nameExcluded && !tagsExcluded;
-});
+  allMods = allMods.filter(mod => {
+    const nameExcluded = exclusions.some(keyword =>
+      mod.name.toLowerCase().includes(keyword.toLowerCase())
+    );
+    const tagsExcluded = mod.tags && mod.tags.some(tag =>
+      tagExclusions.some(excludedTag => tag.toLowerCase() === excludedTag.toLowerCase())
+    );
+    return !nameExcluded && !tagsExcluded;
+  });
 
-const tagSet = new Set();
-allMods.forEach(mod => {
-if (Array.isArray(mod.tags)) {
-mod.tags.forEach(tag => tagSet.add(tag));
-}
-});
-const tags = Array.from(tagSet).sort();
+  const tagSet = new Set();
+  allMods.forEach(mod => {
+    if (Array.isArray(mod.tags)) {
+      mod.tags.forEach(tag => tagSet.add(tag));
+    }
+  });
+  const tags = Array.from(tagSet).sort();
 
-const categorySelect = document.getElementById("categorySelect");
-if (categorySelect) {
-categorySelect.innerHTML = `
-     <option value="" selected>Select Category</option>
-     <option value="">All Categories</option>
-   `;
-tags.forEach(tag => {
-const opt = document.createElement("option");
-opt.value = tag;
-opt.textContent = tag;
-categorySelect.appendChild(opt);
-});
+  const categorySelect = document.getElementById("categorySelect");
+  if (categorySelect) {
+    categorySelect.innerHTML = `
+      <option value="" selected>Select Category</option>
+      <option value="">All Categories</option>
+    `;
+    tags.forEach(tag => {
+      const opt = document.createElement("option");
+      opt.value = tag;
+      opt.textContent = tag;
+      categorySelect.appendChild(opt);
+    });
 
-const params = new URLSearchParams(window.location.search);
-const selectedTag = params.get("cat") || "";
-if (selectedTag) categorySelect.value = selectedTag;
-}
+    const params = new URLSearchParams(window.location.search);
+    const selectedTag = params.get("cat") || "";
+    if (selectedTag) categorySelect.value = selectedTag;
+  }
 
-const path = window.location.pathname.toLowerCase();
-const params = new URLSearchParams(window.location.search);
+  const path = window.location.pathname.toLowerCase();
+  const params = new URLSearchParams(window.location.search);
 
-if (
-path.includes("index.html") ||
-path === "/" ||
-(path.includes("baggedcustoms") &&
-!path.includes("category.html") &&
-!path.includes("search.html"))
-) {
-displayFeatured();
-displayMods("all");
-} else if (path.includes("category.html")) {
-const category = params.get("cat") || "";
-const page = parseInt(params.get("page")) || 1;
+  if (
+    path.includes("index.html") ||
+    path === "/" ||
+    (path.includes("baggedcustoms") &&
+     !path.includes("category.html") &&
+     !path.includes("search.html"))
+  ) {
+    await displayFeatured(); // wait for featured to load first
+    displayMods("all");
 
-const filtered = (category === "" || category === "all")
-? allMods.filter(mod => Array.isArray(mod.tags) && mod.tags.length > 0)
-: allMods.filter(mod => Array.isArray(mod.tags) && mod.tags.includes(category));
+    // Show mod grid and footer (optional fade-in effect support)
+    document.getElementById("modGrid")?.classList.add("visible");
+    document.getElementById("mainFooter")?.classList.add("visible");
+  } else if (path.includes("category.html")) {
+    const category = params.get("cat") || "";
+    const page = parseInt(params.get("page")) || 1;
 
-document.getElementById("categoryTitle").textContent =
-category === "" || category === "all" ? "All Categories" : category;
-displayPagedMods(filtered, page, `category.html?cat=${encodeURIComponent(category)}&`);
-} else if (path.includes("search.html")) {
-const query = params.get("q")?.toLowerCase() || "";
-const page = parseInt(params.get("page")) || 1;
+    const filtered = (category === "" || category === "all")
+      ? allMods.filter(mod => Array.isArray(mod.tags) && mod.tags.length > 0)
+      : allMods.filter(mod => Array.isArray(mod.tags) && mod.tags.includes(category));
 
-const filtered = allMods.filter(
-(mod) =>
-mod.name.toLowerCase().includes(query) ||
-(mod.tags && mod.tags.some(t => t.toLowerCase().includes(query)))
-);
+    document.getElementById("categoryTitle").textContent =
+      category === "" || category === "all" ? "All Categories" : category;
+    displayPagedMods(filtered, page, `category.html?cat=${encodeURIComponent(category)}&`);
+  } else if (path.includes("search.html")) {
+    const query = params.get("q")?.toLowerCase() || "";
+    const page = parseInt(params.get("page")) || 1;
 
-document.getElementById("searchTitle").textContent = `Search: "${query}"`;
-displayPagedMods(filtered, page, `search.html?q=${encodeURIComponent(query)}&`);
-}
+    const filtered = allMods.filter(
+      (mod) =>
+        mod.name.toLowerCase().includes(query) ||
+        (mod.tags && mod.tags.some(t => t.toLowerCase().includes(query)))
+    );
+
+    document.getElementById("searchTitle").textContent = `Search: "${query}"`;
+    displayPagedMods(filtered, page, `search.html?q=${encodeURIComponent(query)}&`);
+  }
 }
 
 async function preloadImage(src) {
-return new Promise((resolve) => {
-const img = new Image();
-img.onload = resolve;
-img.src = src;
-});
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = resolve;
+    img.src = src;
+  });
 }
 
-// === [ UPDATED FEATURED MODS with post_id ] ===
-function displayFeatured() {
-const featured = allMods.filter((mod) => mod.featured);
-if (!featured.length) return;
+// === FEATURED MODS ===
+async function displayFeatured() {
+  const featured = allMods.filter((mod) => mod.featured);
+  if (!featured.length) return;
 
-let index = 0;
-const featuredContainer = document.getElementById("featuredMod");
+  let index = 0;
+  const featuredContainer = document.getElementById("featuredMod");
 
-async function renderFeatured() {
-const mod = featured[index];
-await preloadImage(mod.image);
-featuredContainer.style.opacity = 0;
+  async function renderFeatured() {
+    const mod = featured[index];
+    await preloadImage(mod.image);
+    featuredContainer.style.opacity = 0;
 
-setTimeout(() => {
-featuredContainer.innerHTML = `
-       <a href="mod.html?id=${mod.post_id}" style="text-decoration:none; color: inherit;">
-         <img src="${mod.image}" alt="${mod.name}" title="${mod.name}">
-         <div class="title">${mod.name}</div>
-       </a>
-     `;
-featuredContainer.style.opacity = 1;
-index = (index + 1) % featured.length;
-}, 500);
-}
+    setTimeout(() => {
+      featuredContainer.innerHTML = `
+        <a href="mod.html?id=${mod.post_id}" style="text-decoration:none; color: inherit;">
+          <img src="${mod.image}" alt="${mod.name}" title="${mod.name}">
+          <div class="title">${mod.name}</div>
+        </a>
+      `;
+      featuredContainer.style.opacity = 1;
+      index = (index + 1) % featured.length;
+    }, 500);
+  }
 
-renderFeatured();
-setInterval(renderFeatured, 5000);
+  await renderFeatured(); // preload first mod before cycling
+  setInterval(renderFeatured, 5000);
 }
 
 function displayMods(category) {
-const grid = document.getElementById("modGrid");
-grid.innerHTML = "";
-const filtered =
-category === "All" || category === "" || category === "all"
-? allMods
-: allMods.filter(
-(mod) => Array.isArray(mod.tags) && mod.tags.includes(category)
-);
+  const grid = document.getElementById("modGrid");
+  grid.innerHTML = "";
 
-filtered.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
-filtered.slice(0, 20).forEach((mod) => {
-grid.innerHTML += generateModCard(mod);
-});
+  const filtered =
+    category === "All" || category === "" || category === "all"
+      ? allMods
+      : allMods.filter(
+          (mod) => Array.isArray(mod.tags) && mod.tags.includes(category)
+        );
+
+  filtered.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
+  filtered.slice(0, 20).forEach((mod) => {
+    grid.innerHTML += generateModCard(mod);
+  });
 }
 
 function displayPagedMods(mods, currentPage, baseUrl) {
-const grid = document.getElementById("modGrid");
-const pagination = document.getElementById("paginationControls");
-const totalPages = Math.ceil(mods.length / pageSize);
-const start = (currentPage - 1) * pageSize;
-const paged = mods.slice(start, start + pageSize);
+  const grid = document.getElementById("modGrid");
+  const pagination = document.getElementById("paginationControls");
+  const totalPages = Math.ceil(mods.length / pageSize);
+  const start = (currentPage - 1) * pageSize;
+  const paged = mods.slice(start, start + pageSize);
 
-grid.innerHTML = "";
-pagination.innerHTML = "";
+  grid.innerHTML = "";
+  pagination.innerHTML = "";
 
-if (!paged.length) {
-grid.innerHTML = "<p style='text-align:center;'>No results found.</p>";
-return;
+  if (!paged.length) {
+    grid.innerHTML = "<p style='text-align:center;'>No results found.</p>";
+    return;
+  }
+
+  paged.forEach((mod) => {
+    grid.innerHTML += generateModCard(mod);
+  });
+
+  if (totalPages > 1) {
+    if (currentPage > 1) {
+      pagination.innerHTML += `<a class="back-button" href="${baseUrl}page=${currentPage - 1}">← Prev</a>`;
+    }
+
+    pagination.innerHTML += `<span style="margin: 0 10px;">Page ${currentPage} of ${totalPages}</span>`;
+
+    if (currentPage < totalPages) {
+      pagination.innerHTML += `<a class="back-button" href="${baseUrl}page=${currentPage + 1}">Next →</a>`;
+    }
+  }
 }
 
-paged.forEach((mod) => {
-grid.innerHTML += generateModCard(mod);
-});
-
-if (totalPages > 1) {
-if (currentPage > 1) {
-pagination.innerHTML += `<a class="back-button" href="${baseUrl}page=${currentPage - 1}">← Prev</a>`;
-}
-
-pagination.innerHTML += `<span style="margin: 0 10px;">Page ${currentPage} of ${totalPages}</span>`;
-
-if (currentPage < totalPages) {
-pagination.innerHTML += `<a class="back-button" href="${baseUrl}page=${currentPage + 1}">Next →</a>`;
-}
-}
-}
-
-// === [ UPDATED: generateModCard with post_id ] ===
+// === MOD CARD (no double image) ===
 function generateModCard(mod) {
-const id = encodeURIComponent(mod.post_id);
-return `
-   <div class="mod-card">
-     <a href="mod.html?id=${id}">
-        <img src="${mod.image}" alt="${mod.name}" title="${mod.name}">
+  const id = encodeURIComponent(mod.post_id);
+  return `
+    <div class="mod-card">
+      <a href="mod.html?id=${id}">
         <img src="${mod.image}" alt="${mod.name}" title="${mod.name}" loading="lazy">
-       <div class="mod-info">
-         <h3>${mod.name}</h3>
-       </div>
-     </a>
-   </div>
- `;
+        <div class="mod-info">
+          <h3>${mod.name}</h3>
+        </div>
+      </a>
+    </div>
+  `;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-const categorySelect = document.getElementById("categorySelect");
-const searchInput = document.getElementById("searchInput");
-const searchButton = document.getElementById("searchButton");
+// === DOM READY ===
+document.addEventListener("DOMContentLoaded", async () => {
+  const categorySelect = document.getElementById("categorySelect");
+  const searchInput = document.getElementById("searchInput");
+  const searchButton = document.getElementById("searchButton");
 
-if (categorySelect) {
-categorySelect.addEventListener("change", () => {
-const selected = categorySelect.value;
-window.location.href = `category.html?cat=${encodeURIComponent(selected)}&page=1`;
+  if (categorySelect) {
+    categorySelect.addEventListener("change", () => {
+      const selected = categorySelect.value;
+      window.location.href = `category.html?cat=${encodeURIComponent(selected)}&page=1`;
+    });
+  }
+
+  if (searchInput && searchButton) {
+    searchButton.addEventListener("click", () => {
+      const value = searchInput.value.trim();
+      if (value) {
+        window.location.href = `search.html?q=${encodeURIComponent(value)}&page=1`;
+      }
+    });
+
+    searchInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        searchButton.click();
+      }
+    });
+  }
+
+  await fetchMods(); // ✅ wait for allMods before doing anything
 });
-}
-
-if (searchInput && searchButton) {
-searchButton.addEventListener("click", () => {
-const value = searchInput.value.trim();
-if (value) {
-window.location.href = `search.html?q=${encodeURIComponent(value)}&page=1`;
-}
-});
-
-searchInput.addEventListener("keypress", (e) => {
-if (e.key === "Enter") {
-searchButton.click();
-}
-});
-}
-});
-
-fetchMods();
