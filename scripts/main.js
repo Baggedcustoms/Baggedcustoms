@@ -55,12 +55,13 @@ async function fetchMods() {
       !path.includes("category.html") &&
       !path.includes("search.html"))
   ) {
-await displayFeatured(); // Wait for featured mod (including image load)
+await displayFeatured();
 
-document.getElementById("modGrid").style.visibility = "visible";
-document.querySelector("footer").style.visibility = "visible";
+document.getElementById("modGrid").classList.add("visible");
+document.getElementById("mainFooter").classList.add("visible");
 
 displayMods("all");
+    
   } else if (path.includes("category.html")) {
     const category = params.get("cat") || "";
     const page = parseInt(params.get("page")) || 1;
