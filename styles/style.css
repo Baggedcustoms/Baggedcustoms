@@ -470,3 +470,25 @@ h2, h3 {
 #modContainer div {
   color: #ddd; /* or white if you prefer */
 }
+
+/* Tighten spacing around featured section */
+#featuredWrapper {
+  margin: 20px auto 10px auto !important;
+  padding: 10px 0 !important;
+}
+
+#featuredWrapper h2 {
+  margin-bottom: 10px !important; /* reduce space below "Featured Mods" */
+  font-size: 1.6rem;
+}
+
+/* Reduce bottom margin on featured mod card */
+#featuredMod {
+  margin-bottom: 20px !important;
+}
+
+/* Optional: tighten spacing above "Recent Mods" heading */
+h2#recentHeader {
+  margin-top: 10px !important;
+  margin-bottom: 15px !important;
+}
