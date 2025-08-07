@@ -168,7 +168,7 @@ input:-webkit-autofill:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 15px #c9501d;
+  box-shadow: none; 
 }
 
 #featuredMod.preloading::before {
