@@ -111,22 +111,22 @@ input:-webkit-autofill:hover {
 
 /* ========== FEATURED MOD ========== */
 #featuredMod {
-  margin: 30px auto;
+  position: relative;
+  margin: 0 auto 30px auto;
   width: 90%;
   max-width: 720px;
-  padding: 10px;
-  border-radius: 8px;
+  aspect-ratio: 16 / 9; /* Ensures consistent height and stops shifting */
+  overflow: hidden;
   background-color: #1b1b1b;
+  border-radius: 8px;
   box-shadow: 0 0 15px #c9501d;
-  text-align: center;
-  transition: box-shadow 0.3s, opacity 0.5s ease-in-out;
-  min-height: 294px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  box-sizing: border-box;
+  transition: box-shadow 0.3s ease, opacity 0.5s ease-in-out;
   opacity: 0;
-  visibility: hidden; /* NEW */
+  visibility: hidden; /* Hide until loaded */
+  box-sizing: border-box;
 }
 
 #featuredMod.loaded {
@@ -140,14 +140,12 @@ input:-webkit-autofill:hover {
 
 #featuredMod img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 100%;
   object-fit: cover;
   border-radius: 12px;
   display: block;
-  height: auto;
   max-width: 640px;
   margin: 0 auto;
-  /* REMOVED glow to avoid double box-shadow */
 }
 
 #featuredMod .title {
