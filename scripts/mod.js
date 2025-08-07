@@ -52,7 +52,7 @@ async function loadModDetails() {
     const container = document.getElementById("modContainer");
 
     container.innerHTML = `
-      <h1 style="text-align:center; margin-bottom: 20px; color:#e0611f;">${mod.name}</h1>
+      <h1 style="text-align:center; margin-bottom: 20px;">${mod.name}</h1>
 
       <div id="mainImageWrapper" style="text-align:center; margin-bottom: 20px;">
         <img id="mainImage" 
