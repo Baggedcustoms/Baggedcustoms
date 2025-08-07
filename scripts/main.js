@@ -113,7 +113,7 @@ featuredContainer.innerHTML = `
     <img src="${mod.image}" alt="${mod.name}" title="${mod.name}">
     <div class="featured-text">
       <div class="title">${mod.name}</div>
-      ${mod.category ? `<div class="category">${mod.category}</div>` : ""}
+     ${mod.category && mod.category.toLowerCase() !== "uncategorized" ? `<div class="category">${mod.category}</div>` : ""}
     </div>
   </a>
 `;
