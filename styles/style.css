@@ -74,6 +74,10 @@ header {
   box-shadow: 0 0 15px #c9501d;
   text-align: center;
   transition: box-shadow 0.3s;
+  min-height: 420px; /* 💡 This reserves vertical space and prevents pushdown */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #featuredMod:hover {
