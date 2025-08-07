@@ -12,10 +12,9 @@
 
   <link rel="stylesheet" href="styles/style.css" />
   <style>
-    /* Ad placeholder styles, hidden by default */
     .ad-placeholder {
       display: none;
-      background-color: #6b1f00; /* matches your header brown */
+      background-color: #6b1f00;
       color: #fff;
       font-weight: bold;
       padding: 15px 0;
@@ -29,7 +28,6 @@
       width: 100%;
     }
 
-    /* Responsive fix for smaller screens */
     @media (max-width: 768px) {
       .ad-placeholder {
         max-width: 320px;
@@ -39,32 +37,62 @@
       }
     }
 
-    /* Container for ad blocks */
     .ad-container {
       text-align: center;
+    }
+
+    .back-button-wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    .back-button {
+      font-size: 14px;
+      color: #c9501d;
+      background-color: #333;
+      padding: 6px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #e0611f;
+      color: #fff;
+    }
+
+    #searchTitle {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 24px;
+    }
+
+    #paginationControls {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="images/banner.webp" alt="BaggedCustoms Logo" class="logo" />
+    <!-- No visible logo here to prevent layout shift -->
   </header>
 
-  <!-- Top banner ad container -->
   <div id="topBannerAd" class="ad-container">
     <div class="ad-placeholder">Top Banner Ad Placeholder</div>
   </div>
 
-  <div class="top-filters" style="justify-content: center;">
+  <div class="back-button-wrapper">
     <a href="index.html" class="back-button">← Back to Home</a>
   </div>
 
   <h2 id="searchTitle">Search Results</h2>
 
   <div id="modGrid" class="mod-grid"></div>
-  <div id="paginationControls" class="top-filters" style="justify-content: center;"></div>
+  <div id="paginationControls"></div>
 
-  <!-- Footer ad container -->
   <div id="footerAd" class="ad-container" style="margin-top: 20px; text-align: center;">
     <div class="ad-placeholder">Footer Ad Placeholder</div>
   </div>
@@ -79,11 +107,9 @@
 
   <script src="scripts/main.js"></script>
   <script>
-    // Toggle to show/hide ad placeholders. Set to true to show placeholders.
     const showAdPlaceholders = false;
-
     window.addEventListener('DOMContentLoaded', () => {
-      if(showAdPlaceholders) {
+      if (showAdPlaceholders) {
         document.querySelectorAll('.ad-placeholder').forEach(div => {
           div.style.display = 'block';
         });
