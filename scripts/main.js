@@ -55,8 +55,8 @@ async function fetchMods() {
       !path.includes("category.html") &&
       !path.includes("search.html"))
   ) {
-    displayFeatured();
-    displayMods("all");
+ await displayFeatured(); // ⬅️ Wait for featured to fully render
+displayMods("all");
   } else if (path.includes("category.html")) {
     const category = params.get("cat") || "";
     const page = parseInt(params.get("page")) || 1;
@@ -92,7 +92,7 @@ async function preloadImage(src) {
 }
 
 // === [ UPDATED FEATURED MODS with post_id ] ===
-function displayFeatured() {
+async function displayFeatured() {
   const featured = allMods.filter((mod) => mod.featured);
   if (!featured.length) return;
 
@@ -116,8 +116,8 @@ function displayFeatured() {
     }, 500);
   }
 
-  renderFeatured();
-  setInterval(renderFeatured, 5000);
+  await renderFeatured(); // Wait for the first one before moving on
+  setInterval(renderFeatured, 5000); // Then start cycling
 }
 
 function displayMods(category) {
