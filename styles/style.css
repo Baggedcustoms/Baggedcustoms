@@ -116,21 +116,22 @@ input:-webkit-autofill:hover {
   width: 100%;
   max-width: 900px;
   margin: 0 auto 40px auto;
-  padding: 60px 0; /* already increased from earlier */
-  min-height: 480px; /* <== THIS is the key part */
+  padding: 60px 0;
+  min-height: 480px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
   z-index: 2;
+  overflow: visible;
 }
 
 
 #featuredWrapper::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 50%; 
   left: 50%;
   transform: translate(-50%, -50%);
   background-image: url('../images/banner.webp');
