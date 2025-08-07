@@ -107,17 +107,18 @@ async function displayFeatured() {
   await preloadImage(mod.image);
   featuredContainer.style.opacity = 0;
 
-  setTimeout(() => {
-    featuredContainer.innerHTML = `
-      <a href="mod.html?id=${mod.post_id}" style="text-decoration:none; color: inherit;">
-        <img src="${mod.image}" alt="${mod.name}" title="${mod.name}">
-        <div class="title">${mod.name}</div>
-      </a>
-    `;
-    featuredContainer.classList.remove("preloading"); // 💥 This is the fix
-    featuredContainer.style.opacity = 1;
-    index = (index + 1) % featured.length;
-  }, 500);
+ setTimeout(() => {
+  featuredContainer.innerHTML = `
+    <a href="mod.html?id=${mod.post_id}" style="text-decoration:none; color: inherit;">
+      <img src="${mod.image}" alt="${mod.name}" title="${mod.name}">
+      <div class="title">${mod.name}</div>
+    </a>
+  `;
+  featuredContainer.classList.remove("preloading");
+  featuredContainer.style.opacity = 1;
+  featuredContainer.classList.add("loaded"); // ✅ add this
+  index = (index + 1) % featured.length;
+}, 500);
 }
 
   await renderFeatured(); // preload first mod before cycling
