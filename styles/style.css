@@ -116,7 +116,8 @@ input:-webkit-autofill:hover {
   width: 100%;
   max-width: 900px;
   margin: 0 auto 40px auto;
-  padding: 60px 0; /* increased from 20px to give room above and below */
+  padding: 60px 0; /* already increased from earlier */
+  min-height: 480px; /* <== THIS is the key part */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,6 +125,7 @@ input:-webkit-autofill:hover {
   box-sizing: border-box;
   z-index: 2;
 }
+
 
 #featuredWrapper::before {
   content: "";
