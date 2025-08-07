@@ -472,3 +472,14 @@ footer {
   border-radius: 8px;
   display: block;
 }
+
+.featured-card {
+  height: 405px; /* matches 720x405 aspect ratio */
+  overflow: hidden;
+  position: relative;
+  background-color: #111; /* optional placeholder look */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
