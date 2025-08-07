@@ -120,10 +120,11 @@ input:-webkit-autofill:hover {
   box-shadow: 0 0 15px #c9501d;
   text-align: center;
   transition: box-shadow 0.3s, opacity 0.5s ease-in-out;
-  min-height: 420px;
+  min-height: 294px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
   opacity: 0;
 }
 
@@ -135,9 +136,12 @@ input:-webkit-autofill:hover {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 12px;
   display: block;
   height: auto;
+  max-width: 640px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px #c9501d;
 }
 
 #featuredMod .title {
@@ -150,6 +154,22 @@ input:-webkit-autofill:hover {
   font-size: 0.9rem;
   color: #ccc;
   margin-top: 5px;
+}
+
+#featuredMod.preloading {
+  min-height: 400px;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px #c9501d;
+}
+
+#featuredMod.preloading::before {
+  content: "Loading Featured Mod...";
+  color: #666;
+  font-size: 1rem;
+  font-style: italic;
 }
 
 /* ========== MOD GRID ========== */
@@ -392,27 +412,4 @@ h2, h3 {
   height: 300px;
   pointer-events: none;
   z-index: 1;
-}
-
-#featuredMod {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto 40px auto;
-  transition: opacity 0.5s ease-in-out;
-}
-
-#featuredMod.preloading {
-  min-height: 400px; /* Adjust this to match your typical mod height */
-  background-color: #1a1a1a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 15px #c9501d;
-}
-
-#featuredMod.preloading::before {
-  content: "Loading Featured Mod...";
-  color: #666;
-  font-size: 1rem;
-  font-style: italic;
 }
