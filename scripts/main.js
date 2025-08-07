@@ -174,7 +174,7 @@ function generateModCard(mod) {
   return `
     <div class="mod-card">
       <a href="mod.html?id=${id}">
-        <img src="${mod.image}" alt="${mod.name}" title="${mod.name}">
+        <img src="${mod.image}" alt="${mod.name}" title="${mod.name}" loading="lazy">
         <div class="mod-info">
           <h3>${mod.name}</h3>
         </div>
