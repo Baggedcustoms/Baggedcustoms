@@ -116,7 +116,7 @@ input:-webkit-autofill:hover {
   width: 100%;
   max-width: 900px;
   margin: 0 auto 40px auto;
-  padding: 20px 0;
+  padding: 60px 0; /* increased from 20px to give room above and below */
   display: flex;
   justify-content: center;
   align-items: center;
