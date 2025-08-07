@@ -437,3 +437,21 @@ html {
   box-shadow: 0 0 20px #e0611f;
   transform: scale(1.1);
 }
+
+#featuredWrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('../images/banner.webp');
+  background-size: 300px auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.15;
+  filter: grayscale(80%) brightness(150%);
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+  z-index: 1;
+}
