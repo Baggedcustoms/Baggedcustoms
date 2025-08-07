@@ -55,9 +55,7 @@ path === "/" ||
 !path.includes("category.html") &&
 !path.includes("search.html"))
 ) {
-    displayFeatured();
-    displayMods("all");
- await displayFeatured(); // ⬅️ Wait for featured to fully render
+displayFeatured();
 displayMods("all");
 } else if (path.includes("category.html")) {
 const category = params.get("cat") || "";
@@ -95,7 +93,6 @@ img.src = src;
 
 // === [ UPDATED FEATURED MODS with post_id ] ===
 function displayFeatured() {
-async function displayFeatured() {
 const featured = allMods.filter((mod) => mod.featured);
 if (!featured.length) return;
 
@@ -119,10 +116,8 @@ index = (index + 1) % featured.length;
 }, 500);
 }
 
-  renderFeatured();
-  setInterval(renderFeatured, 5000);
-  await renderFeatured(); // Wait for the first one before moving on
-  setInterval(renderFeatured, 5000); // Then start cycling
+renderFeatured();
+setInterval(renderFeatured, 5000);
 }
 
 function displayMods(category) {
@@ -179,7 +174,8 @@ const id = encodeURIComponent(mod.post_id);
 return `
    <div class="mod-card">
      <a href="mod.html?id=${id}">
-       <img src="${mod.image}" alt="${mod.name}" title="${mod.name}" loading="lazy">
+        <img src="${mod.image}" alt="${mod.name}" title="${mod.name}">
+        <img src="${mod.image}" alt="${mod.name}" title="${mod.name}" loading="lazy">
        <div class="mod-info">
          <h3>${mod.name}</h3>
        </div>
