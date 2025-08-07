@@ -126,6 +126,12 @@ input:-webkit-autofill:hover {
   justify-content: center;
   box-sizing: border-box;
   opacity: 0;
+  visibility: hidden; /* NEW */
+}
+
+#featuredMod.loaded {
+  opacity: 1;
+  visibility: visible;
 }
 
 #featuredMod:hover {
@@ -141,7 +147,7 @@ input:-webkit-autofill:hover {
   height: auto;
   max-width: 640px;
   margin: 0 auto;
-  box-shadow: 0 0 15px #c9501d;
+  /* REMOVED glow to avoid double box-shadow */
 }
 
 #featuredMod .title {
