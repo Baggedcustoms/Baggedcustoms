@@ -86,7 +86,11 @@ header {
 
 #featuredMod img {
   width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   border-radius: 8px;
+  display: block;
+  height: auto;
 }
 
 #featuredMod .title {
