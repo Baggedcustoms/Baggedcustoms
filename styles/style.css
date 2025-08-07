@@ -432,24 +432,21 @@ h2, h3 {
 #featuredMod .featured-text {
   width: 100%;
   text-align: center;
-  padding: 10px 0;
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6); /* Optional: semi-transparent black bar */
-  width: 100%;
+  padding: 10px 10px 0;
   box-sizing: border-box;
+  position: static;
+  background: none;
 }
 
 #featuredMod .title {
   font-size: 1.2rem;
   font-weight: bold;
-  margin: 4px 0 2px;
-  text-align: center;
+  margin: 10px 0 2px;
+  color: white;
 }
 
 #featuredMod .category {
   font-size: 0.9rem;
-  color: #ccc;
-  margin-bottom: 4px;
-  text-align: center;
+  color: #aaa;
+  margin-bottom: 10px;
 }
