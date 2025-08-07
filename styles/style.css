@@ -381,8 +381,8 @@ a:hover {
 
   .mod-card {
     width: 100% !important;
-    box-sizing: border-box; /* include border/padding in width */
-    border: none !important; /* remove debug border */
+    box-sizing: border-box; 
+    border: none !important; 
   }
 }
 
@@ -392,14 +392,14 @@ a:hover {
 
 @media (max-width: 768px) {
   #featuredWrapper img.background-logo {
-    width: 150px; /* smaller size for mobile */
-    opacity: 0.1; /* optionally reduce opacity on mobile */
+    width: 150px; 
+    opacity: 0.1; 
   }
 }
 
 #searchbutton {
-  background-color: #1e1e1e; /* dark gray like your dropdowns */
-  color: #e0611f; /* orange text */
+  background-color: #1e1e1e; 
+  color: #e0611f; 
   border: 1px solid #e0611f;
   padding: 8px 16px;
   font-weight: bold;
@@ -459,4 +459,12 @@ html {
 footer {
   height: 50px;
   min-height: 50px;
+}
+
+#featuredMod img {
+  width: 100%;
+  aspect-ratio: 16 / 9;         
+  object-fit: cover;           
+  border-radius: 8px;
+  display: block;
 }
