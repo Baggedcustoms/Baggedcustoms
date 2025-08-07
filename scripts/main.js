@@ -55,7 +55,11 @@ async function fetchMods() {
       !path.includes("category.html") &&
       !path.includes("search.html"))
   ) {
- await displayFeatured(); // ⬅️ Wait for featured to fully render
+await displayFeatured(); // Wait for featured mod (including image load)
+
+document.getElementById("modGrid").style.visibility = "visible";
+document.querySelector("footer").style.visibility = "visible";
+
 displayMods("all");
   } else if (path.includes("category.html")) {
     const category = params.get("cat") || "";
