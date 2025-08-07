@@ -149,7 +149,7 @@ input:-webkit-autofill:hover {
 /* ========== FEATURED MOD ========== */
 #featuredMod {
   position: relative;
-   margin: 20px auto 30px auto;
+   margin: 40px auto 30px auto;
   width: 90%;
   max-width: 720px;
   background-color: #1b1b1b;
