@@ -429,24 +429,38 @@ h2, h3 {
   padding: 10px 0;
 }
 
+#featuredMod a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+#featuredMod img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
 #featuredMod .featured-text {
   width: 100%;
+  max-width: 640px;
   text-align: center;
-  padding: 10px 10px 0;
-  box-sizing: border-box;
-  position: static;
-  background: none;
+  margin-top: 10px;
 }
 
 #featuredMod .title {
   font-size: 1.2rem;
   font-weight: bold;
-  margin: 10px 0 2px;
+  margin-bottom: 4px;
   color: white;
 }
 
 #featuredMod .category {
   font-size: 0.9rem;
   color: #aaa;
-  margin-bottom: 10px;
-}
