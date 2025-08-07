@@ -150,6 +150,7 @@ input:-webkit-autofill:hover {
 #featuredMod {
   position: relative;
    margin: 40px auto 30px auto;
+   padding-top: 30px;
   width: 90%;
   max-width: 720px;
   background-color: #1b1b1b;
