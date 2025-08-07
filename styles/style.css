@@ -459,3 +459,10 @@ h2, h3 {
   box-shadow: 0 0 20px #e0611f;
   transform: scale(1.1);
 }
+
+#modContainer p,
+#modContainer li,
+#modContainer span,
+#modContainer div {
+  color: #ddd; /* or white if you prefer */
+}
