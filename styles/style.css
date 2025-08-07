@@ -487,3 +487,15 @@ footer {
   justify-content: flex-start;
   align-items: center;
 }
+
+#modGrid,
+#mainFooter {
+  transition: opacity 0.4s ease-in-out;
+  opacity: 0;
+}
+
+#modGrid.visible,
+#mainFooter.visible {
+  opacity: 1;
+  visibility: visible;
+}
