@@ -5,45 +5,59 @@ const pageSize = 15;
 /* ---------- utils ---------- */
 function makeSlug(s) {
   if (!s) return "mod";
-  // mirror the PS slugger:
-  // 1) remove anything not letter/number/space/hyphen
   s = s.replace(/[^\p{L}\p{N}\s-]+/gu, "");
-  // 2) trim + lowercase
   s = s.trim().toLowerCase();
-  // 3) collapse whitespace -> "-"
   s = s.replace(/\s+/g, "-");
-  // 4) collapse multiple "-" -> single
   s = s.replace(/-+/g, "-");
-  if (!s) s = "mod";
-  return s;
+  return s || "mod";
 }
 
 /* ---------- fetch sitemap + build set of available pretty slugs ---------- */
 async function loadSitemapUrls() {
   try {
-    const res = await fetch("/sitemap.xml", { cache: "no-store" });
+    const url = `/sitemap.xml?v=${Date.now()}`; // bust cache
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) {
+      console.warn(`[SITEMAP] HTTP ${res.status} for ${url}`);
+      return;
+    }
     const xmlText = await res.text();
     const parser = new DOMParser();
     const xmlDoc = parser.parseFromString(xmlText, "application/xml");
 
-    // handle namespaced or not by searching local-name()
-    const urlNodes = Array.from(xmlDoc.getElementsByTagNameNS("*", "url"));
-    const locNodes = urlNodes.length
-      ? urlNodes.map(n => n.getElementsByTagNameNS("*", "loc")[0])
-      : Array.from(xmlDoc.getElementsByTagName("loc")); // fallback
+    // parser error?
+    const pe = xmlDoc.getElementsByTagName("parsererror");
+    if (pe && pe.length) {
+      console.warn("[SITEMAP] parsererror:", pe[0].textContent?.slice(0, 300));
+      return;
+    }
 
-    let added = 0;
-    locNodes.forEach(loc => {
-      if (!loc || !loc.textContent) return;
-      const locText = loc.textContent.trim();
-      if (locText.includes("/mods/") && locText.endsWith(".html")) {
+    // Use XPath so namespaces don't matter
+    const xpath = "//*[local-name()='url']/*[local-name()='loc']";
+    const snap = xmlDoc.evaluate(xpath, xmlDoc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+
+    let totalLocs = snap.snapshotLength;
+    let modsFound = 0;
+    let firstFew = [];
+    for (let i = 0; i < snap.snapshotLength; i++) {
+      const locNode = snap.snapshotItem(i);
+      const locText = (locNode.textContent || "").trim();
+      if (!locText) continue;
+      if (locText.includes("/mods/") && /\.html?$/i.test(locText)) {
         const last = locText.substring(locText.lastIndexOf("/") + 1);
-        const slug = last.replace(/\.html$/i, "").toLowerCase();
+        const slug = last.replace(/\.html?$/i, "").toLowerCase();
         prettySlugSet.add(slug);
-        added++;
+        modsFound++;
+        if (firstFew.length < 5) firstFew.push(locText);
       }
-    });
-    console.log(`[SITEMAP] Found ${added} /mods/*.html entries`);
+    }
+
+    console.log(`[SITEMAP] locs=${totalLocs}, /mods/ pages=${modsFound}`);
+    if (firstFew.length) {
+      console.log("[SITEMAP] sample:", firstFew);
+    } else {
+      console.log("[SITEMAP] no /mods/ entries detected in sitemap payload.");
+    }
   } catch (err) {
     console.warn("[SITEMAP] Failed to load or parse /sitemap.xml", err);
   }
@@ -69,9 +83,7 @@ async function fetchMods() {
   });
 
   const tagSet = new Set();
-  allMods.forEach(mod => {
-    if (Array.isArray(mod.tags)) mod.tags.forEach(tag => tagSet.add(tag));
-  });
+  allMods.forEach(mod => Array.isArray(mod.tags) && mod.tags.forEach(tag => tagSet.add(tag)));
   const tags = Array.from(tagSet).sort();
 
   const categorySelect = document.getElementById("categorySelect");
@@ -184,10 +196,7 @@ async function displayFeatured() {
 /* ---------- pick link (pretty if available, else fallback) ---------- */
 function getModLink(mod) {
   const slug = makeSlug(mod.name || "");
-  if (prettySlugSet.has(slug)) {
-    return `/mods/${slug}.html`;
-  }
-  // fallback to legacy route
+  if (prettySlugSet.has(slug)) return `/mods/${slug}.html`;
   return `mod.html?id=${encodeURIComponent(mod.post_id)}`;
 }
 
@@ -277,6 +286,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  await loadSitemapUrls(); // build prettySlugSet
+  await loadSitemapUrls(); // build prettySlugSet (now namespace-safe, cache-busted)
   await fetchMods();       // render with correct links
 });
