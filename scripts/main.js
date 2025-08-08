@@ -12,8 +12,8 @@ function makeSlug(s) {
 
 /* ---------- fetch + prep mods ---------- */
 async function fetchMods() {
-  const res = await fetch("mods.json", { cache: "no-store" });
-  allMods = await res.json();
+  const response = await fetch("mods.json", { cache: "no-store" });
+  allMods = await response.json();
 
   const exclusions = ["z3d", "example1", "example2"];
   const tagExclusions = ["Prime Assets", "GearHead Assets"];
@@ -21,9 +21,9 @@ async function fetchMods() {
   allMods = allMods.filter(mod => {
     const name = (mod.name || "").toLowerCase();
     const nameExcluded = exclusions.some(k => name.includes(k.toLowerCase()));
-    const tagsExcluded = Array.isArray(mod.tags) && mod.tags.some(tag =>
-      tagExclusions.some(ex => tag.toLowerCase() === ex.toLowerCase())
-    );
+    const tagsExcluded =
+      Array.isArray(mod.tags) &&
+      mod.tags.some(tag => tagExclusions.some(ex => tag.toLowerCase() === ex.toLowerCase()));
     return !nameExcluded && !tagsExcluded;
   });
 
@@ -58,8 +58,8 @@ async function fetchMods() {
     path.includes("index.html") ||
     path === "/" ||
     (path.includes("baggedcustoms") &&
-     !path.includes("category.html") &&
-     !path.includes("search.html"))
+      !path.includes("category.html") &&
+      !path.includes("search.html"))
   ) {
     await displayFeatured();
     displayMods("all");
@@ -69,12 +69,13 @@ async function fetchMods() {
     const category = params.get("cat") || "";
     const page = parseInt(params.get("page")) || 1;
 
-    const filtered = (category === "" || category === "all")
-      ? allMods.filter(m => Array.isArray(m.tags) && m.tags.length > 0)
-      : allMods.filter(m => Array.isArray(m.tags) && m.tags.includes(category));
+    const filtered =
+      category === "" || category === "all"
+        ? allMods.filter(m => Array.isArray(m.tags) && m.tags.length > 0)
+        : allMods.filter(m => Array.isArray(m.tags) && m.tags.includes(category));
 
     const titleEl = document.getElementById("categoryTitle");
-    if (titleEl) titleEl.textContent = (category === "" || category === "all") ? "All Categories" : category;
+    if (titleEl) titleEl.textContent = category === "" || category === "all" ? "All Categories" : category;
 
     displayPagedMods(filtered, page, `category.html?cat=${encodeURIComponent(category)}&`);
   } else if (path.includes("search.html")) {
@@ -122,7 +123,8 @@ async function displayFeatured() {
         <div class="featured-text">
           <div class="title">${mod.name}</div>
           ${mod.category && mod.category.toLowerCase() !== "uncategorized"
-            ? `<div class="category">${mod.category}</div>` : ""}
+            ? `<div class="category">${mod.category}</div>`
+            : ""}
         </div>
       </a>
     `;
@@ -137,7 +139,7 @@ async function displayFeatured() {
   // Re-enable transitions for later swaps
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
-      featuredContainer.style.transition = ""; // use CSS value again
+      featuredContainer.style.transition = "";
     });
   });
 
@@ -194,7 +196,8 @@ async function displayFeatured() {
 
   // Pause on tab hide / resume on show
   document.addEventListener("visibilitychange", () => {
-    if (document.hidden) stop(); else start();
+    if (document.hidden) stop();
+    else start();
   });
 
   // Pause on hover
@@ -214,11 +217,11 @@ function displayMods(category) {
   if (!grid) return;
   grid.innerHTML = "";
 
-  const filtered = (category === "All" || category === "" || category === "all")
-    ? allMods
-    : allMods.filter(m => Array.isArray(m.tags) && m.tags.includes(category));
+  const filtered =
+    category === "All" || category === "" || category === "all"
+      ? allMods
+      : allMods.filter(m => Array.isArray(m.tags) && m.tags.includes(category));
 
-  // Sort newest first if published_at exists
   filtered.sort((a, b) => new Date(b.published_at || 0) - new Date(a.published_at || 0));
 
   filtered.slice(0, 20).forEach(mod => {
