@@ -10,6 +10,11 @@ function makeSlug(s) {
   return s || "mod";
 }
 
+/* Use a safe hero image (handles missing/array) */
+function heroImage(mod) {
+  return mod.image || (Array.isArray(mod.images) && mod.images[0]) || "images/placeholder.webp";
+}
+
 /* ---------- fetch + prep mods ---------- */
 async function fetchMods() {
   const response = await fetch("mods.json", { cache: "no-store" });
@@ -117,9 +122,11 @@ async function displayFeatured() {
 
   const templateFor = (mod) => {
     const link = getModLink(mod);
+    const img = heroImage(mod);
     return `
       <a href="${link}" style="text-decoration:none; color:inherit;">
-        <img src="${mod.image}" alt="${mod.name}" title="${mod.name}" loading="eager">
+        <img src="${img}" alt="${mod.name}" title="${mod.name}"
+             width="640" height="360" loading="eager" decoding="async">
         <div class="featured-text">
           <div class="title">${mod.name}</div>
           ${mod.category && mod.category.toLowerCase() !== "uncategorized"
@@ -150,7 +157,7 @@ async function displayFeatured() {
 
   const rotateOnce = async () => {
     const mod = featured[index];
-    await preloadImage(mod.image);
+    await preloadImage(heroImage(mod));
     featuredContainer.classList.add("is-swapping");
     featuredContainer.style.opacity = "0";
     setTimeout(() => {
@@ -161,16 +168,8 @@ async function displayFeatured() {
     index = (index + 1) % featured.length;
   };
 
-  const start = () => {
-    stop();
-    timer = setInterval(rotateOnce, ROTATE_EVERY);
-  };
-  const stop = () => {
-    if (timer) {
-      clearInterval(timer);
-      timer = null;
-    }
-  };
+  const start = () => { stop(); timer = setInterval(rotateOnce, ROTATE_EVERY); };
+  const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
 
   // Start only after visible + page load + extra delay
   let visible = false;
@@ -194,13 +193,10 @@ async function displayFeatured() {
 
   io.observe(featuredContainer);
 
-  // Pause on tab hide / resume on show
   document.addEventListener("visibilitychange", () => {
-    if (document.hidden) stop();
-    else start();
+    if (document.hidden) stop(); else start();
   });
 
-  // Pause on hover
   featuredContainer.addEventListener("mouseenter", stop);
   featuredContainer.addEventListener("mouseleave", start);
 }
@@ -262,10 +258,14 @@ function displayPagedMods(mods, currentPage, baseUrl) {
 /* ---------- card ---------- */
 function generateModCard(mod) {
   const link = getModLink(mod);
+  const img = heroImage(mod);
   return `
     <div class="mod-card">
       <a href="${link}">
-        <img src="${mod.image}" alt="${mod.name}" title="${mod.name}" loading="lazy">
+        <div class="thumb-wrap">
+          <img src="${img}" alt="${mod.name}" title="${mod.name}"
+               width="400" height="225" loading="lazy" decoding="async">
+        </div>
         <div class="mod-info">
           <h3>${mod.name}</h3>
         </div>
