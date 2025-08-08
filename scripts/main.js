@@ -3,12 +3,6 @@ const pageSize = 15;
 
 /* ---------- utils ---------- */
 function makeSlug(s) {
-  if (!s) return "mod";
-  s = s.replace(/[^\p{L}\p{N}\s-]+/gu, "");
-  s = s.trim().toLowerCase();
-  s = s.replace(/\s+/g, "-");
-  s = s.replace(/-+/g, "-");
-  return s || "mod";
 if (!s) return "mod";
 s = s.replace(/[^\p{L}\p{N}\s-]+/gu, "");
 s = s.trim().toLowerCase();
@@ -19,22 +13,6 @@ return s || "mod";
 
 /* ---------- fetch + prep mods ---------- */
 async function fetchMods() {
-  const res = await fetch("mods.json", { cache: "no-store" });
-  allMods = await res.json();
-
-  const exclusions = ["z3d", "example1", "example2"];
-  const tagExclusions = ["Prime Assets", "GearHead Assets"];
-
-  allMods = allMods.filter(mod => {
-    const name = (mod.name || "").toLowerCase();
-    const nameExcluded = exclusions.some(keyword => name.includes(keyword.toLowerCase()));
-    const tagsExcluded =
-      Array.isArray(mod.tags) &&
-      mod.tags.some(tag =>
-        tagExclusions.some(excludedTag => tag.toLowerCase() === excludedTag.toLowerCase())
-      );
-    return !nameExcluded && !tagsExcluded;
-  });
 const res = await fetch("mods.json", { cache: "no-store" });
 allMods = await res.json();
 
@@ -74,67 +52,6 @@ const selectedTag = params.get("cat") || "";
 if (selectedTag) categorySelect.value = selectedTag;
 }
 
-  const tagSet = new Set();
-  allMods.forEach(mod => Array.isArray(mod.tags) && mod.tags.forEach(tag => tagSet.add(tag)));
-  const tags = Array.from(tagSet).sort();
-
-  const categorySelect = document.getElementById("categorySelect");
-  if (categorySelect) {
-    categorySelect.innerHTML = `
-      <option value="" selected>Select Category</option>
-      <option value="">All Categories</option>
-    `;
-    tags.forEach(tag => {
-      const opt = document.createElement("option");
-      opt.value = tag;
-      opt.textContent = tag;
-      categorySelect.appendChild(opt);
-    });
-
-    const params = new URLSearchParams(window.location.search);
-    const selectedTag = params.get("cat") || "";
-    if (selectedTag) categorySelect.value = selectedTag;
-  }
-
-  const path = window.location.pathname.toLowerCase();
-  const params = new URLSearchParams(window.location.search);
-
-  if (
-    path.includes("index.html") ||
-    path === "/" ||
-    (path.includes("baggedcustoms") &&
-      !path.includes("category.html") &&
-      !path.includes("search.html"))
-  ) {
-    await displayFeatured();
-    displayMods("all");
-    document.getElementById("modGrid")?.classList.add("visible");
-    document.getElementById("mainFooter")?.classList.add("visible");
-  } else if (path.includes("category.html")) {
-    const category = params.get("cat") || "";
-    const page = parseInt(params.get("page")) || 1;
-
-    const filtered =
-      category === "" || category === "all"
-        ? allMods.filter(mod => Array.isArray(mod.tags) && mod.tags.length > 0)
-        : allMods.filter(mod => Array.isArray(mod.tags) && mod.tags.includes(category));
-
-    document.getElementById("categoryTitle").textContent =
-      category === "" || category === "all" ? "All Categories" : category;
-    displayPagedMods(filtered, page, `category.html?cat=${encodeURIComponent(category)}&`);
-  } else if (path.includes("search.html")) {
-    const query = params.get("q")?.toLowerCase() || "";
-    const page = parseInt(params.get("page")) || 1;
-
-    const filtered = allMods.filter(
-      mod =>
-        (mod.name || "").toLowerCase().includes(query) ||
-        (mod.tags && mod.tags.some(t => t.toLowerCase().includes(query)))
-    );
-
-    document.getElementById("searchTitle").textContent = `Search: "${query}"`;
-    displayPagedMods(filtered, page, `search.html?q=${encodeURIComponent(query)}&`);
-  }
 const path = window.location.pathname.toLowerCase();
 const params = new URLSearchParams(window.location.search);
 
@@ -177,205 +94,183 @@ displayPagedMods(filtered, page, `search.html?q=${encodeURIComponent(query)}&`);
 }
 
 async function preloadImage(src) {
-return new Promise(resolve => {
-const img = new Image();
-img.onload = resolve;
-img.src = src;
-});
+  return new Promise(resolve => {
+    const img = new Image();
+    img.onload = resolve;
+    img.onerror = resolve; // don't block if image errors
+    img.src = src;
+  });
 }
 
+/* ---------- featured (instant first render, delayed first rotation) ---------- */
 /* ---------- featured (first paint = no fade, rotate later) ---------- */
-/* ---------- featured ---------- */
-/* ---------- featured (delayed first rotation) ---------- */
 async function displayFeatured() {
+  const featured = allMods.filter(mod => mod.featured);
   const featured = allMods.filter(m => m.featured);
-  if (!featured.length) return;
-const featured = allMods.filter(mod => mod.featured);
 if (!featured.length) return;
-
-  const featuredContainer = document.getElementById("featuredMod");
-  // timing knobs
-  const EXTRA_FIRST_DELAY = 3000; // wait this long after full load before the first swap
-  const ROTATE_EVERY = 5000;      // normal cadence
-
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-let index = 0;
-  let timer = null;
 
 const featuredContainer = document.getElementById("featuredMod");
 if (!featuredContainer) return;
 
+  const EXTRA_FIRST_DELAY = 3000; // delay before first rotation (after load + visible)
+  const ROTATE_EVERY = 5000;      // subsequent cadence
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   // Prevent any CSS from hiding this on first paint
   featuredContainer.classList.remove("preloading");
   featuredContainer.style.opacity = "1";
   featuredContainer.style.transition = "none"; // nuke fades for first paint
 
+  let index = 0;
+  let timer = null;
   const EXTRA_FIRST_DELAY = 3000;
   const ROTATE_EVERY = 5000;
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const templateFor = (mod) => {
-    const link = getModLink(mod);
-    return `
-      <a href="${link}" style="text-decoration:none; color:inherit;">
-        <img src="${mod.image}" alt="${mod.name}" title="${mod.name}" loading="eager">
-        <div class="featured-text">
-          <div class="title">${mod.name}</div>
-          ${mod.category && mod.category.toLowerCase() !== "uncategorized"
-            ? `<div class="category">${mod.category}</div>`
-            : ""}
-        </div>
-      </a>
-    `;
-  };
-async function renderFeatured() {
-const mod = featured[index];
-await preloadImage(mod.image);
-featuredContainer.style.opacity = 0;
-
+const templateFor = (mod) => {
 const link = getModLink(mod);
+return `
+      <a href="${link}" style="text-decoration:none; color: inherit;">
+      <a href="${link}" style="text-decoration:none; color:inherit;">
+       <img src="${mod.image}" alt="${mod.name}" title="${mod.name}" loading="eager">
+       <div class="featured-text">
+         <div class="title">${mod.name}</div>
+         ${mod.category && mod.category.toLowerCase() !== "uncategorized"
+           ? `<div class="category">${mod.category}</div>`
+           : ""}
+       </div>
+     </a>
+   `;
+};
 
-setTimeout(() => {
-featuredContainer.innerHTML = `
-       <a href="${link}" style="text-decoration:none; color: inherit;">
-         <img src="${mod.image}" alt="${mod.name}" title="${mod.name}">
-         <div class="featured-text">
-           <div class="title">${mod.name}</div>
-           ${
-             mod.category && mod.category.toLowerCase() !== "uncategorized"
-               ? `<div class="category">${mod.category}</div>`
-               : ""
-           }
-         </div>
-       </a>
-     `;
-featuredContainer.classList.remove("preloading");
-featuredContainer.style.opacity = 1;
-featuredContainer.classList.add("loaded");
-index = (index + 1) % featured.length;
-}, 500);
-}
-
+  function renderCard(mod, { immediate = false } = {}) {
+    if (immediate) {
+      featuredContainer.innerHTML = templateFor(mod);
+      featuredContainer.classList.remove("preloading");
+      featuredContainer.classList.add("loaded");
+      featuredContainer.style.opacity = 1;
+      return Promise.resolve();
+    }
+    return preloadImage(mod.image).then(() => {
+      featuredContainer.style.opacity = 0;
+      setTimeout(() => {
+        featuredContainer.innerHTML = templateFor(mod);
+        featuredContainer.classList.remove("preloading");
+        featuredContainer.classList.add("loaded");
+        featuredContainer.style.opacity = 1;
+      }, 100);
   // 1) Synchronous first render (no preload, no fade)
   let index = 0;
   featuredContainer.innerHTML = templateFor(featured[0]);
   index = (index + 1) % featured.length;
-  function rotateOnce() { renderFeatured(); }
-  function startInterval() { stopInterval(); timer = setInterval(rotateOnce, ROTATE_EVERY); }
-  function stopInterval() { if (timer) { clearInterval(timer); timer = null; } }
 
   // Re-enable transitions AFTER first frame so later swaps can fade if you want
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
       featuredContainer.style.transition = ""; // back to stylesheet value
-    });
+});
+  }
   });
-  // 1) Render the FIRST card immediately (no cycling yet)
-await renderFeatured();
-  setInterval(renderFeatured, 5000);
 
-  // If user prefers reduced motion, don't auto-cycle at all
-if (prefersReduced) return;
+  if (prefersReduced) return;
 
   // 2) Rotate after visible + window load + extra delay
   let timer = null;
   const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
   const start = () => { stop(); timer = setInterval(rotateOnce, ROTATE_EVERY); };
 
-  function rotateOnce() {
-    const mod = featured[index];
-    index = (index + 1) % featured.length;
+function rotateOnce() {
+const mod = featured[index];
+    renderCard(mod, { immediate: false });
+index = (index + 1) % featured.length;
+  }
 
+  function startInterval() {
+    stopInterval();
+    timer = setInterval(rotateOnce, ROTATE_EVERY);
+  }
+  function stopInterval() {
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
     // Optional fade on subsequent swaps
     featuredContainer.style.opacity = "0";
     setTimeout(() => {
       featuredContainer.innerHTML = templateFor(mod);
       featuredContainer.style.opacity = "1";
     }, 120);
-  }
+}
 
-  const beginAfterDelay = () => {
-  // 2) Only start cycling after the section is on-screen AND the page fully loaded,
-  //    then wait EXTRA_FIRST_DELAY to avoid hitting LCP/PSI during initial animations.
+  // First card: render immediately (no fade, no delay)
+  await renderCard(featured[0], { immediate: true });
+  index = (index + 1) % featured.length;
+
+  if (prefersReduced) return; // respect reduced motion
+
+  // Start auto-rotation only after section visible AND page load, then wait extra delay
   let visible = false;
   const startWhenReady = () => {
+  const beginAfterDelay = () => {
 const kickoff = () => {
-      setTimeout(() => {
+setTimeout(() => {
+        if (visible) {
+          rotateOnce();
+          startInterval();
+        }
         // one swap, then start interval
         rotateOnce();
         start();
-      setTimeout(() => { 
-        if (visible) { rotateOnce(); startInterval(); }
 }, EXTRA_FIRST_DELAY);
 };
-    if (document.readyState === "complete") kickoff();
-    else window.addEventListener("load", kickoff, { once: true });
-    if (document.readyState === 'complete') kickoff();
-    else window.addEventListener('load', kickoff, { once: true });
+if (document.readyState === "complete") kickoff();
+else window.addEventListener("load", kickoff, { once: true });
 };
 
-  const io = new IntersectionObserver(
-    entries => {
-      if (entries.some(e => e.isIntersecting)) {
-        io.disconnect();
+const io = new IntersectionObserver(
+entries => {
+if (entries.some(e => e.isIntersecting)) {
+        visible = true;
+io.disconnect();
+        startWhenReady();
         beginAfterDelay();
-      }
-    },
-    { threshold: 0.2 }
-  );
-  const io = new IntersectionObserver((entries) => {
-    if (entries.some(e => e.isIntersecting)) {
-      visible = true;
-      io.disconnect();
-      startWhenReady();
-    }
-  }, { threshold: 0.2 });
+}
+},
+{ threshold: 0.2 }
+);
 io.observe(featuredContainer);
 
+  // Pause/resume on tab visibility
   // Pause on tab hidden / resume on visible
-  document.addEventListener("visibilitychange", () => {
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) stopInterval();
+    else startInterval();
     if (document.hidden) stop(); else start();
-  // 3) Pause on tab hidden / resume on visible
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) stopInterval(); else startInterval();
 });
 
+  // Pause on hover so folks can read
+  featuredContainer.addEventListener("mouseenter", stopInterval);
+  featuredContainer.addEventListener("mouseleave", startInterval);
   featuredContainer.addEventListener("mouseenter", stop);
   featuredContainer.addEventListener("mouseleave", start);
-  // 4) Pause on hover so users can read
-  featuredContainer.addEventListener('mouseenter', stopInterval);
-  featuredContainer.addEventListener('mouseleave', startInterval);
 }
 
-/* ---------- pretty static mod links ---------- */
 /* ---------- always use pretty static page ---------- */
+/* ---------- pretty static mod links ---------- */
 function getModLink(mod) {
-  const slug = makeSlug(mod.name || "");
-  return `/mods/${slug}.html`;
 const slug = makeSlug(mod.name || "");
 return `/mods/${slug}.html`;
 }
 
 /* ---------- grids / pagination ---------- */
 function displayMods(category) {
-  const grid = document.getElementById("modGrid");
-  grid.innerHTML = "";
 const grid = document.getElementById("modGrid");
 grid.innerHTML = "";
 
-  const filtered =
-    category === "All" || category === "" || category === "all"
-      ? allMods
-      : allMods.filter(mod => Array.isArray(mod.tags) && mod.tags.includes(category));
 const filtered =
 category === "All" || category === "" || category === "all"
 ? allMods
 : allMods.filter(mod => Array.isArray(mod.tags) && mod.tags.includes(category));
 
-  filtered.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
-  filtered.slice(0, 20).forEach(mod => {
-    grid.innerHTML += generateModCard(mod);
-  });
 filtered.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
 filtered.slice(0, 20).forEach(mod => {
 grid.innerHTML += generateModCard(mod);
@@ -383,23 +278,6 @@ grid.innerHTML += generateModCard(mod);
 }
 
 function displayPagedMods(mods, currentPage, baseUrl) {
-  const grid = document.getElementById("modGrid");
-  const pagination = document.getElementById("paginationControls");
-  const totalPages = Math.ceil(mods.length / pageSize);
-  const start = (currentPage - 1) * pageSize;
-  const paged = mods.slice(start, start + pageSize);
-
-  grid.innerHTML = "";
-  pagination.innerHTML = "";
-
-  if (!paged.length) {
-    grid.innerHTML = "<p style='text-align:center;'>No results found.</p>";
-    return;
-  }
-
-  paged.forEach(mod => {
-    grid.innerHTML += generateModCard(mod);
-  });
 const grid = document.getElementById("modGrid");
 const pagination = document.getElementById("paginationControls");
 const totalPages = Math.ceil(mods.length / pageSize);
@@ -414,15 +292,6 @@ grid.innerHTML = "<p style='text-align:center;'>No results found.</p>";
 return;
 }
 
-  if (totalPages > 1) {
-    if (currentPage > 1) {
-      pagination.innerHTML += `<a class="back-button" href="${baseUrl}page=${currentPage - 1}">← Prev</a>`;
-    }
-    pagination.innerHTML += `<span style="margin: 0 10px;">Page ${currentPage} of ${totalPages}</span>`;
-    if (currentPage < totalPages) {
-      pagination.innerHTML += `<a class="back-button" href="${baseUrl}page=${currentPage + 1}">Next →</a>`;
-    }
-  }
 paged.forEach(mod => {
 grid.innerHTML += generateModCard(mod);
 });
@@ -440,17 +309,6 @@ pagination.innerHTML += `<a class="back-button" href="${baseUrl}page=${currentPa
 
 /* ---------- card ---------- */
 function generateModCard(mod) {
-  const link = getModLink(mod);
-  return `
-    <div class="mod-card">
-      <a href="${link}">
-        <img src="${mod.image}" alt="${mod.name}" title="${mod.name}" loading="lazy">
-        <div class="mod-info">
-          <h3>${mod.name}</h3>
-        </div>
-      </a>
-    </div>
-  `;
 const link = getModLink(mod);
 return `
    <div class="mod-card">
@@ -466,30 +324,6 @@ return `
 
 /* ---------- DOM ready ---------- */
 document.addEventListener("DOMContentLoaded", async () => {
-  const categorySelect = document.getElementById("categorySelect");
-  const searchInput = document.getElementById("searchInput");
-  const searchButton = document.getElementById("searchButton");
-
-  if (categorySelect) {
-    categorySelect.addEventListener("change", () => {
-      const selected = categorySelect.value;
-      window.location.href = `category.html?cat=${encodeURIComponent(selected)}&page=1`;
-    });
-  }
-
-  if (searchInput && searchButton) {
-    searchButton.addEventListener("click", () => {
-      const value = searchInput.value.trim();
-      if (value) {
-        window.location.href = `search.html?q=${encodeURIComponent(value)}&page=1`;
-      }
-    });
-    searchInput.addEventListener("keypress", e => {
-      if (e.key === "Enter") searchButton.click();
-    });
-  }
-
-  await fetchMods();
 const categorySelect = document.getElementById("categorySelect");
 const searchInput = document.getElementById("searchInput");
 const searchButton = document.getElementById("searchButton");
@@ -513,5 +347,6 @@ if (e.key === "Enter") searchButton.click();
 });
 }
 
-await fetchMods(); // render with static pretty links
+  await fetchMods(); // render with static pretty links
+  await fetchMods();
 });
