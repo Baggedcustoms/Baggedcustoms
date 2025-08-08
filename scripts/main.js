@@ -118,21 +118,17 @@ async function displayFeatured() {
   const featuredContainer = document.getElementById("featuredMod");
   if (!featuredContainer) return;
 
-  function modHTML(mod, link) {
-    return `
-      <a href="${link}" style="text-decoration:none; color: inherit;">
-        <img src="${mod.image}" alt="${mod.name}" title="${mod.name}">
-        <div class="featured-text">
-          <div class="title">${mod.name}</div>
-          ${
-            mod.category && mod.category.toLowerCase() !== "uncategorized"
-              ? `<div class="category">${mod.category}</div>`
-              : ""
-          }
-        </div>
-      </a>
-    `;
-  }
+  const modHTML = (mod, link) => `
+    <a href="${link}" style="text-decoration:none; color: inherit;">
+      <img src="${mod.image}" alt="${mod.name}" title="${mod.name}">
+      <div class="featured-text">
+        <div class="title">${mod.name}</div>
+        ${mod.category && mod.category.toLowerCase() !== "uncategorized"
+          ? `<div class="category">${mod.category}</div>`
+          : ""}
+      </div>
+    </a>
+  `;
 
   async function renderFeatured() {
     const mod = featured[index];
@@ -140,7 +136,10 @@ async function displayFeatured() {
     const link = getModLink(mod);
 
     if (firstPaint) {
-      // Show immediately on first paint — no opacity changes, no extra classes.
+      // Kill the loading placeholder and show immediately
+      featuredContainer.classList.remove('preloading');
+      featuredContainer.style.opacity = "";     // ensure not stuck at 0
+      featuredContainer.style.visibility = "";  // ensure visible
       featuredContainer.innerHTML = modHTML(mod, link);
       firstPaint = false;
     } else {
@@ -148,8 +147,8 @@ async function displayFeatured() {
       featuredContainer.classList.add("is-swapping");
       featuredContainer.style.opacity = 0;
 
-      // small timeout lets the opacity=0 apply before we swap content
       setTimeout(() => {
+        featuredContainer.classList.remove('preloading');
         featuredContainer.innerHTML = modHTML(mod, link);
         featuredContainer.style.opacity = 1;
 
@@ -157,7 +156,6 @@ async function displayFeatured() {
           featuredContainer.classList.remove("is-swapping");
           featuredContainer.removeEventListener("transitionend", off);
         };
-        // remove helper class once fade completes (in case you ever add CSS transitions)
         featuredContainer.addEventListener("transitionend", off);
       }, 50);
     }
