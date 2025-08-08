@@ -418,3 +418,30 @@ h2#recentHeader { margin-top: 10px !important; margin-bottom: 15px !important; }
     max-width: none;          /* let it fill the card on small screens */
   }
 }
+
+/* Featured card should clip and have inner padding like mod cards */
+#featuredMod {
+  overflow: hidden;           /* clip anything past rounded corners */
+  border-radius: 12px;        /* slightly larger to match the glow */
+}
+
+#featuredMod a {
+  width: 100%;
+  display: block;
+  padding: 10px;              /* inner padding like .mod-card */
+  box-sizing: border-box;
+}
+
+#featuredMod img {
+  display: block;
+  width: 100% !important;     /* fill inner box on mobile */
+  max-width: none !important; /* prevent old max-width from limiting it */
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;         /* inner radius so corners look clean */
+}
+
+/* a little breathing room for the title block */
+#featuredMod .featured-text { padding: 8px 6px 12px; }
+
