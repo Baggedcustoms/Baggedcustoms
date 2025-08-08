@@ -93,34 +93,27 @@ async function fetchMods() {
   }
 }
 
-async function preloadImage(src) {
-  return new Promise(resolve => {
-    const img = new Image();
-    img.onload = resolve;
-    img.onerror = resolve; // don't block if image errors
-    img.src = src;
-  });
-}
-
-/* ---------- featured (instant first render, delayed first rotation) ---------- */
+/* ---------- featured (first paint = no fade, rotate later) ---------- */
 async function displayFeatured() {
-  const featured = allMods.filter(mod => mod.featured);
+  const featured = allMods.filter(m => m.featured);
   if (!featured.length) return;
 
   const featuredContainer = document.getElementById("featuredMod");
   if (!featuredContainer) return;
 
-  const EXTRA_FIRST_DELAY = 3000; // delay before first rotation (after load + visible)
-  const ROTATE_EVERY = 5000;      // subsequent cadence
-  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // Prevent any CSS from hiding this on first paint
+  featuredContainer.classList.remove("preloading");
+  featuredContainer.style.opacity = "1";
+  featuredContainer.style.transition = "none"; // nuke fades for first paint
 
-  let index = 0;
-  let timer = null;
+  const EXTRA_FIRST_DELAY = 3000;
+  const ROTATE_EVERY = 5000;
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const templateFor = (mod) => {
     const link = getModLink(mod);
     return `
-      <a href="${link}" style="text-decoration:none; color: inherit;">
+      <a href="${link}" style="text-decoration:none; color:inherit;">
         <img src="${mod.image}" alt="${mod.name}" title="${mod.name}" loading="eager">
         <div class="featured-text">
           <div class="title">${mod.name}</div>
@@ -132,57 +125,43 @@ async function displayFeatured() {
     `;
   };
 
-  function renderCard(mod, { immediate = false } = {}) {
-    if (immediate) {
-      featuredContainer.innerHTML = templateFor(mod);
-      featuredContainer.classList.remove("preloading");
-      featuredContainer.classList.add("loaded");
-      featuredContainer.style.opacity = 1;
-      return Promise.resolve();
-    }
-    return preloadImage(mod.image).then(() => {
-      featuredContainer.style.opacity = 0;
-      setTimeout(() => {
-        featuredContainer.innerHTML = templateFor(mod);
-        featuredContainer.classList.remove("preloading");
-        featuredContainer.classList.add("loaded");
-        featuredContainer.style.opacity = 1;
-      }, 100);
+  // 1) Synchronous first render (no preload, no fade)
+  let index = 0;
+  featuredContainer.innerHTML = templateFor(featured[0]);
+  index = (index + 1) % featured.length;
+
+  // Re-enable transitions AFTER first frame so later swaps can fade if you want
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      featuredContainer.style.transition = ""; // back to stylesheet value
     });
-  }
+  });
+
+  if (prefersReduced) return;
+
+  // 2) Rotate after visible + window load + extra delay
+  let timer = null;
+  const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
+  const start = () => { stop(); timer = setInterval(rotateOnce, ROTATE_EVERY); };
 
   function rotateOnce() {
     const mod = featured[index];
-    renderCard(mod, { immediate: false });
     index = (index + 1) % featured.length;
+
+    // Optional fade on subsequent swaps
+    featuredContainer.style.opacity = "0";
+    setTimeout(() => {
+      featuredContainer.innerHTML = templateFor(mod);
+      featuredContainer.style.opacity = "1";
+    }, 120);
   }
 
-  function startInterval() {
-    stopInterval();
-    timer = setInterval(rotateOnce, ROTATE_EVERY);
-  }
-  function stopInterval() {
-    if (timer) {
-      clearInterval(timer);
-      timer = null;
-    }
-  }
-
-  // First card: render immediately (no fade, no delay)
-  await renderCard(featured[0], { immediate: true });
-  index = (index + 1) % featured.length;
-
-  if (prefersReduced) return; // respect reduced motion
-
-  // Start auto-rotation only after section visible AND page load, then wait extra delay
-  let visible = false;
-  const startWhenReady = () => {
+  const beginAfterDelay = () => {
     const kickoff = () => {
       setTimeout(() => {
-        if (visible) {
-          rotateOnce();
-          startInterval();
-        }
+        // one swap, then start interval
+        rotateOnce();
+        start();
       }, EXTRA_FIRST_DELAY);
     };
     if (document.readyState === "complete") kickoff();
@@ -192,27 +171,24 @@ async function displayFeatured() {
   const io = new IntersectionObserver(
     entries => {
       if (entries.some(e => e.isIntersecting)) {
-        visible = true;
         io.disconnect();
-        startWhenReady();
+        beginAfterDelay();
       }
     },
     { threshold: 0.2 }
   );
   io.observe(featuredContainer);
 
-  // Pause/resume on tab visibility
+  // Pause on tab hidden / resume on visible
   document.addEventListener("visibilitychange", () => {
-    if (document.hidden) stopInterval();
-    else startInterval();
+    if (document.hidden) stop(); else start();
   });
 
-  // Pause on hover so folks can read
-  featuredContainer.addEventListener("mouseenter", stopInterval);
-  featuredContainer.addEventListener("mouseleave", startInterval);
+  featuredContainer.addEventListener("mouseenter", stop);
+  featuredContainer.addEventListener("mouseleave", start);
 }
 
-/* ---------- always use pretty static page ---------- */
+/* ---------- pretty static mod links ---------- */
 function getModLink(mod) {
   const slug = makeSlug(mod.name || "");
   return `/mods/${slug}.html`;
@@ -304,5 +280,5 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  await fetchMods(); // render with static pretty links
+  await fetchMods();
 });
