@@ -333,26 +333,45 @@ footer {
   }
 }
 
-/* ========== SOCIAL ICONS ========== */
-.social-icons {
+/* --- Social icons: center + a11y (override) --- */
+header .social-icons {
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin: 10px auto 20px auto;
+  justify-content: center;     /* center horizontally */
+  align-items: center;
+  gap: 12px;
+  list-style: none;            /* kill bullets */
+  padding: 0;                  /* kill UL left indent */
+  margin: 12px auto 18px;      /* center the block */
   max-width: 600px;
 }
 
-.social-icons a img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  filter: brightness(0) invert(1);
-  transition: filter 0.3s ease;
+header .social-icons li {
+  display: inline-flex;
 }
 
-.social-icons a:hover img {
-  filter: brightness(0) invert(0.6) drop-shadow(0 0 4px #e0611f);
-  cursor: pointer;
+header .social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .social-icons img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: transform .2s ease, filter .2s ease;
+}
+
+header .social-icons a:hover img {
+  transform: translateY(-1px);
+  filter: brightness(0) invert(.6) drop-shadow(0 0 4px #e0611f);
+}
+
+header .social-icons a:focus-visible {
+  outline: 2px solid #e0611f;
+  outline-offset: 3px;
+  border-radius: 6px;
 }
 
 /* ========== MISC ELEMENTS ========== */
