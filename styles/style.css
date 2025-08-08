@@ -147,10 +147,11 @@ input:-webkit-autofill:hover {
 }
 
 /* ========== FEATURED MOD ========== */
+/* FEATURED MOD — visible on first paint */
 #featuredMod {
   position: relative;
-   margin: 40px auto 30px auto;
-   padding-top: 30px;
+  margin: 40px auto 30px auto;
+  padding-top: 30px;
   width: 90%;
   max-width: 720px;
   background-color: #1b1b1b;
@@ -160,16 +161,26 @@ input:-webkit-autofill:hover {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  transition: box-shadow 0.3s ease, opacity 0.5s ease-in-out;
-  opacity: 0;
-  visibility: hidden;
+  /* no opacity transition on initial paint */
+  transition: box-shadow 0.3s ease;
+  opacity: 1;            /* <- show it */
+  visibility: visible;   /* <- show it */
   box-sizing: border-box;
   z-index: 2;
 }
 
-#featuredMod.loaded {
-  opacity: 1;
-  visibility: visible;
+/* Keep your hover the same */
+#featuredMod:hover { box-shadow: 0 0 25px #e0611f; }
+
+/* Optional: only fade when you're rotating cards, not on first paint */
+#featuredMod.is-swapping {
+  transition: box-shadow 0.3s ease, opacity 0.5s ease-in-out;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  #featuredMod,
+  #featuredMod.is-swapping { transition: box-shadow 0.3s ease; }
 }
 
 #featuredMod:hover {
