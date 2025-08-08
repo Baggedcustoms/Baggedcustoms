@@ -1,1923 +1,2407 @@
-<?xml version='1.0' encoding='utf-8'?>
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.baggedcustoms.com/</loc>
-    <lastmod>2025-08-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/about.html</loc>
-    <lastmod>2025-08-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/category.html</loc>
-    <lastmod>2025-08-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/category.html?page=1</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/category.html?page=10</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/category.html?page=11</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/category.html?page=12</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/category.html?page=13</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/category.html?page=14</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/category.html?page=2</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/category.html?page=3</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/category.html?page=4</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/category.html?page=5</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/category.html?page=6</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/category.html?page=7</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/category.html?page=8</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/category.html?page=9</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/contact.html</loc>
-    <lastmod>2025-08-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html</loc>
-    <lastmod>2025-08-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=17%20%22Brad%20Deberti%22%20Transformer%20F-250%20FDNY%20Edition%21%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=17%20Fleetwood%20Jamboree%20%5BFiveM%5D%5BAdd-On%5D</loc>
-    <lastmod>2019-07-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=17%20Shelby%20SuperSnake%20F-150%20NYPD%20Edition%21%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=1965%20Chevrolet%20C10%20Pickup%20%5BAdd-On%5D</loc>
-    <lastmod>2020-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=1990%20Jeep%20Grand%20Wagoneer%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-04-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=2000%20Ford%20Excursion%20SEMA%20Edition%20%5BAdd-On%5D</loc>
-    <lastmod>2020-03-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=2000%20Kenworth%20W900%20Heavy%20Duty%20Wrecker%21</loc>
-    <lastmod>2020-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=2012%20Bagged%20Customs%20Ford%20Ranger%20Mini%20Truck%21%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2019-09-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=2018%20CAT%20259b3%20Skidsteer%20%5BFIVEM%5D%5BAdd-On%5D</loc>
-    <lastmod>2020-04-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=2019%20Dodge%20Ram%203500%20HD%20%5BAdd-On%5D%20%5BFiveM%5D</loc>
-    <lastmod>2020-04-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=2020%20Chevrolet%20Silverado%20Trail%20Boss%201500%21</loc>
-    <lastmod>2019-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=2020%20GMC%20Sierra%20Denali%20HD%203500%21</loc>
-    <lastmod>2019-11-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=2020%20International%20LoneStar%21</loc>
-    <lastmod>2020-01-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=2020%20Ram%202500HD%20Custom%21</loc>
-    <lastmod>2019-11-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=48%20Ford%20Custom%20Toy%20Hauler%21</loc>
-    <lastmod>2019-09-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=78%20Firebird%20Dragster%21</loc>
-    <lastmod>2019-10-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=August%20Mods%202000%20F350%20and%202018%20Dodge%20Ram%202500HD%21</loc>
-    <lastmod>2019-08-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=August%20Mods%2092%20Dodge%20Ram%20Mega%20Mud%20Truck%20%26%20F-350%20Custom%21</loc>
-    <lastmod>2019-08-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=August%20Mods%20Kenwroth%20W900%20and%2095%20Sierra%20Custom</loc>
-    <lastmod>2019-08-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BIG%20RED%27s%20Ford%209000%21%20%5BFiveM%5D%5BAddOn%5D</loc>
-    <lastmod>2020-05-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Bagged%20Customs%201980%20c10%20Custom%21</loc>
-    <lastmod>2019-11-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Bagged%20Customs%202006%20%22Cateye%22%20Silverado%202500hd</loc>
-    <lastmod>2019-10-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Bagged%20Customs%202015%203500HD%20High%20Country%20Custom%21</loc>
-    <lastmod>2019-11-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Bagged%20Customs%2094%20Silverado%201500%21</loc>
-    <lastmod>2019-12-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Bagged%20Customs%2099%20Dodge%20Ram%202500</loc>
-    <lastmod>2019-10-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Bagged%20Customs%20Featherlight%20Trailer%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2019-12-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Bagged%20Customs%20Peterbilt%20Show%20Hauler%20%5BAdd-On%20%7C%20Sounds%20%7C%20Template%5D</loc>
-    <lastmod>2020-03-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%22Aces%20High%22%20Monster%20ElCamino%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2022-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%22Express%20Shipping%22%20%5BAdd-On%5D%5BFivem%5D%5BAnimated%5D</loc>
-    <lastmod>2022-06-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%22Krew%20Kut%22%20Dually%20%5BFiveM%5D%5BAdd-On%5D</loc>
-    <lastmod>2023-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%22Lance%20Rhodes%22%20GMC%20Sierra%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-07-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%22OVERKILL%22%21</loc>
-    <lastmod>2020-01-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%22Twister%22%20Ram%20and%20Dorothy%20probe%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-07-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%40BigRed_Cummins%20Ram%202500%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2022-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%40Brandon24v%20Cateye%20%26%20LoadTrail%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%40GasMonkeyGarage%20%22Texas%20Skidmark%22%5BAddOn%5D%5BFiveM%5D</loc>
-    <lastmod>2023-11-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%40Generalleemax%20%5BAddon%5D%5BFiveM%5D</loc>
-    <lastmod>2021-07-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%40Tweetys_tire%20ExCALIBUR%21%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-10-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%40austinmelo%2000%20Dodge%20Ram%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-10-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%40lacey_blair%20Hummer%20H2%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-10-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2003%20Ram%203500%20%5BAdd-ON%5D%5BFiveM%5D</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2005%20Sierra%202500%20HD%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-10-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2013%20Ram%203500%20JTX%20Edition%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2022-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2013%20Ram%203500%20YellowStone%20Edition%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-12-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2015%20Silverado%20HighCountry%20Custom%21</loc>
-    <lastmod>2019-12-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2018%20Anylevel%20F-450%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-11-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2018%20Dodge%20Ram%20%2B%20Show%20Hauler%5BFiveM%5D%5BAdd-On%5D</loc>
-    <lastmod>2020-06-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2018%20F350%20Dually%20%5BAdd-On%5D%5BFivem%5D</loc>
-    <lastmod>2020-08-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2019%20Yamaha%20YFZ450%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-07-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%201978%20Ford%20Bronco%21</loc>
-    <lastmod>2019-12-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2020%20Ram%203500%20Bruiser%20Edition%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2022-04-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2020%20Ram%203500%20HD%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-03-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2020%20Ram%205500%20Flatbed%5BAdd-On%5D%5BFivem%5D</loc>
-    <lastmod>2020-12-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202001%20GMC%20Sierra%203500HD%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202009%20F-550%20SixDoor%21</loc>
-    <lastmod>2020-02-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202017%20Shelby%20SuperSnake%20F-150%21</loc>
-    <lastmod>2020-02-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202020%20F250%20Singlecab%21%20%5BAddon%5D%5BFiveM%5D</loc>
-    <lastmod>2020-08-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202020%20Kodiak%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202020%20Ram%203500%20Single%20Cab%20Minitruck%21</loc>
-    <lastmod>2019-12-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202020%20Ram%205500%20Landscape%20Truck%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-10-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202020%20Ram%205500%20Roll%20Back%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-09-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202021%20Tahoe%20High%20Country%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202021%20Tahoe%20High%20Country%20Bagged%5BAdd-On%5D%5BFivem%5D</loc>
-    <lastmod>2020-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202022%20Bloomer%20Stock%20Trailer%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2022-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202023%20Mack%20Granite%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202023%20Mack%20Granite%20HD%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2023-04-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2021%20Bronco%20Badlands%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2021%20Tahoe%20Interceptor%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-05-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%204%20door%20Sandrail%20%5BZ3d%5D</loc>
-    <lastmod>2024-03-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2072%20Elcamino%20Dragster%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2025-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2080%20Silverado%20Custom%204x4%21%20%5BFiveM/Add-On%5D</loc>
-    <lastmod>2020-04-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2080s%20Toyota%20Pickup%20%5BZ3D%5D</loc>
-    <lastmod>2024-01-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2090s%20Yamaha%20Banshee%20%5BZ3d%5D</loc>
-    <lastmod>2024-03-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2091%20Widebody%20Honda%20CRX%20SIR%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-11-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2092%20Dodge%20Ram%20Custom%21%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2093%20Ram%20W250%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2022-01-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2093%20Toyota%20Pickup%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2022-06-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2093%20Toyota%20Tacoma%20%5BZ3D%5D</loc>
-    <lastmod>2024-04-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2093%20Toytoa%20Pickup%20Stock%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2022-09-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2095%20CaddyHoe%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2023-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2095%20Caddyhoe%20%5BZ3d%5D</loc>
-    <lastmod>2024-02-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2095%20Ford%20F150%20Lightning%20%5BAdd-On%5D%5BFivem%5D</loc>
-    <lastmod>2021-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2095%20Ford%20Lightning%20%5B.Z3d%5D</loc>
-    <lastmod>2024-10-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2095%20Jeep%20Cherokee%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2023-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2095%20Nissan%20Hardbody%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2022-01-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2097%20F-350%20SnowPlow%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-12-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2097%20Ford%20F-350%20CrewCab%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-12-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2097%20Ford%20F-350%20Flatbed%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-03-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2097%20Ford%20F350%20Dually%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2099%20Ram%20Ranchhand%20Inspired%20Bumpers.</loc>
-    <lastmod>2023-04-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Amani%20Forged%20Bario%20Inspired%20Wheel</loc>
-    <lastmod>2023-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20AnyLevel%20Inspired%20Lift</loc>
-    <lastmod>2023-10-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Argo%208x8%20UTV%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-01-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Atomic%20Bog%20Beast%20Tire</loc>
-    <lastmod>2024-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20B.A.D%20Inspired%20Wheel%20%5B.Z3d%5D</loc>
-    <lastmod>2024-06-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20BDS%20Inspired%20Lift%20kit</loc>
-    <lastmod>2023-07-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Bagged%202006%202500HD%20Silverado%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Bagged%202020%20DenaliHD%20%5BFiveM%5D%5BAdd-On%5D</loc>
-    <lastmod>2020-06-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Biff%20Heavy%20Twinsteer%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2023-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Biff%20Roll%20Off%20Sanitation%20Truck%5BFiveM%5D</loc>
-    <lastmod>2024-07-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Bloomer%20Cattle%20Trailer%20%5B.Z3d%5D</loc>
-    <lastmod>2024-05-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20BobCat%20Skid%20Loader%20%5BFIVEM%20ONLY%5D%5BSynergy%20Required%5D</loc>
-    <lastmod>2021-05-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20BobCat%20Skidsteer%20with%20Forks/Pallets%20%5BFIVEM%20ONLY%5D%20%5BSynergy%20Required%5D</loc>
-    <lastmod>2024-04-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Bobcat%20Mini%20Excavator%20%5BFIVEM%20ONLY%5D%5BSynergy%20Required%5D</loc>
-    <lastmod>2021-11-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Brute%20Telehandler%20%5BFiveM%20Only%5D%5BAnimated%5D%5BSynergy%20Required%5D</loc>
-    <lastmod>2024-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Cat%20140%20Snow%20Edition%20%5BFIVEM%20ONLY%5D%5BSynergy%20Required%5D</loc>
-    <lastmod>2021-12-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Caterpillar%20140M3%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-10-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Caterpillar%20349%20Excavator%20%5BFIVEM%20ONLY%5D%5BSynergy%20Required%5D</loc>
-    <lastmod>2024-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Caterpillar%20430%20Backhoe%5BFIVEM%5D%5BSYNERGY%5D</loc>
-    <lastmod>2022-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Caterpillar%20555D%20with%20logs%21%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Caterpillar%20627k%20Scraper%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2022-05-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Caterpillar%20745c%20Offroad%20Truck%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-10-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Caterpillar%20950m%20/%20Salvage%20Forks%20%5BSynergy%5D%5BFiveM%5D</loc>
-    <lastmod>2023-01-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Caterpillar%20AP1055%20Paver%20%5BFIVEM%5D</loc>
-    <lastmod>2021-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Caterpillar%20D7R%5BFiveM%5D%5BAdd-On%5D%5BReplace%5D</loc>
-    <lastmod>2020-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Caterpillar%20D8T%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2022-12-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Classic%20Mod%20Pack%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2024-02-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Concept%20Neeper%20Haaz%20wheel</loc>
-    <lastmod>2024-04-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Concept%20Neeper%20Syncro%20wheel</loc>
-    <lastmod>2024-04-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Crawler%5BFiveM%5D%5BAdd-On%5D</loc>
-    <lastmod>2020-05-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Custom%2017%20Yamaha%20R1%20Drag%20Bike%21%20%5BFiveM%5D%5BAdd-On%5D</loc>
-    <lastmod>2020-06-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Custom%204%20seater%20SandRail%21%20%5BFiveM%5D%5BAdd-On%5D</loc>
-    <lastmod>2020-06-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Demolition%20Ranch%20DemoCuda%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2022-05-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Dodge%20Challenger%20Hardtop%20Vert%20%5B.Z3d%5D</loc>
-    <lastmod>2024-10-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Dodge%20Challenger%20Hardtop%20Vert%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2022-07-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Dorado%20XL%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2024-05-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20EagerBeaver%20Tandem%20Trailer%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-02-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Exmark%20Zero%20Turn%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20F-750%20Flatbed%20%5B.Z3d%5D</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20F350%20Harley%20Edition%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-08-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20F750%20TMA%20Vehicle%5BAdd-On%5D%5BFiveM%5D%5BSynergy%5D</loc>
-    <lastmod>2022-10-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20FTS%20IFS%20Inspired%20Lift</loc>
-    <lastmod>2023-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20FTS%20inspired%20Lift</loc>
-    <lastmod>2023-02-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Fab%20Fours%20Jeep%20Wrangler%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-11-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Finnegans%20Garage%20Toyota%20Mini%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2023-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Ford%20F-750%20Flatbed%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2023-05-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Ford%20F550%20Bucket%20Truck%20%5BFiveM%5D</loc>
-    <lastmod>2021-06-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Ford%20F650%20Custom%20Hauler%21%20%5BFiveM%5D%5BAdd-On%5D</loc>
-    <lastmod>2020-03-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Fuel%20Tanker%20%5BFiveM%5D%5BAdd-On%5D</loc>
-    <lastmod>2020-07-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Fury%20Country%20Hunter%20M/T%20Inspired%20Tire</loc>
-    <lastmod>2022-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Fusion%20Inspired%20Bumpers%2011/f250</loc>
-    <lastmod>2023-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20GRID%20GF-17%20Inspired%20Wheel</loc>
-    <lastmod>2022-12-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Gabe%20Farrell%20F350%20V2%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-11-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Gabe%20Farrell%20Ford%20F350%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Gabe%20Farrell%20Hood%20Stacked%20Table%5BAdd-On%5D%5BFiveM</loc>
-    <lastmod>2022-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Gladiator%20Inspired%20tire.</loc>
-    <lastmod>2023-04-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20GoodYear%20MVT%20Insipred%20Tire</loc>
-    <lastmod>2023-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Goodyear%20Wrangler%20%26%20Black%20Rhino%20Inspired%20Wheel</loc>
-    <lastmod>2024-07-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Guniwheel%20Inspired%20Wheel</loc>
-    <lastmod>2023-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20HVY%20Mobile%20Light%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2023-11-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Hay%20Ride%20%5BAdd-On%5D%5BFivem%5D</loc>
-    <lastmod>2023-10-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Heavy%20Wrecker%20Bed.</loc>
-    <lastmod>2023-04-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Hummer%20H2%20%5B.Z3d%5D</loc>
-    <lastmod>2024-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Int%20Workstar%20Twinsteer%20Heavy%20Wrecker%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2022-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Interco%20SS%20Bogger%20Inspired%20tire.</loc>
-    <lastmod>2023-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Intl%20WorkStar%20Pump%20Truck%20%5BAdd-On%5D%5BFivem%5D</loc>
-    <lastmod>2022-04-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Intl.%20WorkStar%20Lube%20Truck%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2022-03-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20JTX%20Capital%20Inspired%20Wheel</loc>
-    <lastmod>2023-10-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20JTX%20Inspired%20GMG%20Wheels</loc>
-    <lastmod>2024-01-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Jeep%20XJ%20%5B.Z3d%5D</loc>
-    <lastmod>2024-07-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Killer%20Rig%21%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2019-09-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20LPFAB%20Inspired%20Lift%20Kit</loc>
-    <lastmod>2023-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Landscape%20Bed%20%5BZ3D%5D</loc>
-    <lastmod>2024-05-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Liebherr%20936%20Excavator%5BAdd-on%5D%5BFiveM%5D</loc>
-    <lastmod>2020-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Liebherr%20Excavator%20%5BFIVEM%20ONLY%5D%5BSynergy%20Required%5D</loc>
-    <lastmod>2021-05-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Mega%20Ram%20Runner%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-04-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Mega%20Truck%20Chassis</loc>
-    <lastmod>2023-05-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Mega%20Truck%20Wheels%20%26%20BKT%20Check%20Inspired%20Tires</loc>
-    <lastmod>2023-05-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Micky%20Thompson%20Baja%20Pro%20inspired%20tire</loc>
-    <lastmod>2023-02-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20MonsterMax%20II%20%5BAdd-On%5D-%5BFiveM%5D</loc>
-    <lastmod>2021-09-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20MonsterMax%20II%20Remasterd%20%5BAdd-On%5D%5BFIVEM%5D</loc>
-    <lastmod>2023-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20MonsterMax%20YeeYee%20Edition%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-01-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20MonsterMax%20v3%20Quad/Float%20%5BAdd-On%5D%5BFivem%5D</loc>
-    <lastmod>2021-01-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20MonsterMaxII%20w/Reaper%20Wheels%20%5BFiveM%5D</loc>
-    <lastmod>2024-10-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Nitto%20Trail%20Gappler</loc>
-    <lastmod>2024-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Out%20Tha%20Mud%20F350%20Mega%20Truck%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2022-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20PhantomHD%20%5BAdd-On%5D</loc>
-    <lastmod>2020-05-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Polaris%20General%20%5BFiveM%5D%5BAdd-On%5D</loc>
-    <lastmod>2020-04-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Polaris%20RZR%20XP%21%20and%20Mud%20Variant%21</loc>
-    <lastmod>2020-04-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Polaris%20Scrambler%21</loc>
-    <lastmod>2020-04-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Polaris%20Sportsman%21</loc>
-    <lastmod>2020-04-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20RI-FAB%20Inspired%20Air%20Ride%20Lift</loc>
-    <lastmod>2022-12-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Rancher%20XL%20HD%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2023-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Revo%20Forged%20Inspired%20wheel</loc>
-    <lastmod>2023-11-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20SOF%20Insipred%20Lift</loc>
-    <lastmod>2023-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20SPARC%20Inspired%20Steering%20Wheel</loc>
-    <lastmod>2023-12-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Sandking%205500%20%5BZ3d%20%2B%20Animation%20%2B%20UV%5D</loc>
-    <lastmod>2024-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Sandking%205500%20Rollback%20%5BAddOn%5D%5BFiveM%5D</loc>
-    <lastmod>2023-12-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Sandking%205500v2%20%5BAnimated%5D%5BFiveM%20Only%5D%20</loc>
-    <lastmod>2024-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Semi%20Hauler%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-10-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Sick_7_Evan%20Ram%203500%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2022-02-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20SparksMotors%20T800%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Squatted%20GMC%201500%20%5B.Z3d%5D</loc>
-    <lastmod>2024-06-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Tilt%20Bed%20Car%20Hauler%21</loc>
-    <lastmod>2020-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Tooted%2099%20Tahoe%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Trailer%20mounted%20attenuator%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2022-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Transport%20Hauler%202%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2024-01-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Transport%20Hauler%203.0%20%5BFiveM/Add-On/Replace%5D</loc>
-    <lastmod>2020-04-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Truck%20Mounted%20Attenuator%20%5BZ3D%5D%5BAnimated%5D</loc>
-    <lastmod>2024-02-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Truck%20that%20Broke%20the%20Internet%20%5BFiveM%5D%5BAdd-On%5D</loc>
-    <lastmod>2020-04-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Turn%20Table%20%5BFiveM%5D%5BTurnTableScript%5D</loc>
-    <lastmod>2021-12-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Tweetys%20Tire%20%22BlackJack%22%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Tweetys%20Tire%20Inspired%20Lift</loc>
-    <lastmod>2023-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20TyreFryer95s%20Chevy%20C10%5BAdd-On%5D%5BFivem%5D</loc>
-    <lastmod>2021-01-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Varnbilt%20inspired%20lift</loc>
-    <lastmod>2023-12-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Venom%20Inspired%20tire</loc>
-    <lastmod>2023-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20WhistlinDiesel%20Anylevel%20F350%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-08-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20WhistlinDiesel%20Rocket%20Max%20%5BFiveM%5D</loc>
-    <lastmod>2024-03-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Whistlindeisel%20RZR%20Reaper%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Wilwood%20inspired%20Big%20brake%20kit</loc>
-    <lastmod>2023-07-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Yamaha%20Banshee%20350%21</loc>
-    <lastmod>2020-05-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Yamaha%20R1%20Drag%20%5B.Z3d%5D</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20billet%20specialties%20inspired%20Steeringwheel</loc>
-    <lastmod>2024-01-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%2001%20GMC%20Sierra%203500HD%20%5B.z3d%5D</loc>
-    <lastmod>2025-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%201965%20C10%20%5B.Z3d%5D</loc>
-    <lastmod>2025-05-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%201986%20Jeep%20CJ7%20Crawler%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2025-05-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%2020%20Chevy%20Trailboss%20z71%20%5B.Z3d%5D</loc>
-    <lastmod>2025-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%2020%20F250%20Singlecab%20%5B.z3d%5D</loc>
-    <lastmod>2025-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%2080s%20Ford%20Bronco%20%22Mudslinger%22%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2025-04-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%2095%20GMC%202500%20%5B.Z3d%5D</loc>
-    <lastmod>2024-12-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%2095%20Nissan%20Hardbody%20%5B.Z3d%5D</loc>
-    <lastmod>2025-03-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Bruiser%20Inspired%20Flatbed</loc>
-    <lastmod>2022-11-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Brute%20Material%20Handler%20%5BFiveM%20Only%5D%5BSynergy%20Required%5D</loc>
-    <lastmod>2024-12-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20BulletProof%20Inspired%2012%22%20Lift%20for%20GM%20Trucks</loc>
-    <lastmod>2022-10-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20CaraCaraSE%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2025-04-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Crawler%20%5B.z3d%5D</loc>
-    <lastmod>2025-05-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Dodge%20Mega%20Ram%203500%20HD%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2025-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Ford%20F550%20Bucket%20Truck%20%5B.Z3d%5D</loc>
-    <lastmod>2025-03-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Gen%201%20Drag%20Ram%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2025-07-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20GenY%20Inspired%20Drop%20Hitch</loc>
-    <lastmod>2022-11-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Interco%20SSM16%20Inspired%20Tire</loc>
-    <lastmod>2022-11-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Intl%20Lonestar%5B.z3d%5D</loc>
-    <lastmod>2025-01-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Mack%20Granite%20%5B.Z3d%5D</loc>
-    <lastmod>2024-12-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Overkill%20Trailer%21%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2025-01-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Peterbilt%20Show%20Hauler%20%5B.Z3d%5D</loc>
-    <lastmod>2025-04-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Polaris%20General%20%5B.Z3d%5D</loc>
-    <lastmod>2025-01-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Polaris%20Scrambler%20%5B.Z3d%5D</loc>
-    <lastmod>2025-04-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20RanchHand%20Inspired%202018%20Ram%20Bumper</loc>
-    <lastmod>2022-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Sandking%20Hauler%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2025-04-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Stryker%20Inspired%20F-Series%20Links</loc>
-    <lastmod>2022-10-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20X450%20Excursion%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2025-03-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Yamaha%20YFZ450%20%5B.z3d%5D</loc>
-    <lastmod>2025-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms/BigReds%2006%202500%20HD%20Work%20Truck%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-07-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BaggedCutoms%20MonsterMax%20I%20Inspired%20Lift</loc>
-    <lastmod>2023-11-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Baggedcsutoms%20Polaris%20RzR%20MEGA%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Baggedcustoms%20%40TruckGuru%27s%20SilveradoHD%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-08-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Baggedcustoms%20Caterpillar%20950M%20%5BFIVEM%20ONLY%5D%5BSynergy%20Required%5D</loc>
-    <lastmod>2021-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Baggedcustoms%20Flog%20Insipired%20Bumpers</loc>
-    <lastmod>2023-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Baggedcustoms%20Polaris%20RzR%20XP%201000%20Dune%20Edition%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-02-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Baggedcustoms%20Polaris%20Sportsman%20High%20lifter%20Edition%21%20%5BFiveM%5D%5BAdd-On%5D</loc>
-    <lastmod>2020-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Baggedcustoms%20RYD%20Inspired%20Lift%20kit</loc>
-    <lastmod>2023-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Bankai%27s%20Drift%20Ram%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-08-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Bankai%27s%20Silverado%20z71%202500HD%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Big%20Reds%20-%20Custom%20Manac%20Log%20Trailer%21%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Big%20Reds%2017%20F450%20Escort%20Truck%21%20%5BAddOn%5D%5BFiveM%5D</loc>
-    <lastmod>2020-05-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Big%20Reds%20Bad%20Ford%20F250%20Custom%21</loc>
-    <lastmod>2020-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Big%20Reds%20Peterbilt%20352%20Custom%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-07-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BigReds%2017%20Fontaine%20trailer%20Pack%20with%2025%20Cargo%20Options%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=BigTex%2020%27%20and%2040%27%20GooseNeck%20Trailers%21%20%5BFiveM%5D%5BAddOn%5D</loc>
-    <lastmod>2019-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Brad%20Debertis%20Transformer%21%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2019-10-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=CT660%20Tow%20Truck</loc>
-    <lastmod>2019-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Caterpillar%20CT660%20Multi%20function%20truck%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Dres%20Hydroplane%20Race%20Boat%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-03-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Enclosed%20Gooseneck%20Car%20Hauler%20%5BFIVEM%5D%20%5BAdd-On%5D</loc>
-    <lastmod>2020-04-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Enclosed%20Hauler%20%5BAdd-On%5D%20%5BFiveM%5D</loc>
-    <lastmod>2020-04-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Fontaine%20Magnitude%2051%20Lowboy%20%5BFiveM/Add-On%5D</loc>
-    <lastmod>2020-03-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Happy%20Halloween%21%202020%20Silverado%20Trail%20Boss%21</loc>
-    <lastmod>2019-10-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Hollywood%20Mike%20Cloud%20NINE9%20F350%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-11-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Hollywood%20Mikes%20Goldschl%C3%A4ger%2097%20Ford%20F350%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2021-01-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Jeep%20Cherokee%20XJ%20SnowHawk%20Edition%20%5BFiveM%5D</loc>
-    <lastmod>2020-03-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Monster%20Jam%20Mega%20Pack%20%5BFiveM%5D%5BAdd-On%5D</loc>
-    <lastmod>2020-03-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=NikoBelik7%20%22CornFed%22%20John%20Deere%20Pulling%20Tractor%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-09-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=NikoBelik7%20Pulling%20Sled%20%5BAdd-On%5D%5BFiveM%5D</loc>
-    <lastmod>2020-09-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Nitro%20z20%20Bassboat%21</loc>
-    <lastmod>2020-03-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Omar%20St%20Clouds%2C%20Spooled%20Out%20Fundamentals%20DenaliHD%21</loc>
-    <lastmod>2019-12-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Possible%20new%20dev%20tier%E2%80%A6%3F%E2%80%A6</loc>
-    <lastmod>2022-09-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=SKOOP%21%21%21%20SMG%20Hauler%20%26%20HotWheel%20%5BFiveM%5D%5BAdd-On%5D</loc>
-    <lastmod>2020-06-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Terminator%20Mustang%20Cobra%21</loc>
-    <lastmod>2019-11-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=The%20Importers%3A%20Custom%20Tool%20Truck%21</loc>
-    <lastmod>2020-03-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Thoughts%20on%20some%20FarmSim%2022%20Modding%3F</loc>
-    <lastmod>2022-01-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=Tweetys%20Tire%20and%20Welding%3A%20Queen%20Of%20Hearts%21</loc>
-    <lastmod>2019-10-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=WhistlinDiesel%20MonsterMax%21</loc>
-    <lastmod>2020-03-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=WhistlinDiesel%20MonsterMax%21%20v2%20%5BFiveM%5D%5BAdd-On%5D</loc>
-    <lastmod>2020-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/mod.html?id=WhistlinDiesels%20F-350%20on%20Reapers%21</loc>
-    <lastmod>2020-03-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/privacy.html</loc>
-    <lastmod>2025-08-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/search.html</loc>
-    <lastmod>2025-08-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/search.html?page=1</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/search.html?page=10</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/search.html?page=11</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/search.html?page=12</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/search.html?page=13</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/search.html?page=14</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/search.html?page=2</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/search.html?page=3</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/search.html?page=4</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/search.html?page=5</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/search.html?page=6</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/search.html?page=7</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/search.html?page=8</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/search.html?page=9</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://www.baggedcustoms.com/terms.html</loc>
-    <lastmod>2025-08-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-    </url>
-  </urlset>
+<url>
+<loc>https://www.baggedcustoms.com/</loc>
+<lastmod>2025-08-04</lastmod>
+<changefreq>daily</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/about.html</loc>
+<lastmod>2025-08-04</lastmod>
+<changefreq>yearly</changefreq>
+<priority>0.3</priority>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/contact.html</loc>
+<lastmod>2025-08-04</lastmod>
+<changefreq>yearly</changefreq>
+<priority>0.3</priority>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/privacy.html</loc>
+<lastmod>2025-08-04</lastmod>
+<changefreq>yearly</changefreq>
+<priority>0.3</priority>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/terms.html</loc>
+<lastmod>2025-08-04</lastmod>
+<changefreq>yearly</changefreq>
+<priority>0.3</priority>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html</loc>
+<lastmod>2025-08-04</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/category.html</loc>
+<lastmod>2025-08-04</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/category.html?page=1</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/category.html?page=2</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/category.html?page=3</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/category.html?page=4</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/category.html?page=5</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/category.html?page=6</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/category.html?page=7</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/category.html?page=8</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/category.html?page=9</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/category.html?page=10</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/category.html?page=11</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/category.html?page=12</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/category.html?page=13</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/category.html?page=14</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/search.html</loc>
+<lastmod>2025-08-04</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/search.html?page=1</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/search.html?page=2</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/search.html?page=3</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/search.html?page=4</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/search.html?page=5</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/search.html?page=6</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/search.html?page=7</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/search.html?page=8</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/search.html?page=9</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/search.html?page=10</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/search.html?page=11</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/search.html?page=12</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/search.html?page=13</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/search.html?page=14</loc>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=CT660%20Tow%20Truck</loc>
+<lastmod>2019-07-17</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=17%20Fleetwood%20Jamboree%20%5BFiveM%5D%5BAdd-On%5D</loc>
+<lastmod>2019-07-19</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=August%20Mods%20Kenwroth%20W900%20and%2095%20Sierra%20Custom</loc>
+<lastmod>2019-08-03</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=August%20Mods%202000%20F350%20and%202018%20Dodge%20Ram%202500HD%21</loc>
+<lastmod>2019-08-16</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=August%20Mods%2092%20Dodge%20Ram%20Mega%20Mud%20Truck%20%26%20F-350%20Custom%21</loc>
+<lastmod>2019-08-24</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=2012%20Bagged%20Customs%20Ford%20Ranger%20Mini%20Truck%21%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2019-09-09</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Killer%20Rig%21%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2019-09-15</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BigTex%2020%27%20and%2040%27%20GooseNeck%20Trailers%21%20%5BFiveM%5D%5BAddOn%5D</loc>
+<lastmod>2019-09-17</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=48%20Ford%20Custom%20Toy%20Hauler%21</loc>
+<lastmod>2019-09-26</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Brad%20Debertis%20Transformer%21%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2019-10-02</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=78%20Firebird%20Dragster%21</loc>
+<lastmod>2019-10-02</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Bagged%20Customs%202006%20%22Cateye%22%20Silverado%202500hd</loc>
+<lastmod>2019-10-04</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Bagged%20Customs%2099%20Dodge%20Ram%202500</loc>
+<lastmod>2019-10-05</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Tweetys%20Tire%20and%20Welding%3A%20Queen%20Of%20Hearts%21</loc>
+<lastmod>2019-10-21</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Happy%20Halloween%21%202020%20Silverado%20Trail%20Boss%21</loc>
+<lastmod>2019-10-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Terminator%20Mustang%20Cobra%21</loc>
+<lastmod>2019-11-02</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=2020%20Ram%202500HD%20Custom%21</loc>
+<lastmod>2019-11-05</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Bagged%20Customs%201980%20c10%20Custom%21</loc>
+<lastmod>2019-11-08</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=2020%20GMC%20Sierra%20Denali%20HD%203500%21</loc>
+<lastmod>2019-11-09</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Bagged%20Customs%202015%203500HD%20High%20Country%20Custom%21</loc>
+<lastmod>2019-11-20</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Bagged%20Customs%20Featherlight%20Trailer%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2019-12-03</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Bagged%20Customs%2094%20Silverado%201500%21</loc>
+<lastmod>2019-12-04</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%201978%20Ford%20Bronco%21</loc>
+<lastmod>2019-12-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=2020%20Chevrolet%20Silverado%20Trail%20Boss%201500%21</loc>
+<lastmod>2019-12-10</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2015%20Silverado%20HighCountry%20Custom%21</loc>
+<lastmod>2019-12-16</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202020%20Ram%203500%20Single%20Cab%20Minitruck%21</loc>
+<lastmod>2019-12-24</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Omar%20St%20Clouds%2C%20Spooled%20Out%20Fundamentals%20DenaliHD%21</loc>
+<lastmod>2019-12-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Argo%208x8%20UTV%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-01-03</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Tilt%20Bed%20Car%20Hauler%21</loc>
+<lastmod>2020-01-08</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=2020%20International%20LoneStar%21</loc>
+<lastmod>2020-01-22</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%22OVERKILL%22%21</loc>
+<lastmod>2020-01-29</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202009%20F-550%20SixDoor%21</loc>
+<lastmod>2020-02-04</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202017%20Shelby%20SuperSnake%20F-150%21</loc>
+<lastmod>2020-02-08</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=17%20Shelby%20SuperSnake%20F-150%20NYPD%20Edition%21%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-02-21</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=17%20%22Brad%20Deberti%22%20Transformer%20F-250%20FDNY%20Edition%21%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-02-21</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=WhistlinDiesels%20F-350%20on%20Reapers%21</loc>
+<lastmod>2020-03-02</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=WhistlinDiesel%20MonsterMax%21</loc>
+<lastmod>2020-03-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Nitro%20z20%20Bassboat%21</loc>
+<lastmod>2020-03-12</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=2000%20Kenworth%20W900%20Heavy%20Duty%20Wrecker%21</loc>
+<lastmod>2020-03-14</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=The%20Importers%3A%20Custom%20Tool%20Truck%21</loc>
+<lastmod>2020-03-16</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Jeep%20Cherokee%20XJ%20SnowHawk%20Edition%20%5BFiveM%5D</loc>
+<lastmod>2020-03-22</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=2000%20Ford%20Excursion%20SEMA%20Edition%20%5BAdd-On%5D</loc>
+<lastmod>2020-03-22</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Bagged%20Customs%20Peterbilt%20Show%20Hauler%20%5BAdd-On%20%7C%20Sounds%20%7C%20Template%5D</loc>
+<lastmod>2020-03-22</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Monster%20Jam%20Mega%20Pack%20%5BFiveM%5D%5BAdd-On%5D</loc>
+<lastmod>2020-03-23</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Ford%20F650%20Custom%20Hauler%21%20%5BFiveM%5D%5BAdd-On%5D</loc>
+<lastmod>2020-03-23</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Fontaine%20Magnitude%2051%20Lowboy%20%5BFiveM/Add-On%5D</loc>
+<lastmod>2020-03-25</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=1965%20Chevrolet%20C10%20Pickup%20%5BAdd-On%5D</loc>
+<lastmod>2020-03-27</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Big%20Reds%20Bad%20Ford%20F250%20Custom%21</loc>
+<lastmod>2020-03-27</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Transport%20Hauler%203.0%20%5BFiveM/Add-On/Replace%5D</loc>
+<lastmod>2020-04-01</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2080%20Silverado%20Custom%204x4%21%20%5BFiveM/Add-On%5D</loc>
+<lastmod>2020-04-01</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Caterpillar%20CT660%20Multi%20function%20truck%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-04-03</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Mega%20Ram%20Runner%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-04-06</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Enclosed%20Gooseneck%20Car%20Hauler%20%5BFIVEM%5D%20%5BAdd-On%5D</loc>
+<lastmod>2020-04-09</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Enclosed%20Hauler%20%5BAdd-On%5D%20%5BFiveM%5D</loc>
+<lastmod>2020-04-09</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=2019%20Dodge%20Ram%203500%20HD%20%5BAdd-On%5D%20%5BFiveM%5D</loc>
+<lastmod>2020-04-11</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=1990%20Jeep%20Grand%20Wagoneer%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-04-13</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Polaris%20RZR%20XP%21%20and%20Mud%20Variant%21</loc>
+<lastmod>2020-04-18</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Polaris%20Sportsman%21</loc>
+<lastmod>2020-04-18</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Polaris%20Scrambler%21</loc>
+<lastmod>2020-04-18</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=2018%20CAT%20259b3%20Skidsteer%20%5BFIVEM%5D%5BAdd-On%5D</loc>
+<lastmod>2020-04-22</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Polaris%20General%20%5BFiveM%5D%5BAdd-On%5D</loc>
+<lastmod>2020-04-25</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Truck%20that%20Broke%20the%20Internet%20%5BFiveM%5D%5BAdd-On%5D</loc>
+<lastmod>2020-04-26</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Baggedcustoms%20Polaris%20Sportsman%20High%20lifter%20Edition%21%20%5BFiveM%5D%5BAdd-On%5D</loc>
+<lastmod>2020-05-02</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Crawler%5BFiveM%5D%5BAdd-On%5D</loc>
+<lastmod>2020-05-06</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BIG%20RED%27s%20Ford%209000%21%20%5BFiveM%5D%5BAddOn%5D</loc>
+<lastmod>2020-05-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Yamaha%20Banshee%20350%21</loc>
+<lastmod>2020-05-14</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BigReds%2017%20Fontaine%20trailer%20Pack%20with%2025%20Cargo%20Options%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-05-19</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20PhantomHD%20%5BAdd-On%5D</loc>
+<lastmod>2020-05-20</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Big%20Reds%2017%20F450%20Escort%20Truck%21%20%5BAddOn%5D%5BFiveM%5D</loc>
+<lastmod>2020-05-23</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Bagged%202020%20DenaliHD%20%5BFiveM%5D%5BAdd-On%5D</loc>
+<lastmod>2020-06-06</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=WhistlinDiesel%20MonsterMax%21%20v2%20%5BFiveM%5D%5BAdd-On%5D</loc>
+<lastmod>2020-06-13</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Custom%204%20seater%20SandRail%21%20%5BFiveM%5D%5BAdd-On%5D</loc>
+<lastmod>2020-06-14</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2018%20Dodge%20Ram%20%2B%20Show%20Hauler%5BFiveM%5D%5BAdd-On%5D</loc>
+<lastmod>2020-06-17</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=SKOOP%21%21%21%20SMG%20Hauler%20%26%20HotWheel%20%5BFiveM%5D%5BAdd-On%5D</loc>
+<lastmod>2020-06-20</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Custom%2017%20Yamaha%20R1%20Drag%20Bike%21%20%5BFiveM%5D%5BAdd-On%5D</loc>
+<lastmod>2020-06-25</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Fuel%20Tanker%20%5BFiveM%5D%5BAdd-On%5D</loc>
+<lastmod>2020-07-02</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Caterpillar%20D7R%5BFiveM%5D%5BAdd-On%5D%5BReplace%5D</loc>
+<lastmod>2020-07-10</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms/BigReds%2006%202500%20HD%20Work%20Truck%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-07-14</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2019%20Yamaha%20YFZ450%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-07-16</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Big%20Reds%20Peterbilt%20352%20Custom%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-07-19</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2092%20Dodge%20Ram%20Custom%21%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-07-23</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Exmark%20Zero%20Turn%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-07-23</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Caterpillar%20555D%20with%20logs%21%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-07-23</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%22Twister%22%20Ram%20and%20Dorothy%20probe%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-07-26</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202020%20F250%20Singlecab%21%20%5BAddon%5D%5BFiveM%5D</loc>
+<lastmod>2020-08-02</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2018%20F350%20Dually%20%5BAdd-On%5D%5BFivem%5D</loc>
+<lastmod>2020-08-06</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20WhistlinDiesel%20Anylevel%20F350%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-08-09</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Bagged%202006%202500HD%20Silverado%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-08-11</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202021%20Tahoe%20High%20Country%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-08-17</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202021%20Tahoe%20High%20Country%20Bagged%5BAdd-On%5D%5BFivem%5D</loc>
+<lastmod>2020-08-17</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Bankai%27s%20Drift%20Ram%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-08-21</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Liebherr%20936%20Excavator%5BAdd-on%5D%5BFiveM%5D</loc>
+<lastmod>2020-09-02</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Bankai%27s%20Silverado%20z71%202500HD%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-09-02</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Big%20Reds%20-%20Custom%20Manac%20Log%20Trailer%21%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-09-06</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=NikoBelik7%20Pulling%20Sled%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-09-08</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=NikoBelik7%20%22CornFed%22%20John%20Deere%20Pulling%20Tractor%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-09-08</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202001%20GMC%20Sierra%203500HD%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-09-17</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202020%20Ram%205500%20Roll%20Back%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-09-26</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202020%20Ram%205500%20Landscape%20Truck%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-10-02</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Semi%20Hauler%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-10-13</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2021%20Bronco%20Badlands%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-10-19</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Caterpillar%20140M3%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-10-25</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Caterpillar%20745c%20Offroad%20Truck%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-10-25</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2005%20Sierra%202500%20HD%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-10-25</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2018%20Anylevel%20F-450%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-11-02</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Fab%20Fours%20Jeep%20Wrangler%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-11-13</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2091%20Widebody%20Honda%20CRX%20SIR%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-11-19</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202020%20Kodiak%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-12-01</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2020%20Ram%205500%20Flatbed%5BAdd-On%5D%5BFivem%5D</loc>
+<lastmod>2020-12-06</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2097%20Ford%20F-350%20CrewCab%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-12-14</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2097%20F-350%20SnowPlow%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2020-12-19</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20TyreFryer95s%20Chevy%20C10%5BAdd-On%5D%5BFivem%5D</loc>
+<lastmod>2021-01-03</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20MonsterMax%20v3%20Quad/Float%20%5BAdd-On%5D%5BFivem%5D</loc>
+<lastmod>2021-01-09</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20MonsterMax%20YeeYee%20Edition%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-01-11</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Hollywood%20Mikes%20Goldschl%C3%A4ger%2097%20Ford%20F350%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-01-23</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Baggedcustoms%20Polaris%20RzR%20XP%201000%20Dune%20Edition%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-02-05</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Tweetys%20Tire%20%22BlackJack%22%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-02-13</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20EagerBeaver%20Tandem%20Trailer%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-02-14</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Whistlindeisel%20RZR%20Reaper%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-02-19</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2095%20Ford%20F150%20Lightning%20%5BAdd-On%5D%5BFivem%5D</loc>
+<lastmod>2021-03-06</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2097%20Ford%20F-350%20Flatbed%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-03-12</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2020%20Ram%203500%20HD%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-03-22</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Dres%20Hydroplane%20Race%20Boat%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-03-26</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Tooted%2099%20Tahoe%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-04-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Liebherr%20Excavator%20%5BFIVEM%20ONLY%5D%5BSynergy%20Required%5D</loc>
+<lastmod>2021-05-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20BobCat%20Skid%20Loader%20%5BFIVEM%20ONLY%5D%5BSynergy%20Required%5D</loc>
+<lastmod>2021-05-11</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Baggedcsutoms%20Polaris%20RzR%20MEGA%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-05-18</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2021%20Tahoe%20Interceptor%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-05-27</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Ford%20F550%20Bucket%20Truck%20%5BFiveM%5D</loc>
+<lastmod>2021-06-03</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20SparksMotors%20T800%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-06-13</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2097%20Ford%20F350%20Dually%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-06-24</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%22Lance%20Rhodes%22%20GMC%20Sierra%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-07-09</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Gabe%20Farrell%20Ford%20F350%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-07-17</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%40Generalleemax%20%5BAddon%5D%5BFiveM%5D</loc>
+<lastmod>2021-07-26</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20F350%20Harley%20Edition%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-08-10</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Baggedcustoms%20%40TruckGuru%27s%20SilveradoHD%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-08-20</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Baggedcustoms%20Caterpillar%20950M%20%5BFIVEM%20ONLY%5D%5BSynergy%20Required%5D</loc>
+<lastmod>2021-08-23</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20MonsterMax%20II%20%5BAdd-On%5D-%5BFiveM%5D</loc>
+<lastmod>2021-09-10</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%40Brandon24v%20Cateye%20%26%20LoadTrail%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-09-21</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%40lacey_blair%20Hummer%20H2%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-10-03</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%40austinmelo%2000%20Dodge%20Ram%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-10-12</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%40Tweetys_tire%20ExCALIBUR%21%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-10-16</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Caterpillar%20AP1055%20Paver%20%5BFIVEM%5D</loc>
+<lastmod>2021-10-23</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Hollywood%20Mike%20Cloud%20NINE9%20F350%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-11-04</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Gabe%20Farrell%20F350%20V2%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-11-14</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Bobcat%20Mini%20Excavator%20%5BFIVEM%20ONLY%5D%5BSynergy%20Required%5D</loc>
+<lastmod>2021-11-27</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Cat%20140%20Snow%20Edition%20%5BFIVEM%20ONLY%5D%5BSynergy%20Required%5D</loc>
+<lastmod>2021-12-08</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Turn%20Table%20%5BFiveM%5D%5BTurnTableScript%5D</loc>
+<lastmod>2021-12-16</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2013%20Ram%203500%20YellowStone%20Edition%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2021-12-25</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202022%20Bloomer%20Stock%20Trailer%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2022-01-08</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Thoughts%20on%20some%20FarmSim%2022%20Modding%3F</loc>
+<lastmod>2022-01-14</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2095%20Nissan%20Hardbody%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2022-01-17</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2093%20Ram%20W250%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2022-01-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2013%20Ram%203500%20JTX%20Edition%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2022-02-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Sick_7_Evan%20Ram%203500%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2022-02-26</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Intl.%20WorkStar%20Lube%20Truck%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2022-03-15</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Caterpillar%20430%20Backhoe%5BFIVEM%5D%5BSYNERGY%5D</loc>
+<lastmod>2022-03-27</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Intl%20WorkStar%20Pump%20Truck%20%5BAdd-On%5D%5BFivem%5D</loc>
+<lastmod>2022-04-19</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2020%20Ram%203500%20Bruiser%20Edition%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2022-04-27</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Demolition%20Ranch%20DemoCuda%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2022-05-12</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Caterpillar%20627k%20Scraper%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2022-05-26</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2093%20Toyota%20Pickup%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2022-06-08</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%22Express%20Shipping%22%20%5BAdd-On%5D%5BFivem%5D%5BAnimated%5D</loc>
+<lastmod>2022-06-29</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Dodge%20Challenger%20Hardtop%20Vert%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2022-07-08</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%22Aces%20High%22%20Monster%20ElCamino%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2022-07-29</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Gabe%20Farrell%20Hood%20Stacked%20Table%5BAdd-On%5D%5BFiveM</loc>
+<lastmod>2022-08-23</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Int%20Workstar%20Twinsteer%20Heavy%20Wrecker%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2022-08-31</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Possible%20new%20dev%20tier%E2%80%A6%3F%E2%80%A6</loc>
+<lastmod>2022-09-08</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2093%20Toytoa%20Pickup%20Stock%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2022-09-24</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Stryker%20Inspired%20F-Series%20Links</loc>
+<lastmod>2022-10-02</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20RanchHand%20Inspired%202018%20Ram%20Bumper</loc>
+<lastmod>2022-10-08</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20BulletProof%20Inspired%2012%22%20Lift%20for%20GM%20Trucks</loc>
+<lastmod>2022-10-10</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20F750%20TMA%20Vehicle%5BAdd-On%5D%5BFiveM%5D%5BSynergy%5D</loc>
+<lastmod>2022-10-21</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Trailer%20mounted%20attenuator%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2022-10-28</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20GenY%20Inspired%20Drop%20Hitch</loc>
+<lastmod>2022-11-06</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Interco%20SSM16%20Inspired%20Tire</loc>
+<lastmod>2022-11-06</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Bruiser%20Inspired%20Flatbed</loc>
+<lastmod>2022-11-10</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%40BigRed_Cummins%20Ram%202500%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2022-11-26</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Out%20Tha%20Mud%20F350%20Mega%20Truck%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2022-12-10</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Fury%20Country%20Hunter%20M/T%20Inspired%20Tire</loc>
+<lastmod>2022-12-10</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20GRID%20GF-17%20Inspired%20Wheel</loc>
+<lastmod>2022-12-13</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20RI-FAB%20Inspired%20Air%20Ride%20Lift</loc>
+<lastmod>2022-12-19</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Caterpillar%20D8T%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2022-12-24</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Baggedcustoms%20Flog%20Insipired%20Bumpers</loc>
+<lastmod>2023-01-20</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=Baggedcustoms%20RYD%20Inspired%20Lift%20kit</loc>
+<lastmod>2023-01-20</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Caterpillar%20950m%20/%20Salvage%20Forks%20%5BSynergy%5D%5BFiveM%5D</loc>
+<lastmod>2023-01-28</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Micky%20Thompson%20Baja%20Pro%20inspired%20tire</loc>
+<lastmod>2023-02-17</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20FTS%20inspired%20Lift</loc>
+<lastmod>2023-02-17</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2095%20CaddyHoe%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2023-03-01</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Interco%20SS%20Bogger%20Inspired%20tire.</loc>
+<lastmod>2023-03-27</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Tweetys%20Tire%20Inspired%20Lift</loc>
+<lastmod>2023-03-27</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202023%20Mack%20Granite%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2023-04-01</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Gladiator%20Inspired%20tire.</loc>
+<lastmod>2023-04-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2099%20Ram%20Ranchhand%20Inspired%20Bumpers.</loc>
+<lastmod>2023-04-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Heavy%20Wrecker%20Bed.</loc>
+<lastmod>2023-04-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%202023%20Mack%20Granite%20HD%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2023-04-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Mega%20Truck%20Chassis</loc>
+<lastmod>2023-05-31</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Mega%20Truck%20Wheels%20%26%20BKT%20Check%20Inspired%20Tires</loc>
+<lastmod>2023-05-31</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Ford%20F-750%20Flatbed%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2023-05-31</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%22Krew%20Kut%22%20Dually%20%5BFiveM%5D%5BAdd-On%5D</loc>
+<lastmod>2023-06-19</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Venom%20Inspired%20tire</loc>
+<lastmod>2023-06-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Amani%20Forged%20Bario%20Inspired%20Wheel</loc>
+<lastmod>2023-06-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20FTS%20IFS%20Inspired%20Lift</loc>
+<lastmod>2023-06-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20MonsterMax%20II%20Remasterd%20%5BAdd-On%5D%5BFIVEM%5D</loc>
+<lastmod>2023-07-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Wilwood%20inspired%20Big%20brake%20kit</loc>
+<lastmod>2023-07-31</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20BDS%20Inspired%20Lift%20kit</loc>
+<lastmod>2023-07-31</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2095%20Jeep%20Cherokee%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2023-08-29</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20GoodYear%20MVT%20Insipred%20Tire</loc>
+<lastmod>2023-08-31</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20LPFAB%20Inspired%20Lift%20Kit</loc>
+<lastmod>2023-08-31</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Guniwheel%20Inspired%20Wheel</loc>
+<lastmod>2023-08-31</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Finnegans%20Garage%20Toyota%20Mini%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2023-09-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Fusion%20Inspired%20Bumpers%2011/f250</loc>
+<lastmod>2023-09-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20SOF%20Insipred%20Lift</loc>
+<lastmod>2023-09-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Rancher%20XL%20HD%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2023-10-22</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Biff%20Heavy%20Twinsteer%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2023-10-22</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Hay%20Ride%20%5BAdd-On%5D%5BFivem%5D</loc>
+<lastmod>2023-10-26</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20AnyLevel%20Inspired%20Lift</loc>
+<lastmod>2023-10-29</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20JTX%20Capital%20Inspired%20Wheel</loc>
+<lastmod>2023-10-29</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20HVY%20Mobile%20Light%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2023-11-06</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20%40GasMonkeyGarage%20%22Texas%20Skidmark%22%5BAddOn%5D%5BFiveM%5D</loc>
+<lastmod>2023-11-29</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCutoms%20MonsterMax%20I%20Inspired%20Lift</loc>
+<lastmod>2023-11-29</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Revo%20Forged%20Inspired%20wheel</loc>
+<lastmod>2023-11-29</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Sandking%205500%20Rollback%20%5BAddOn%5D%5BFiveM%5D</loc>
+<lastmod>2023-12-18</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Varnbilt%20inspired%20lift</loc>
+<lastmod>2023-12-22</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20SPARC%20Inspired%20Steering%20Wheel</loc>
+<lastmod>2023-12-22</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Transport%20Hauler%202%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2024-01-26</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20billet%20specialties%20inspired%20Steeringwheel</loc>
+<lastmod>2024-01-31</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20JTX%20Inspired%20GMG%20Wheels</loc>
+<lastmod>2024-01-31</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2080s%20Toyota%20Pickup%20%5BZ3D%5D</loc>
+<lastmod>2024-01-31</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Classic%20Mod%20Pack%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2024-02-29</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2095%20Caddyhoe%20%5BZ3d%5D</loc>
+<lastmod>2024-02-29</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Truck%20Mounted%20Attenuator%20%5BZ3D%5D%5BAnimated%5D</loc>
+<lastmod>2024-02-29</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2090s%20Yamaha%20Banshee%20%5BZ3d%5D</loc>
+<lastmod>2024-03-24</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%204%20door%20Sandrail%20%5BZ3d%5D</loc>
+<lastmod>2024-03-24</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20WhistlinDiesel%20Rocket%20Max%20%5BFiveM%5D</loc>
+<lastmod>2024-03-26</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20BobCat%20Skidsteer%20with%20Forks/Pallets%20%5BFIVEM%20ONLY%5D%20%5BSynergy%20Required%5D</loc>
+<lastmod>2024-04-28</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Concept%20Neeper%20Haaz%20wheel</loc>
+<lastmod>2024-04-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Concept%20Neeper%20Syncro%20wheel</loc>
+<lastmod>2024-04-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2093%20Toyota%20Tacoma%20%5BZ3D%5D</loc>
+<lastmod>2024-04-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Dorado%20XL%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2024-05-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Landscape%20Bed%20%5BZ3D%5D</loc>
+<lastmod>2024-05-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Bloomer%20Cattle%20Trailer%20%5B.Z3d%5D</loc>
+<lastmod>2024-05-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Sandking%205500v2%20%5BAnimated%5D%5BFiveM%20Only%5D%20</loc>
+<lastmod>2024-06-28</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Squatted%20GMC%201500%20%5B.Z3d%5D</loc>
+<lastmod>2024-06-29</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20B.A.D%20Inspired%20Wheel%20%5B.Z3d%5D</loc>
+<lastmod>2024-06-29</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Biff%20Roll%20Off%20Sanitation%20Truck%5BFiveM%5D</loc>
+<lastmod>2024-07-02</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Goodyear%20Wrangler%20%26%20Black%20Rhino%20Inspired%20Wheel</loc>
+<lastmod>2024-07-31</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Jeep%20XJ%20%5B.Z3d%5D</loc>
+<lastmod>2024-07-31</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Caterpillar%20349%20Excavator%20%5BFIVEM%20ONLY%5D%5BSynergy%20Required%5D</loc>
+<lastmod>2024-08-31</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Atomic%20Bog%20Beast%20Tire</loc>
+<lastmod>2024-08-31</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Sandking%205500%20%5BZ3d%20%2B%20Animation%20%2B%20UV%5D</loc>
+<lastmod>2024-08-31</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Brute%20Telehandler%20%5BFiveM%20Only%5D%5BAnimated%5D%5BSynergy%20Required%5D</loc>
+<lastmod>2024-09-06</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Nitto%20Trail%20Gappler</loc>
+<lastmod>2024-09-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Hummer%20H2%20%5B.Z3d%5D</loc>
+<lastmod>2024-09-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20MonsterMaxII%20w/Reaper%20Wheels%20%5BFiveM%5D</loc>
+<lastmod>2024-10-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2095%20Ford%20Lightning%20%5B.Z3d%5D</loc>
+<lastmod>2024-10-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Dodge%20Challenger%20Hardtop%20Vert%20%5B.Z3d%5D</loc>
+<lastmod>2024-10-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2003%20Ram%203500%20%5BAdd-ON%5D%5BFiveM%5D</loc>
+<lastmod>2024-11-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20F-750%20Flatbed%20%5B.Z3d%5D</loc>
+<lastmod>2024-11-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%20Yamaha%20R1%20Drag%20%5B.Z3d%5D</loc>
+<lastmod>2024-11-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Brute%20Material%20Handler%20%5BFiveM%20Only%5D%5BSynergy%20Required%5D</loc>
+<lastmod>2024-12-22</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Mack%20Granite%20%5B.Z3d%5D</loc>
+<lastmod>2024-12-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%2095%20GMC%202500%20%5B.Z3d%5D</loc>
+<lastmod>2024-12-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Overkill%20Trailer%21%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2025-01-26</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Polaris%20General%20%5B.Z3d%5D</loc>
+<lastmod>2025-01-31</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Intl%20Lonestar%5B.z3d%5D</loc>
+<lastmod>2025-01-31</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%2072%20Elcamino%20Dragster%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2025-02-28</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Yamaha%20YFZ450%20%5B.z3d%5D</loc>
+<lastmod>2025-02-28</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%2020%20F250%20Singlecab%20%5B.z3d%5D</loc>
+<lastmod>2025-02-28</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Ford%20F550%20Bucket%20Truck%20%5B.Z3d%5D</loc>
+<lastmod>2025-03-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%2095%20Nissan%20Hardbody%20%5B.Z3d%5D</loc>
+<lastmod>2025-03-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20X450%20Excursion%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2025-03-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Sandking%20Hauler%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2025-04-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%2080s%20Ford%20Bronco%20%22Mudslinger%22%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2025-04-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20CaraCaraSE%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2025-04-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Polaris%20Scrambler%20%5B.Z3d%5D</loc>
+<lastmod>2025-04-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Peterbilt%20Show%20Hauler%20%5B.Z3d%5D</loc>
+<lastmod>2025-04-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%201986%20Jeep%20CJ7%20Crawler%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2025-05-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%201965%20C10%20%5B.Z3d%5D</loc>
+<lastmod>2025-05-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Crawler%20%5B.z3d%5D</loc>
+<lastmod>2025-05-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Dodge%20Mega%20Ram%203500%20HD%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2025-06-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%2001%20GMC%20Sierra%203500HD%20%5B.z3d%5D</loc>
+<lastmod>2025-06-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%2020%20Chevy%20Trailboss%20z71%20%5B.Z3d%5D</loc>
+<lastmod>2025-06-30</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mod.html?id=BaggedCustoms%3A%20Gen%201%20Drag%20Ram%20%5BAdd-On%5D%5BFiveM%5D</loc>
+<lastmod>2025-07-31</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/ct660-tow-truck.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/17-fleetwood-jamboree-fivemadd-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/august-mods-kenwroth-w900-and-95-sierra-custom.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/august-mods-2000-f350-and-2018-dodge-ram-2500hd.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/august-mods-92-dodge-ram-mega-mud-truck-f-350-custom.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/2012-bagged-customs-ford-ranger-mini-truck-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-killer-rig-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/bigtex-20-and-40-gooseneck-trailers-fivemaddon.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/48-ford-custom-toy-hauler.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/brad-debertis-transformer-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/78-firebird-dragster.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/bagged-customs-2006-cateye-silverado-2500hd.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/bagged-customs-99-dodge-ram-2500.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/tweetys-tire-and-welding-queen-of-hearts.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/happy-halloween-2020-silverado-trail-boss.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/terminator-mustang-cobra.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/2020-ram-2500hd-custom.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/bagged-customs-1980-c10-custom.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/2020-gmc-sierra-denali-hd-3500.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/bagged-customs-2015-3500hd-high-country-custom.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/bagged-customs-featherlight-traileradd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/bagged-customs-94-silverado-1500.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-1978-ford-bronco.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/2020-chevrolet-silverado-trail-boss-1500.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-15-silverado-highcountry-custom.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-2020-ram-3500-single-cab-minitruck.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/omar-st-clouds-spooled-out-fundamentals-denalihd.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-argo-8x8-utv-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-tilt-bed-car-hauler.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/2020-international-lonestar.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-overkill.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-2009-f-550-sixdoor.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-2017-shelby-supersnake-f-150.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/17-shelby-supersnake-f-150-nypd-editionadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/17-brad-deberti-transformer-f-250-fdny-edition-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/whistlindiesels-f-350-on-reapers.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/whistlindiesel-monstermax.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/nitro-z20-bassboat.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/2000-kenworth-w900-heavy-duty-wrecker.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/the-importers-custom-tool-truck.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/jeep-cherokee-xj-snowhawk-edition-fivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/2000-ford-excursion-sema-edition-add-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/bagged-customs-peterbilt-show-hauler-add-on-sounds-template.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/monster-jam-mega-pack-fivemadd-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-ford-f650-custom-hauler-fivemadd-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/fontaine-magnitude-51-lowboy-fivemadd-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/1965-chevrolet-c10-pickup-add-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/big-reds-bad-ford-f250-custom.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-transport-hauler-30-fivemadd-onreplace.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-80-silverado-custom-4x4-fivemadd-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/caterpillar-ct660-multi-function-truck-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-mega-ram-runner-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/enclosed-gooseneck-car-hauler-fivem-add-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/enclosed-hauler-add-on-fivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/2019-dodge-ram-3500-hd-add-on-fivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/1990-jeep-grand-wagoneer-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-polaris-rzr-xp-and-mud-variant.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-polaris-sportsman.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-polaris-scrambler.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/2018-cat-259b3-skidsteer-fivemadd-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-polaris-general-fivemadd-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-truck-that-broke-the-internet-fivemadd-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-polaris-sportsman-high-lifter-edition-fivemadd-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-crawlerfivemadd-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/big-reds-ford-9000-fivemaddon.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-yamaha-banshee-350.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/bigreds-17-fontaine-trailer-pack-with-25-cargo-options-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-phantomhd-add-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/big-reds-17-f450-escort-truck-addonfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-bagged-2020-denalihd-fivemadd-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/whistlindiesel-monstermax-v2-fivemadd-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-custom-4-seater-sandrail-fivemadd-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-18-dodge-ram-show-haulerfivemadd-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/skoop-smg-hauler-hotwheel-fivemadd-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-custom-17-yamaha-r1-drag-bike-fivemadd-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-fuel-tanker-fivemadd-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-caterpillar-d7rfivemadd-onreplace.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustomsbigreds-06-2500-hd-work-truckadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-19-yamaha-yfz450add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/big-reds-peterbilt-352-customadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-92-dodge-ram-customadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-exmark-zero-turnadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-caterpillar-555d-with-logsadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-twister-ram-and-dorothy-probeadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-2020-f250-singlecab-addonfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-18-f350-dually-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-whistlindiesel-anylevel-f350-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-bagged-2006-2500hd-silverado-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-2021-tahoe-high-country-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-2021-tahoe-high-country-baggedadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/bankais-drift-ram-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-liebherr-936-excavatoradd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/bankais-silverado-z71-2500hdadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/big-reds-custom-manac-log-trailer-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/nikobelik7-pulling-sled-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/nikobelik7-cornfed-john-deere-pulling-tractor-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-2001-gmc-sierra-3500hdadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-2020-ram-5500-roll-backadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-2020-ram-5500-landscape-truckadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-semi-hauleradd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-21-bronco-badlands-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-caterpillar-140m3-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-caterpillar-745c-offroad-truckadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-05-sierra-2500-hd-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-18-anylevel-f-450add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-fab-fours-jeep-wrangleradd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-91-widebody-honda-crx-siradd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-2020-kodiak-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-20-ram-5500-flatbedadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-97-ford-f-350-crewcabadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-97-f-350-snowplow-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-tyrefryer95s-chevy-c10add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-monstermax-v3-quadfloat-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-monstermax-yeeyee-editionadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/hollywood-mikes-goldschlãger-97-ford-f350-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-polaris-rzr-xp-1000-dune-editionadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-tweetys-tire-blackjack-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-eagerbeaver-tandem-trailer-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-whistlindeisel-rzr-reaperadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-95-ford-f150-lightning-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-97-ford-f-350-flatbedadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-20-ram-3500-hd-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/dres-hydroplane-race-boatadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-tooted-99-tahoeadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-liebherr-excavator-fivem-onlysynergy-required.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-bobcat-skid-loader-fivem-onlysynergy-required.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcsutoms-polaris-rzr-mega-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-21-tahoe-interceptor-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-ford-f550-bucket-truck-fivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-sparksmotors-t800-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-97-ford-f350-dually-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-lance-rhodes-gmc-sierra-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-gabe-farrell-ford-f350-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-generalleemax-addonfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-f350-harley-edition-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-truckgurus-silveradohd-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-caterpillar-950m-fivem-onlysynergy-required.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-monstermax-ii-add-on-fivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-brandon24v-cateye-loadtrail-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-laceyblair-hummer-h2add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-austinmelo-00-dodge-ram-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-tweetystire-excalibur-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-caterpillar-ap1055-paver-fivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/hollywood-mike-cloud-nine9-f350add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-gabe-farrell-f350-v2-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-bobcat-mini-excavator-fivem-onlysynergy-required.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-cat-140-snow-edition-fivem-onlysynergy-required.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-turn-table-fivemturntablescript.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-13-ram-3500-yellowstone-editionadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-2022-bloomer-stock-traileradd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/thoughts-on-some-farmsim-22-modding.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-95-nissan-hardbody-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-93-ram-w250add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-13-ram-3500-jtx-editionadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-sick7evan-ram-3500add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-intl-workstar-lube-truckadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-caterpillar-430-backhoefivemsynergy.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-intl-workstar-pump-truck-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-20-ram-3500-bruiser-editionadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-demolition-ranch-democuda-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-caterpillar-627k-scraper-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-93-toyota-pickup-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-express-shipping-add-onfivemanimated.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-dodge-challenger-hardtop-vertadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-aces-high-monster-elcaminoadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-gabe-farrell-hood-stacked-tableadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-int-workstar-twinsteer-heavy-wrecker-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/possible-new-dev-tierââ.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-93-toytoa-pickup-stock-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-stryker-inspired-f-series-links.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-ranchhand-inspired-2018-ram-bumper.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-bulletproof-inspired-12-lift-for-gm-trucks.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-f750-tma-vehicleadd-onfivemsynergy.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-trailer-mounted-attenuator-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-geny-inspired-drop-hitch.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-interco-ssm16-inspired-tire.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-bruiser-inspired-flatbed.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-bigredcummins-ram-2500add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-out-tha-mud-f350-mega-truckadd-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-fury-country-hunter-mt-inspired-tire.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-grid-gf-17-inspired-wheel.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-ri-fab-inspired-air-ride-lift.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-caterpillar-d8t-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-flog-insipired-bumpers.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-ryd-inspired-lift-kit.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-caterpillar-950m-salvage-forks-synergyfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-micky-thompson-baja-pro-inspired-tire.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-fts-inspired-lift.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-95-caddyhoe-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-interco-ss-bogger-inspired-tire.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-tweetys-tire-inspired-lift.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-2023-mack-granite-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-gladiator-inspired-tire.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-99-ram-ranchhand-inspired-bumpers.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-heavy-wrecker-bed.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-2023-mack-granite-hd-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-mega-truck-chassis.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-mega-truck-wheels-bkt-check-inspired-tires.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-ford-f-750-flatbed-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-krew-kut-dually-fivemadd-on.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-venom-inspired-tire.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-amani-forged-bario-inspired-wheel.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-fts-ifs-inspired-lift.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-monstermax-ii-remasterd-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-wilwood-inspired-big-brake-kit.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-bds-inspired-lift-kit.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-95-jeep-cherokee-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-goodyear-mvt-insipred-tire.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-lpfab-inspired-lift-kit.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-guniwheel-inspired-wheel.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-finnegans-garage-toyota-mini-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-fusion-inspired-bumpers-11f250.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-sof-insipred-lift.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-rancher-xl-hd-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-biff-heavy-twinsteer-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-hay-ride-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-anylevel-inspired-lift.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-jtx-capital-inspired-wheel.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-hvy-mobile-light-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-gasmonkeygarage-texas-skidmarkaddonfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcutoms-monstermax-i-inspired-lift.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-revo-forged-inspired-wheel.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-sandking-5500-rollback-addonfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-varnbilt-inspired-lift.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-sparc-inspired-steering-wheel.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-transport-hauler-2-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-billet-specialties-inspired-steeringwheel.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-jtx-inspired-gmg-wheels.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-80s-toyota-pickup-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-classic-mod-pack-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-95-caddyhoe-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-truck-mounted-attenuator-z3danimated.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-90s-yamaha-banshee-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-4-door-sandrail-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-whistlindiesel-rocket-max-fivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-bobcat-skidsteer-with-forkspallets-fivem-only-synergy-required.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-concept-neeper-haaz-wheel.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-concept-neeper-syncro-wheel.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-93-toyota-tacoma-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-dorado-xl-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-landscape-bed-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-bloomer-cattle-trailer-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-sandking-5500v2-animatedfivem-only.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-squatted-gmc-1500-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-bad-inspired-wheel-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-biff-roll-off-sanitation-truckfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-goodyear-wrangler-black-rhino-inspired-wheel.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-jeep-xj-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-caterpillar-349-excavator-fivem-onlysynergy-required.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-atomic-bog-beast-tire.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-sandking-5500-z3d-animation-uv.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-brute-telehandler-fivem-onlyanimatedsynergy-required.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-nitto-trail-gappler.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-hummer-h2-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-monstermaxii-wreaper-wheels-fivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-95-ford-lightning-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-dodge-challenger-hardtop-vert-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-03-ram-3500-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-f-750-flatbed-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-yamaha-r1-drag-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-brute-material-handler-fivem-onlysynergy-required.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-mack-granite-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-95-gmc-2500-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-overkill-trailer-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-polaris-general-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-intl-lonestarz3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-72-elcamino-dragster-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-yamaha-yfz450-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-20-f250-singlecab-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-ford-f550-bucket-truck-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-95-nissan-hardbody-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-x450-excursion-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-sandking-hauler-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-80s-ford-bronco-mudslinger-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-caracarase-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-polaris-scrambler-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-peterbilt-show-hauler-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-1986-jeep-cj7-crawler-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-1965-c10-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-crawler-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-dodge-mega-ram-3500-hd-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-01-gmc-sierra-3500hd-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-20-chevy-trailboss-z71-z3d.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+<url>
+<loc>https://www.baggedcustoms.com/mods/baggedcustoms-gen-1-drag-ram-add-onfivem.html</loc>
+<lastmod>2025-08-07</lastmod>
+</url>
+</urlset>
