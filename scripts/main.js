@@ -57,7 +57,6 @@ async function fetchMods() {
     await displayFeatured(); // wait for featured to load first
     displayMods("all");
 
-    // Show mod grid and footer (optional fade-in effect support)
     document.getElementById("modGrid")?.classList.add("visible");
     document.getElementById("mainFooter")?.classList.add("visible");
   } else if (path.includes("category.html")) {
@@ -94,6 +93,23 @@ async function preloadImage(src) {
   });
 }
 
+// === SLUG + STATIC PAGE CHECK ===
+function generateSlug(name) {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+async function checkStaticPage(slug) {
+  try {
+    const res = await fetch(`mods/${slug}.html`, { method: "HEAD" });
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
+
 // === FEATURED MODS ===
 async function displayFeatured() {
   const featured = allMods.filter((mod) => mod.featured);
@@ -102,29 +118,35 @@ async function displayFeatured() {
   let index = 0;
   const featuredContainer = document.getElementById("featuredMod");
 
- async function renderFeatured() {
-  const mod = featured[index];
-  await preloadImage(mod.image);
-  featuredContainer.style.opacity = 0;
+  async function renderFeatured() {
+    const mod = featured[index];
+    await preloadImage(mod.image);
+    featuredContainer.style.opacity = 0;
 
- setTimeout(() => {
-featuredContainer.innerHTML = `
-  <a href="mod.html?id=${mod.post_id}" style="text-decoration:none; color: inherit;">
-    <img src="${mod.image}" alt="${mod.name}" title="${mod.name}">
-    <div class="featured-text">
-      <div class="title">${mod.name}</div>
-     ${mod.category && mod.category.toLowerCase() !== "uncategorized" ? `<div class="category">${mod.category}</div>` : ""}
-    </div>
-  </a>
-`;
-  featuredContainer.classList.remove("preloading");
-  featuredContainer.style.opacity = 1;
-  featuredContainer.classList.add("loaded"); // ✅ add this
-  index = (index + 1) % featured.length;
-}, 500);
-}
+    const slug = `baggedcustoms-${generateSlug(mod.name)}`;
+    let link = `mod.html?id=${encodeURIComponent(mod.post_id)}`;
+    if (await checkStaticPage(slug)) {
+      link = `mods/${slug}.html`;
+    }
 
-  await renderFeatured(); // preload first mod before cycling
+    setTimeout(() => {
+      featuredContainer.innerHTML = `
+        <a href="${link}" style="text-decoration:none; color: inherit;">
+          <img src="${mod.image}" alt="${mod.name}" title="${mod.name}">
+          <div class="featured-text">
+            <div class="title">${mod.name}</div>
+           ${mod.category && mod.category.toLowerCase() !== "uncategorized" ? `<div class="category">${mod.category}</div>` : ""}
+          </div>
+        </a>
+      `;
+      featuredContainer.classList.remove("preloading");
+      featuredContainer.style.opacity = 1;
+      featuredContainer.classList.add("loaded");
+      index = (index + 1) % featured.length;
+    }, 500);
+  }
+
+  await renderFeatured();
   setInterval(renderFeatured, 5000);
 }
 
@@ -177,12 +199,22 @@ function displayPagedMods(mods, currentPage, baseUrl) {
   }
 }
 
-// === MOD CARD (no double image) ===
+// === MOD CARD (auto-upgrade to static page) ===
 function generateModCard(mod) {
   const id = encodeURIComponent(mod.post_id);
+  const slug = `baggedcustoms-${generateSlug(mod.name)}`;
+  let link = `mod.html?id=${id}`;
+
+  checkStaticPage(slug).then(exists => {
+    if (exists) {
+      const card = document.querySelector(`[data-mod-id="${id}"] a`);
+      if (card) card.href = `mods/${slug}.html`;
+    }
+  });
+
   return `
-    <div class="mod-card">
-      <a href="mod.html?id=${id}">
+    <div class="mod-card" data-mod-id="${id}">
+      <a href="${link}">
         <img src="${mod.image}" alt="${mod.name}" title="${mod.name}" loading="lazy">
         <div class="mod-info">
           <h3>${mod.name}</h3>
@@ -220,5 +252,5 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  await fetchMods(); // ✅ wait for allMods before doing anything
+  await fetchMods();
 });
