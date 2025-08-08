@@ -96,27 +96,41 @@
       background-color: #e0611f;
       color: #fff;
     }
+
+    /* --- a11y-friendly social icons (layout-only CSS) --- */
+    .social-icons { display: flex; gap: .5rem; list-style: none; padding: 0; margin: 0; }
+    .social-icons a { display: inline-flex; align-items: center; justify-content: center; }
+    .social-icons img { display: block; width: 28px; height: 28px; }
   </style>
 </head>
 <body>
 
 <header>
-<img src="images/banner.webp" alt="" class="background logo" width="360" fetchpriority="high" decoding="async">
+  <img src="images/banner.webp" alt="" class="background logo" width="360" fetchpriority="high" decoding="async">
 
-  <div class="social-icons">
-    <a href="https://discord.gg/ynDj6wNpbF" target="_blank" rel="noopener noreferrer">
-      <img src="images/discord.png" alt="" />
-    </a>
-    <a href="https://www.instagram.com/baggedcustoms" target="_blank" rel="noopener noreferrer">
-      <img src="images/instagram.png" alt="" />
-    </a>
-    <a href="https://www.youtube.com/baggedcustoms?sub_confirmation=1" target="_blank" rel="noopener noreferrer">
-      <img src="images/youtube.png" alt="" />
-    </a>
-    <a href="https://www.tiktok.com/@baggedcustoms" target="_blank" rel="noopener noreferrer">
-      <img src="images/tik-tok.png" alt="" />
-    </a>
-  </div>
+  <!-- Accessible social links -->
+  <ul class="social-icons" aria-label="Follow BaggedCustoms">
+    <li>
+      <a href="https://discord.gg/ynDj6wNpbF" target="_blank" rel="noopener noreferrer" aria-label="Join us on Discord">
+        <img src="images/discord.png" alt="" aria-hidden="true" loading="lazy" width="28" height="28">
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/baggedcustoms" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+        <img src="images/instagram.png" alt="" aria-hidden="true" loading="lazy" width="28" height="28">
+      </a>
+    </li>
+    <li>
+      <a href="https://www.youtube.com/baggedcustoms?sub_confirmation=1" target="_blank" rel="noopener noreferrer" aria-label="Subscribe on YouTube">
+        <img src="images/youtube.png" alt="" aria-hidden="true" loading="lazy" width="28" height="28">
+      </a>
+    </li>
+    <li>
+      <a href="https://www.tiktok.com/@baggedcustoms" target="_blank" rel="noopener noreferrer" aria-label="Follow us on TikTok">
+        <img src="images/tik-tok.png" alt="" aria-hidden="true" loading="lazy" width="28" height="28">
+      </a>
+    </li>
+  </ul>
 
   <div class="search-container">
     <label for="categorySelect" class="visually-hidden">Filter mods by category</label>
