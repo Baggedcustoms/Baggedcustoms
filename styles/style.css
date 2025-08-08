@@ -445,3 +445,22 @@ h2#recentHeader { margin-top: 10px !important; margin-bottom: 15px !important; }
 /* a little breathing room for the title block */
 #featuredMod .featured-text { padding: 8px 6px 12px; }
 
+/* --- tighten spacing around Featured + Recent --- */
+
+/* Desktop: a little tighter */
+#featuredWrapper { margin: 12px auto 8px; padding: 8px 0; }
+#featuredMod     { margin: 12px auto 14px; }
+#modGrid         { margin: 14px auto 40px; }
+#featuredMod .featured-text { margin-top: 6px; }
+
+/* If you have a specific id on the Recent header, keep it snug */
+h2#recentHeader { margin-top: 8px; margin-bottom: 10px; }
+
+/* Mobile: pull everything up more aggressively */
+@media (max-width: 600px) {
+  h2 { margin-top: 10px; margin-bottom: 8px; }           /* Featured/Recent titles */
+  #featuredWrapper { margin: 8px auto 4px; padding: 4px 0; }
+  #featuredMod     { margin: 8px auto 10px; }
+  #modGrid         { margin: 8px auto 24px; gap: 12px; }  /* slightly tighter card gaps */
+}
+
