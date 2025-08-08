@@ -101,13 +101,21 @@ async function preloadImage(src) {
   });
 }
 
-/* ---------- featured ---------- */
+/* ---------- featured (delayed first rotation) ---------- */
 async function displayFeatured() {
   const featured = allMods.filter(mod => mod.featured);
   if (!featured.length) return;
 
+  // timing knobs
+  const EXTRA_FIRST_DELAY = 3000; // wait this long after full load before the first swap
+  const ROTATE_EVERY = 5000;      // normal cadence
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let index = 0;
+  let timer = null;
+
   const featuredContainer = document.getElementById("featuredMod");
+  if (!featuredContainer) return;
 
   async function renderFeatured() {
     const mod = featured[index];
@@ -137,8 +145,46 @@ async function displayFeatured() {
     }, 500);
   }
 
+  function rotateOnce() { renderFeatured(); }
+  function startInterval() { stopInterval(); timer = setInterval(rotateOnce, ROTATE_EVERY); }
+  function stopInterval() { if (timer) { clearInterval(timer); timer = null; } }
+
+  // 1) Render the FIRST card immediately (no cycling yet)
   await renderFeatured();
-  setInterval(renderFeatured, 5000);
+
+  // If user prefers reduced motion, don't auto-cycle at all
+  if (prefersReduced) return;
+
+  // 2) Only start cycling after the section is on-screen AND the page fully loaded,
+  //    then wait EXTRA_FIRST_DELAY to avoid hitting LCP/PSI during initial animations.
+  let visible = false;
+  const startWhenReady = () => {
+    const kickoff = () => {
+      setTimeout(() => { 
+        if (visible) { rotateOnce(); startInterval(); }
+      }, EXTRA_FIRST_DELAY);
+    };
+    if (document.readyState === 'complete') kickoff();
+    else window.addEventListener('load', kickoff, { once: true });
+  };
+
+  const io = new IntersectionObserver((entries) => {
+    if (entries.some(e => e.isIntersecting)) {
+      visible = true;
+      io.disconnect();
+      startWhenReady();
+    }
+  }, { threshold: 0.2 });
+  io.observe(featuredContainer);
+
+  // 3) Pause on tab hidden / resume on visible
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) stopInterval(); else startInterval();
+  });
+
+  // 4) Pause on hover so users can read
+  featuredContainer.addEventListener('mouseenter', stopInterval);
+  featuredContainer.addEventListener('mouseleave', startInterval);
 }
 
 /* ---------- always use pretty static page ---------- */
