@@ -1,5 +1,4 @@
 let allMods = [];
-let prettySlugSet = new Set();
 const pageSize = 15;
 
 /* ---------- utils ---------- */
@@ -10,57 +9,6 @@ function makeSlug(s) {
   s = s.replace(/\s+/g, "-");
   s = s.replace(/-+/g, "-");
   return s || "mod";
-}
-
-/* ---------- fetch sitemap + build set of available pretty slugs ---------- */
-async function loadSitemapUrls() {
-  try {
-    const url = `/sitemap.xml?v=${Date.now()}`; // bust cache
-    const res = await fetch(url, { cache: "no-store" });
-    if (!res.ok) {
-      console.warn(`[SITEMAP] HTTP ${res.status} for ${url}`);
-      return;
-    }
-    const xmlText = await res.text();
-    const parser = new DOMParser();
-    const xmlDoc = parser.parseFromString(xmlText, "application/xml");
-
-    // parser error?
-    const pe = xmlDoc.getElementsByTagName("parsererror");
-    if (pe && pe.length) {
-      console.warn("[SITEMAP] parsererror:", pe[0].textContent?.slice(0, 300));
-      return;
-    }
-
-    // Use XPath so namespaces don't matter
-    const xpath = "//*[local-name()='url']/*[local-name()='loc']";
-    const snap = xmlDoc.evaluate(xpath, xmlDoc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
-
-    let totalLocs = snap.snapshotLength;
-    let modsFound = 0;
-    let firstFew = [];
-    for (let i = 0; i < snap.snapshotLength; i++) {
-      const locNode = snap.snapshotItem(i);
-      const locText = (locNode.textContent || "").trim();
-      if (!locText) continue;
-      if (locText.includes("/mods/") && /\.html?$/i.test(locText)) {
-        const last = locText.substring(locText.lastIndexOf("/") + 1);
-        const slug = last.replace(/\.html?$/i, "").toLowerCase();
-        prettySlugSet.add(slug);
-        modsFound++;
-        if (firstFew.length < 5) firstFew.push(locText);
-      }
-    }
-
-    console.log(`[SITEMAP] locs=${totalLocs}, /mods/ pages=${modsFound}`);
-    if (firstFew.length) {
-      console.log("[SITEMAP] sample:", firstFew);
-    } else {
-      console.log("[SITEMAP] no /mods/ entries detected in sitemap payload.");
-    }
-  } catch (err) {
-    console.warn("[SITEMAP] Failed to load or parse /sitemap.xml", err);
-  }
 }
 
 /* ---------- fetch + prep mods ---------- */
@@ -193,11 +141,10 @@ async function displayFeatured() {
   setInterval(renderFeatured, 5000);
 }
 
-/* ---------- pick link (pretty if available, else fallback) ---------- */
+/* ---------- always use pretty static page ---------- */
 function getModLink(mod) {
   const slug = makeSlug(mod.name || "");
-  if (prettySlugSet.has(slug)) return `/mods/${slug}.html`;
-  return `mod.html?id=${encodeURIComponent(mod.post_id)}`;
+  return `/mods/${slug}.html`;
 }
 
 /* ---------- grids / pagination ---------- */
@@ -286,6 +233,5 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  await loadSitemapUrls(); // build prettySlugSet (now namespace-safe, cache-busted)
-  await fetchMods();       // render with correct links
+  await fetchMods(); // render with static pretty links
 });
