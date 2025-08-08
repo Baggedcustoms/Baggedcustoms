@@ -97,94 +97,119 @@ async function preloadImage(src) {
   return new Promise(resolve => {
     const img = new Image();
     img.onload = resolve;
+    img.onerror = resolve; // don't block if image errors
     img.src = src;
   });
 }
 
-/* ---------- featured (delayed first rotation) ---------- */
+/* ---------- featured (instant first render, delayed first rotation) ---------- */
 async function displayFeatured() {
   const featured = allMods.filter(mod => mod.featured);
   if (!featured.length) return;
 
-  // timing knobs
-  const EXTRA_FIRST_DELAY = 3000; // wait this long after full load before the first swap
-  const ROTATE_EVERY = 5000;      // normal cadence
-
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let index = 0;
-  let timer = null;
-
   const featuredContainer = document.getElementById("featuredMod");
   if (!featuredContainer) return;
 
-  async function renderFeatured() {
-    const mod = featured[index];
-    await preloadImage(mod.image);
-    featuredContainer.style.opacity = 0;
+  const EXTRA_FIRST_DELAY = 3000; // delay before first rotation (after load + visible)
+  const ROTATE_EVERY = 5000;      // subsequent cadence
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  let index = 0;
+  let timer = null;
+
+  const templateFor = (mod) => {
     const link = getModLink(mod);
+    return `
+      <a href="${link}" style="text-decoration:none; color: inherit;">
+        <img src="${mod.image}" alt="${mod.name}" title="${mod.name}" loading="eager">
+        <div class="featured-text">
+          <div class="title">${mod.name}</div>
+          ${mod.category && mod.category.toLowerCase() !== "uncategorized"
+            ? `<div class="category">${mod.category}</div>`
+            : ""}
+        </div>
+      </a>
+    `;
+  };
 
-    setTimeout(() => {
-      featuredContainer.innerHTML = `
-        <a href="${link}" style="text-decoration:none; color: inherit;">
-          <img src="${mod.image}" alt="${mod.name}" title="${mod.name}">
-          <div class="featured-text">
-            <div class="title">${mod.name}</div>
-            ${
-              mod.category && mod.category.toLowerCase() !== "uncategorized"
-                ? `<div class="category">${mod.category}</div>`
-                : ""
-            }
-          </div>
-        </a>
-      `;
+  function renderCard(mod, { immediate = false } = {}) {
+    if (immediate) {
+      featuredContainer.innerHTML = templateFor(mod);
       featuredContainer.classList.remove("preloading");
-      featuredContainer.style.opacity = 1;
       featuredContainer.classList.add("loaded");
-      index = (index + 1) % featured.length;
-    }, 500);
+      featuredContainer.style.opacity = 1;
+      return Promise.resolve();
+    }
+    return preloadImage(mod.image).then(() => {
+      featuredContainer.style.opacity = 0;
+      setTimeout(() => {
+        featuredContainer.innerHTML = templateFor(mod);
+        featuredContainer.classList.remove("preloading");
+        featuredContainer.classList.add("loaded");
+        featuredContainer.style.opacity = 1;
+      }, 100);
+    });
   }
 
-  function rotateOnce() { renderFeatured(); }
-  function startInterval() { stopInterval(); timer = setInterval(rotateOnce, ROTATE_EVERY); }
-  function stopInterval() { if (timer) { clearInterval(timer); timer = null; } }
+  function rotateOnce() {
+    const mod = featured[index];
+    renderCard(mod, { immediate: false });
+    index = (index + 1) % featured.length;
+  }
 
-  // 1) Render the FIRST card immediately (no cycling yet)
-  await renderFeatured();
+  function startInterval() {
+    stopInterval();
+    timer = setInterval(rotateOnce, ROTATE_EVERY);
+  }
+  function stopInterval() {
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+  }
 
-  // If user prefers reduced motion, don't auto-cycle at all
-  if (prefersReduced) return;
+  // First card: render immediately (no fade, no delay)
+  await renderCard(featured[0], { immediate: true });
+  index = (index + 1) % featured.length;
 
-  // 2) Only start cycling after the section is on-screen AND the page fully loaded,
-  //    then wait EXTRA_FIRST_DELAY to avoid hitting LCP/PSI during initial animations.
+  if (prefersReduced) return; // respect reduced motion
+
+  // Start auto-rotation only after section visible AND page load, then wait extra delay
   let visible = false;
   const startWhenReady = () => {
     const kickoff = () => {
-      setTimeout(() => { 
-        if (visible) { rotateOnce(); startInterval(); }
+      setTimeout(() => {
+        if (visible) {
+          rotateOnce();
+          startInterval();
+        }
       }, EXTRA_FIRST_DELAY);
     };
-    if (document.readyState === 'complete') kickoff();
-    else window.addEventListener('load', kickoff, { once: true });
+    if (document.readyState === "complete") kickoff();
+    else window.addEventListener("load", kickoff, { once: true });
   };
 
-  const io = new IntersectionObserver((entries) => {
-    if (entries.some(e => e.isIntersecting)) {
-      visible = true;
-      io.disconnect();
-      startWhenReady();
-    }
-  }, { threshold: 0.2 });
+  const io = new IntersectionObserver(
+    entries => {
+      if (entries.some(e => e.isIntersecting)) {
+        visible = true;
+        io.disconnect();
+        startWhenReady();
+      }
+    },
+    { threshold: 0.2 }
+  );
   io.observe(featuredContainer);
 
-  // 3) Pause on tab hidden / resume on visible
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) stopInterval(); else startInterval();
+  // Pause/resume on tab visibility
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) stopInterval();
+    else startInterval();
   });
 
-  // 4) Pause on hover so users can read
-  featuredContainer.addEventListener('mouseenter', stopInterval);
-  featuredContainer.addEventListener('mouseleave', startInterval);
+  // Pause on hover so folks can read
+  featuredContainer.addEventListener("mouseenter", stopInterval);
+  featuredContainer.addEventListener("mouseleave", startInterval);
 }
 
 /* ---------- always use pretty static page ---------- */
