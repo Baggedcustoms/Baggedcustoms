@@ -458,7 +458,7 @@ h2#recentHeader { margin-top: 8px; margin-bottom: 10px; }
 
 /* Mobile: pull everything up more aggressively */
 @media (max-width: 600px) {
-  h2 { margin-top: 200px; margin-bottom: 8px; }           /* Featured/Recent titles */
+  h2 { margin-top: 5px; margin-bottom: 8px; }           /* Featured/Recent titles */
   #featuredWrapper { margin: 8px auto 4px; padding: 4px 0; }
   #featuredMod     { margin: 8px auto 10px; }
   #modGrid         { margin: 8px auto 24px; gap: 12px; }  /* slightly tighter card gaps */
