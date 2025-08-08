@@ -1,66 +1,55 @@
 let allMods = [];
-let prettyUrlMap = new Map();   // slug -> relative /mods/*.html
-let prettySlugSet = new Set();  // quick existence check
+let prettySlugSet = new Set();
 const pageSize = 15;
 
-// --- Slugify to match the PowerShell New-Slug ---
-function slugify(s) {
-  if (!s || typeof s !== "string") return "mod";
-  // Remove anything not letter/number/space/hyphen (Unicode aware)
-  let out = s
-    .normalize("NFKD")
-    .replace(/[^\p{L}\p{N}\s-]/gu, "")
-    .trim()
-    .toLowerCase()
-    .replace(/\s+/g, "-")
-    .replace(/-+/g, "-");
-  return out || "mod";
+/* ---------- utils ---------- */
+function makeSlug(s) {
+  if (!s) return "mod";
+  // mirror the PS slugger:
+  // 1) remove anything not letter/number/space/hyphen
+  s = s.replace(/[^\p{L}\p{N}\s-]+/gu, "");
+  // 2) trim + lowercase
+  s = s.trim().toLowerCase();
+  // 3) collapse whitespace -> "-"
+  s = s.replace(/\s+/g, "-");
+  // 4) collapse multiple "-" -> single
+  s = s.replace(/-+/g, "-");
+  if (!s) s = "mod";
+  return s;
 }
 
-// === FETCH SITEMAP AND BUILD URL MAP ===
+/* ---------- fetch sitemap + build set of available pretty slugs ---------- */
 async function loadSitemapUrls() {
   try {
-    const res = await fetch("sitemap.xml", { cache: "no-store" });
+    const res = await fetch("/sitemap.xml", { cache: "no-store" });
     const xmlText = await res.text();
     const parser = new DOMParser();
     const xmlDoc = parser.parseFromString(xmlText, "application/xml");
 
-    // Handle XML namespaces (sitemaps use a default ns)
+    // handle namespaced or not by searching local-name()
     const urlNodes = Array.from(xmlDoc.getElementsByTagNameNS("*", "url"));
-    let count = 0;
+    const locNodes = urlNodes.length
+      ? urlNodes.map(n => n.getElementsByTagNameNS("*", "loc")[0])
+      : Array.from(xmlDoc.getElementsByTagName("loc")); // fallback
 
-    urlNodes.forEach(urlNode => {
-      const locNode = urlNode.getElementsByTagNameNS("*", "loc")[0];
-      if (!locNode) return;
-      const full = locNode.textContent.trim();
-      if (!full.includes("/mods/")) return;
-
-      // Make a relative path for client-side links
-      let relPath;
-      try {
-        const u = new URL(full, window.location.origin);
-        relPath = u.pathname; // e.g. /mods/some-slug.html
-      } catch {
-        // If it's already relative
-        relPath = full;
+    let added = 0;
+    locNodes.forEach(loc => {
+      if (!loc || !loc.textContent) return;
+      const locText = loc.textContent.trim();
+      if (locText.includes("/mods/") && locText.endsWith(".html")) {
+        const last = locText.substring(locText.lastIndexOf("/") + 1);
+        const slug = last.replace(/\.html$/i, "").toLowerCase();
+        prettySlugSet.add(slug);
+        added++;
       }
-
-      // Extract slug (filename without .html)
-      const last = relPath.substring(relPath.lastIndexOf("/") + 1);
-      if (!last.toLowerCase().endsWith(".html")) return;
-      const slug = last.slice(0, -5).toLowerCase();
-
-      prettyUrlMap.set(slug, relPath);
-      prettySlugSet.add(slug);
-      count++;
     });
-
-    console.log(`[SITEMAP] Loaded ${count} /mods/ pages (slugs)`);
+    console.log(`[SITEMAP] Found ${added} /mods/*.html entries`);
   } catch (err) {
-    console.warn("[SITEMAP] Failed to load/parse sitemap.xml", err);
+    console.warn("[SITEMAP] Failed to load or parse /sitemap.xml", err);
   }
 }
 
+/* ---------- fetch + prep mods ---------- */
 async function fetchMods() {
   const res = await fetch("mods.json", { cache: "no-store" });
   allMods = await res.json();
@@ -69,20 +58,19 @@ async function fetchMods() {
   const tagExclusions = ["Prime Assets", "GearHead Assets"];
 
   allMods = allMods.filter(mod => {
-    const nameExcluded = exclusions.some(keyword =>
-      (mod.name || "").toLowerCase().includes(keyword.toLowerCase())
-    );
-    const tagsExcluded = Array.isArray(mod.tags) && mod.tags.some(tag =>
-      tagExclusions.some(excludedTag => (tag || "").toLowerCase() === excludedTag.toLowerCase())
-    );
+    const name = (mod.name || "").toLowerCase();
+    const nameExcluded = exclusions.some(keyword => name.includes(keyword.toLowerCase()));
+    const tagsExcluded =
+      Array.isArray(mod.tags) &&
+      mod.tags.some(tag =>
+        tagExclusions.some(excludedTag => tag.toLowerCase() === excludedTag.toLowerCase())
+      );
     return !nameExcluded && !tagsExcluded;
   });
 
   const tagSet = new Set();
   allMods.forEach(mod => {
-    if (Array.isArray(mod.tags)) {
-      mod.tags.forEach(tag => tagSet.add(tag));
-    }
+    if (Array.isArray(mod.tags)) mod.tags.forEach(tag => tagSet.add(tag));
   });
   const tags = Array.from(tagSet).sort();
 
@@ -111,8 +99,8 @@ async function fetchMods() {
     path.includes("index.html") ||
     path === "/" ||
     (path.includes("baggedcustoms") &&
-     !path.includes("category.html") &&
-     !path.includes("search.html"))
+      !path.includes("category.html") &&
+      !path.includes("search.html"))
   ) {
     await displayFeatured();
     displayMods("all");
@@ -122,42 +110,40 @@ async function fetchMods() {
     const category = params.get("cat") || "";
     const page = parseInt(params.get("page")) || 1;
 
-    const filtered = (category === "" || category === "all")
-      ? allMods.filter(mod => Array.isArray(mod.tags) && mod.tags.length > 0)
-      : allMods.filter(mod => Array.isArray(mod.tags) && mod.tags.includes(category));
+    const filtered =
+      category === "" || category === "all"
+        ? allMods.filter(mod => Array.isArray(mod.tags) && mod.tags.length > 0)
+        : allMods.filter(mod => Array.isArray(mod.tags) && mod.tags.includes(category));
 
-    const titleEl = document.getElementById("categoryTitle");
-    if (titleEl) {
-      titleEl.textContent = (category === "" || category === "all") ? "All Categories" : category;
-    }
+    document.getElementById("categoryTitle").textContent =
+      category === "" || category === "all" ? "All Categories" : category;
     displayPagedMods(filtered, page, `category.html?cat=${encodeURIComponent(category)}&`);
   } else if (path.includes("search.html")) {
     const query = params.get("q")?.toLowerCase() || "";
     const page = parseInt(params.get("page")) || 1;
 
     const filtered = allMods.filter(
-      (mod) =>
+      mod =>
         (mod.name || "").toLowerCase().includes(query) ||
-        (Array.isArray(mod.tags) && mod.tags.some(t => (t || "").toLowerCase().includes(query)))
+        (mod.tags && mod.tags.some(t => t.toLowerCase().includes(query)))
     );
 
-    const searchTitle = document.getElementById("searchTitle");
-    if (searchTitle) searchTitle.textContent = `Search: "${query}"`;
+    document.getElementById("searchTitle").textContent = `Search: "${query}"`;
     displayPagedMods(filtered, page, `search.html?q=${encodeURIComponent(query)}&`);
   }
 }
 
 async function preloadImage(src) {
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     const img = new Image();
     img.onload = resolve;
     img.src = src;
   });
 }
 
-// === FEATURED MODS ===
+/* ---------- featured ---------- */
 async function displayFeatured() {
-  const featured = allMods.filter((mod) => mod.featured);
+  const featured = allMods.filter(mod => mod.featured);
   if (!featured.length) return;
 
   let index = 0;
@@ -176,7 +162,11 @@ async function displayFeatured() {
           <img src="${mod.image}" alt="${mod.name}" title="${mod.name}">
           <div class="featured-text">
             <div class="title">${mod.name}</div>
-            ${mod.category && mod.category.toLowerCase() !== "uncategorized" ? `<div class="category">${mod.category}</div>` : ""}
+            ${
+              mod.category && mod.category.toLowerCase() !== "uncategorized"
+                ? `<div class="category">${mod.category}</div>`
+                : ""
+            }
           </div>
         </a>
       `;
@@ -191,24 +181,17 @@ async function displayFeatured() {
   setInterval(renderFeatured, 5000);
 }
 
-// === DETERMINE MOD LINK ===
+/* ---------- pick link (pretty if available, else fallback) ---------- */
 function getModLink(mod) {
-  // 1) Try exact pretty page by slug from name (matches how files are generated)
-  const nameSlug = slugify(mod.name || "");
-  if (prettySlugSet.has(nameSlug)) {
-    return prettyUrlMap.get(nameSlug);
+  const slug = makeSlug(mod.name || "");
+  if (prettySlugSet.has(slug)) {
+    return `/mods/${slug}.html`;
   }
-
-  // 2) Try slug from post_id, if present
-  const idSlug = slugify(mod.post_id || "");
-  if (idSlug && prettySlugSet.has(idSlug)) {
-    return prettyUrlMap.get(idSlug);
-  }
-
-  // 3) Fallback to old format
-  return `mod.html?id=${encodeURIComponent(mod.post_id || mod.name || "")}`;
+  // fallback to legacy route
+  return `mod.html?id=${encodeURIComponent(mod.post_id)}`;
 }
 
+/* ---------- grids / pagination ---------- */
 function displayMods(category) {
   const grid = document.getElementById("modGrid");
   grid.innerHTML = "";
@@ -216,12 +199,10 @@ function displayMods(category) {
   const filtered =
     category === "All" || category === "" || category === "all"
       ? allMods
-      : allMods.filter(
-          (mod) => Array.isArray(mod.tags) && mod.tags.includes(category)
-        );
+      : allMods.filter(mod => Array.isArray(mod.tags) && mod.tags.includes(category));
 
   filtered.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
-  filtered.slice(0, 20).forEach((mod) => {
+  filtered.slice(0, 20).forEach(mod => {
     grid.innerHTML += generateModCard(mod);
   });
 }
@@ -241,7 +222,7 @@ function displayPagedMods(mods, currentPage, baseUrl) {
     return;
   }
 
-  paged.forEach((mod) => {
+  paged.forEach(mod => {
     grid.innerHTML += generateModCard(mod);
   });
 
@@ -249,16 +230,14 @@ function displayPagedMods(mods, currentPage, baseUrl) {
     if (currentPage > 1) {
       pagination.innerHTML += `<a class="back-button" href="${baseUrl}page=${currentPage - 1}">← Prev</a>`;
     }
-
     pagination.innerHTML += `<span style="margin: 0 10px;">Page ${currentPage} of ${totalPages}</span>`;
-
     if (currentPage < totalPages) {
       pagination.innerHTML += `<a class="back-button" href="${baseUrl}page=${currentPage + 1}">Next →</a>`;
     }
   }
 }
 
-// === MOD CARD ===
+/* ---------- card ---------- */
 function generateModCard(mod) {
   const link = getModLink(mod);
   return `
@@ -273,7 +252,7 @@ function generateModCard(mod) {
   `;
 }
 
-// === DOM READY ===
+/* ---------- DOM ready ---------- */
 document.addEventListener("DOMContentLoaded", async () => {
   const categorySelect = document.getElementById("categorySelect");
   const searchInput = document.getElementById("searchInput");
@@ -293,14 +272,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         window.location.href = `search.html?q=${encodeURIComponent(value)}&page=1`;
       }
     });
-
-    searchInput.addEventListener("keypress", (e) => {
-      if (e.key === "Enter") {
-        searchButton.click();
-      }
+    searchInput.addEventListener("keypress", e => {
+      if (e.key === "Enter") searchButton.click();
     });
   }
 
-  await loadSitemapUrls(); // build slug map first
-  await fetchMods();       // then render using getModLink()
+  await loadSitemapUrls(); // build prettySlugSet
+  await fetchMods();       // render with correct links
 });
