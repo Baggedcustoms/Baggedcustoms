@@ -1,5 +1,29 @@
 let allMods = [];
+let prettyUrlMap = new Map();
 const pageSize = 15;
+
+// === FETCH SITEMAP AND BUILD URL MAP ===
+async function loadSitemapUrls() {
+  try {
+    const res = await fetch("sitemap.xml");
+    const xmlText = await res.text();
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(xmlText, "application/xml");
+
+    const urls = Array.from(xmlDoc.getElementsByTagName("url"));
+    urls.forEach(urlNode => {
+      const locNode = urlNode.getElementsByTagName("loc")[0];
+      if (locNode && locNode.textContent.includes("/mods/")) {
+        const fullUrl = locNode.textContent.trim();
+        const slug = fullUrl.substring(fullUrl.lastIndexOf("/") + 1).replace(".html", "");
+        prettyUrlMap.set(slug.toLowerCase(), fullUrl);
+      }
+    });
+    console.log(`[SITEMAP] Loaded ${prettyUrlMap.size} pretty URLs`);
+  } catch (err) {
+    console.warn("[SITEMAP] Failed to load sitemap.xml", err);
+  }
+}
 
 async function fetchMods() {
   const res = await fetch("mods.json");
@@ -54,9 +78,8 @@ async function fetchMods() {
      !path.includes("category.html") &&
      !path.includes("search.html"))
   ) {
-    await displayFeatured(); // wait for featured to load first
+    await displayFeatured(); 
     displayMods("all");
-
     document.getElementById("modGrid")?.classList.add("visible");
     document.getElementById("mainFooter")?.classList.add("visible");
   } else if (path.includes("category.html")) {
@@ -93,23 +116,6 @@ async function preloadImage(src) {
   });
 }
 
-// === SLUG + STATIC PAGE CHECK ===
-function generateSlug(name) {
-  return name
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}
-
-async function checkStaticPage(slug) {
-  try {
-    const res = await fetch(`mods/${slug}.html`, { method: "HEAD" });
-    return res.ok;
-  } catch {
-    return false;
-  }
-}
-
 // === FEATURED MODS ===
 async function displayFeatured() {
   const featured = allMods.filter((mod) => mod.featured);
@@ -123,11 +129,7 @@ async function displayFeatured() {
     await preloadImage(mod.image);
     featuredContainer.style.opacity = 0;
 
-    const slug = `baggedcustoms-${generateSlug(mod.name)}`;
-    let link = `mod.html?id=${encodeURIComponent(mod.post_id)}`;
-    if (await checkStaticPage(slug)) {
-      link = `mods/${slug}.html`;
-    }
+    const link = getModLink(mod);
 
     setTimeout(() => {
       featuredContainer.innerHTML = `
@@ -148,6 +150,15 @@ async function displayFeatured() {
 
   await renderFeatured();
   setInterval(renderFeatured, 5000);
+}
+
+// === DETERMINE MOD LINK ===
+function getModLink(mod) {
+  const prettyKey = mod.post_id?.toLowerCase();
+  if (prettyKey && prettyUrlMap.has(prettyKey)) {
+    return prettyUrlMap.get(prettyKey);
+  }
+  return `mod.html?id=${encodeURIComponent(mod.post_id)}`;
 }
 
 function displayMods(category) {
@@ -199,21 +210,11 @@ function displayPagedMods(mods, currentPage, baseUrl) {
   }
 }
 
-// === MOD CARD (auto-upgrade to static page) ===
+// === MOD CARD ===
 function generateModCard(mod) {
-  const id = encodeURIComponent(mod.post_id);
-  const slug = `baggedcustoms-${generateSlug(mod.name)}`;
-  let link = `mod.html?id=${id}`;
-
-  checkStaticPage(slug).then(exists => {
-    if (exists) {
-      const card = document.querySelector(`[data-mod-id="${id}"] a`);
-      if (card) card.href = `mods/${slug}.html`;
-    }
-  });
-
+  const link = getModLink(mod);
   return `
-    <div class="mod-card" data-mod-id="${id}">
+    <div class="mod-card">
       <a href="${link}">
         <img src="${mod.image}" alt="${mod.name}" title="${mod.name}" loading="lazy">
         <div class="mod-info">
@@ -252,5 +253,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
+  await loadSitemapUrls();
   await fetchMods();
 });
