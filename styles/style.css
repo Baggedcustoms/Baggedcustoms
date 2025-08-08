@@ -399,3 +399,22 @@ h2, h3 { text-align: center; margin-top: 30px; }
 
 /* Optional: tighten spacing above "Recent Mods" heading */
 h2#recentHeader { margin-top: 10px !important; margin-bottom: 15px !important; }
+
+/* Make the featured card clip its contents like the mod cards */
+#featuredMod { overflow: hidden; }
+
+/* Mobile-only polish so the image sits perfectly inside the rounded box */
+@media (max-width: 600px) {
+  #featuredMod {
+    padding: 12px;            /* even padding all around */
+    border-radius: 12px;      /* slightly larger outer radius for a clean glow */
+  }
+  #featuredMod img {
+    border-radius: 8px;       /* inner radius so corners don’t clash */
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    max-width: none;          /* let it fill the card on small screens */
+  }
+}
