@@ -1,11 +1,66 @@
+// mod.js (drop-in)
+
+function toAbsolute(url) {
+  if (!url) return "";
+  if (/^https?:\/\//i.test(url)) return url;
+  // ensure leading slash
+  const clean = url.startsWith("/") ? url : `/${url}`;
+  return `${location.origin}${clean}`;
+}
+
+function unique(arr) {
+  const seen = new Set();
+  const out = [];
+  for (const x of arr) {
+    if (!x) continue;
+    const key = x.toLowerCase();
+    if (!seen.has(key)) { seen.add(key); out.push(x); }
+  }
+  return out;
+}
+
+function injectJsonLd(mod, imagesAbs, pageUrlAbs) {
+  // Keep your CreativeWork but ensure absolute image URLs
+  const json = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": mod.name,
+    "description": (mod.description || "").replace(/<[^>]*>/g, "").slice(0, 500),
+    "image": imagesAbs,
+    "url": pageUrlAbs,
+    "author": { "@type": "Person", "name": "BaggedCustoms" }
+  };
+  const el = document.createElement("script");
+  el.type = "application/ld+json";
+  el.textContent = JSON.stringify(json);
+  document.head.appendChild(el);
+}
+
+function injectNoScriptImages(mod, imagesAbs) {
+  if (!imagesAbs.length) return;
+  const nos = document.createElement("noscript");
+  let html = '<div class="gallery">';
+  for (let i = 0; i < imagesAbs.length; i++) {
+    const src = imagesAbs[i];
+    const alt = `${mod.name} – image ${i + 1}`;
+    // width/height are hints; adjust if you have exact sizes
+    html += `<img src="${src}" alt="${alt}" width="1000" height="562" loading="lazy" />`;
+  }
+  html += "</div>";
+  nos.innerHTML = html;
+  const main = document.querySelector("main#modContainer") || document.querySelector("main");
+  if (main) main.appendChild(nos);
+}
+
 function renderMod(mod) {
   const tags = Array.isArray(mod.tags) ? mod.tags.join(', ') : '';
 
-  // --- SEO updates (same as before) ---
+  // --- SEO updates ---
   document.title = `${mod.name} - BaggedCustoms GTA V & FiveM Mod${tags ? ` [${tags}]` : ''}`;
+
   const metaDesc = document.createElement("meta");
   metaDesc.name = "description";
-  metaDesc.content = `${mod.name} — ${mod.description?.slice(0, 150) || "Explore this custom GTA V & FiveM mod."}`;
+  metaDesc.content = `${mod.name} — ${(mod.description || "").replace(/<[^>]*>/g, "").slice(0, 160) || "Explore this custom GTA V & FiveM mod."}`;
   document.head.appendChild(metaDesc);
 
   const metaKeywords = document.createElement("meta");
@@ -13,32 +68,37 @@ function renderMod(mod) {
   metaKeywords.content = tags;
   document.head.appendChild(metaKeywords);
 
+  // canonical = current URL
   const canonical = document.createElement("link");
   canonical.rel = "canonical";
-  canonical.href = window.location.href;
+  canonical.href = location.href;
   document.head.appendChild(canonical);
-  // ------------------------------------
+  // -------------------
 
+  // Build image lists
   const mainImageUrl = mod.image || (Array.isArray(mod.images) && mod.images[0]) || "";
-  let images = [];
-  if (Array.isArray(mod.images) && mod.images.length > 0) {
-    images = mod.images.filter(img => img !== mainImageUrl);
-  }
+  let gallery = Array.isArray(mod.images) ? mod.images.slice() : [];
+  if (mainImageUrl) gallery.unshift(mainImageUrl); // ensure main first
+  gallery = unique(gallery);
+
+  // Absolute URLs for SEO & Bing
+  const galleryAbs = gallery.map(toAbsolute);
 
   const container = document.getElementById("modContainer");
+  const otherImages = gallery.filter((img, idx) => idx > 0);
   container.innerHTML = `
     <h1 style="text-align:center; margin-bottom: 20px;">${mod.name}</h1>
 
     <div id="mainImageWrapper" style="text-align:center; margin-bottom: 20px;">
       <img id="mainImage"
-           src="${mainImageUrl}"
+           src="${gallery[0] || ""}"
            alt="${mod.name} Main Preview"
            title="${mod.name} Main Preview"
            style="max-width: 100%; max-height: 400px; border-radius: 8px; box-shadow: 0 0 15px #c9501d;" />
     </div>
 
     <div id="thumbnailContainer" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
-      ${images.map((img, idx) => `
+      ${otherImages.map((img, idx) => `
         <img class="thumb"
              src="${img}"
              alt="${mod.name} Thumbnail ${idx + 1}"
@@ -58,19 +118,23 @@ function renderMod(mod) {
     </div>
   `;
 
+  // Click-to-swap
   const mainImage = document.getElementById("mainImage");
-  const thumbnails = container.querySelectorAll(".thumb");
-  thumbnails.forEach((thumb, index) => {
+  container.querySelectorAll(".thumb").forEach((thumb, index) => {
     thumb.addEventListener("click", () => {
       mainImage.src = thumb.src;
       mainImage.alt = `${mod.name} Thumbnail ${index + 1}`;
       mainImage.title = `${mod.name} Thumbnail ${index + 1}`;
     });
   });
+
+  // --- NEW: noscript fallback & JSON-LD with absolute image URLs ---
+  injectNoScriptImages(mod, galleryAbs);
+  injectJsonLd(mod, galleryAbs, location.href);
 }
 
 async function loadModDetails() {
-  // If static page embedded data exists, use it (new /mods/*.html flow)
+  // Static page path: use embedded JSON if present
   const dataEl = document.getElementById("modData");
   if (dataEl) {
     try {
@@ -80,12 +144,12 @@ async function loadModDetails() {
         return;
       }
     } catch (e) {
-      // fall through to old fetch path
+      // continue
     }
   }
 
-  // Old dynamic path: /mod.html?id=...
-  const params = new URLSearchParams(window.location.search);
+  // Legacy dynamic path: /mod.html?id=...
+  const params = new URLSearchParams(location.search);
   const modId = params.get("id");
   if (!modId) {
     document.getElementById("modContainer").innerHTML = "<p>Mod ID missing in URL.</p>";
@@ -93,7 +157,7 @@ async function loadModDetails() {
   }
 
   try {
-    const res = await fetch("mods.json");
+    const res = await fetch("mods.json", { cache: "no-store" });
     const allMods = await res.json();
 
     const decodedId = decodeURIComponent(modId);
