@@ -464,3 +464,15 @@ h2#recentHeader { margin-top: 8px; margin-bottom: 10px; }
   #modGrid         { margin: 8px auto 24px; gap: 12px; }  /* slightly tighter card gaps */
 }
 
+.mod-nav .mod-card,
+.related-mods .rel-card {
+  border: 1px solid rgba(255,255,255,.06) !important; /* subtle base */
+  box-shadow: none !important;
+  transition: box-shadow .2s ease;
+}
+
+.mod-nav .mod-card:hover,
+.related-mods .rel-card:hover {
+  border-color: rgba(255,255,255,.06) !important; /* keep subtle border */
+  box-shadow: 0 0 15px #c9501d !important;        /* the glow */
+}
