@@ -2,3 +2,4 @@ User-agent: *
 Disallow:
 
 Sitemap: https://www.baggedcustoms.com/sitemap.xml
+Sitemap: https://www.baggedcustoms.com/sitemap_with_images.xml
