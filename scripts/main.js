@@ -137,11 +137,17 @@ async function displayFeatured() {
     `;
   };
 
+  // Pick a random starting index
+  let index = Math.floor(Math.random() * featured.length);
+
   // First render instant (no fade)
-  featuredContainer.innerHTML = templateFor(featured[0]);
+  featuredContainer.innerHTML = templateFor(featured[index]);
   featuredContainer.classList.remove("preloading");
   featuredContainer.classList.add("loaded");
   featuredContainer.style.opacity = "1";
+
+  // Advance index for rotation
+  index = (index + 1) % featured.length;
 
   // Re-enable transitions for later swaps
   requestAnimationFrame(() => {
@@ -152,7 +158,6 @@ async function displayFeatured() {
 
   if (prefersReduced) return;
 
-  let index = 1 % featured.length;
   let timer = null;
 
   const rotateOnce = async () => {
